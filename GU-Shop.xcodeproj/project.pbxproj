@@ -50,7 +50,6 @@
 		57871FA722675B090052E0A4 /* GU-Shop */ = {
 			isa = PBXGroup;
 			children = (
-				57871FA822675B090052E0A4 /* AppDelegate.swift */,
 				57871FBA22675E800052E0A4 /* App */,
 				57871FBF22675EA40052E0A4 /* Core */,
 				57871FC022675EAB0052E0A4 /* Resources */,
@@ -62,6 +61,7 @@
 		57871FBA22675E800052E0A4 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				57871FA822675B090052E0A4 /* AppDelegate.swift */,
 				57871FBE22675E960052E0A4 /* BusinessLogic */,
 				57871FBD22675E910052E0A4 /* Entity */,
 				57871FBC22675E8B0052E0A4 /* Assembly */,
