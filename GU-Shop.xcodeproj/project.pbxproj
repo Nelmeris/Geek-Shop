@@ -10,14 +10,38 @@
 		57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57871FA822675B090052E0A4 /* AppDelegate.swift */; };
 		57871FB022675B0B0052E0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57871FAF22675B0B0052E0A4 /* Assets.xcassets */; };
 		57871FB322675B0B0052E0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57871FB122675B0B0052E0A4 /* LaunchScreen.storyboard */; };
+		57DB49D4226F2FCA000FCA53 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49D3226F2FCA000FCA53 /* AbstractErrorParser.swift */; };
+		57DB49D6226F2FF5000FCA53 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49D5226F2FF5000FCA53 /* ErrorParser.swift */; };
+		57DB49D8226F3065000FCA53 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49D7226F3065000FCA53 /* DataRequest.swift */; };
+		57DB49DA226F310B000FCA53 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49D9226F310B000FCA53 /* RequestRouter.swift */; };
+		57DB49DC226F3163000FCA53 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49DB226F3163000FCA53 /* AbstractRequestFactory.swift */; };
+		57DB49DF226F378F000FCA53 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49DE226F378F000FCA53 /* AuthRequestFactory.swift */; };
+		57DB49E1226F379B000FCA53 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E0226F379B000FCA53 /* Auth.swift */; };
+		57DB49E3226F37AD000FCA53 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E2226F37AD000FCA53 /* RequestFactory.swift */; };
+		57DB49E5226F37E2000FCA53 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E4226F37E2000FCA53 /* LoginResult.swift */; };
+		57DB49E7226F37ED000FCA53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E6226F37ED000FCA53 /* User.swift */; };
+		C8E3DF1DC0BE9526C3509CBA /* Pods_GU_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AAE8DB460AA639C5BA46D8 /* Pods_GU_Shop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		552326635806B0B97705C5BB /* Pods-GU-Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GU-Shop.debug.xcconfig"; path = "Target Support Files/Pods-GU-Shop/Pods-GU-Shop.debug.xcconfig"; sourceTree = "<group>"; };
 		57871FA522675B090052E0A4 /* GU-Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GU-Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57871FA822675B090052E0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57871FAF22675B0B0052E0A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57871FB222675B0B0052E0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57871FB422675B0B0052E0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57DB49D3226F2FCA000FCA53 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
+		57DB49D5226F2FF5000FCA53 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		57DB49D7226F3065000FCA53 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		57DB49D9226F310B000FCA53 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		57DB49DB226F3163000FCA53 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
+		57DB49DE226F378F000FCA53 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
+		57DB49E0226F379B000FCA53 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		57DB49E2226F37AD000FCA53 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		57DB49E4226F37E2000FCA53 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		57DB49E6226F37ED000FCA53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		65AAE8DB460AA639C5BA46D8 /* Pods_GU_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GU_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB36AAE7698ADF735BBC851E /* Pods-GU-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GU-Shop.release.xcconfig"; path = "Target Support Files/Pods-GU-Shop/Pods-GU-Shop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E3DF1DC0BE9526C3509CBA /* Pods_GU_Shop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +61,8 @@
 			children = (
 				57871FA722675B090052E0A4 /* GU-Shop */,
 				57871FA622675B090052E0A4 /* Products */,
+				AAE1AEB4C45A0453DBB0173C /* Pods */,
+				BE64A779A15558484FB58E5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +114,8 @@
 		57871FBD22675E910052E0A4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				57DB49E4226F37E2000FCA53 /* LoginResult.swift */,
+				57DB49E6226F37ED000FCA53 /* User.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -94,6 +123,7 @@
 		57871FBE22675E960052E0A4 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				57DB49DD226F3495000FCA53 /* Network */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -101,6 +131,7 @@
 		57871FBF22675EA40052E0A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				57DB49D2226F2F9E000FCA53 /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -122,6 +153,45 @@
 			path = Environments;
 			sourceTree = "<group>";
 		};
+		57DB49D2226F2F9E000FCA53 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				57DB49D3226F2FCA000FCA53 /* AbstractErrorParser.swift */,
+				57DB49D5226F2FF5000FCA53 /* ErrorParser.swift */,
+				57DB49D7226F3065000FCA53 /* DataRequest.swift */,
+				57DB49DB226F3163000FCA53 /* AbstractRequestFactory.swift */,
+				57DB49D9226F310B000FCA53 /* RequestRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		57DB49DD226F3495000FCA53 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				57DB49DE226F378F000FCA53 /* AuthRequestFactory.swift */,
+				57DB49E0226F379B000FCA53 /* Auth.swift */,
+				57DB49E2226F37AD000FCA53 /* RequestFactory.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AAE1AEB4C45A0453DBB0173C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				552326635806B0B97705C5BB /* Pods-GU-Shop.debug.xcconfig */,
+				EB36AAE7698ADF735BBC851E /* Pods-GU-Shop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE64A779A15558484FB58E5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65AAE8DB460AA639C5BA46D8 /* Pods_GU_Shop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57871FB722675B0B0052E0A4 /* Build configuration list for PBXNativeTarget "GU-Shop" */;
 			buildPhases = (
+				98BE9A24DC5475BF349CEC3F /* [CP] Check Pods Manifest.lock */,
 				57871FA122675B090052E0A4 /* Sources */,
 				57871FA222675B090052E0A4 /* Frameworks */,
 				57871FA322675B090052E0A4 /* Resources */,
+				F6272037FC5934BCBF4F61AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,12 +259,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		98BE9A24DC5475BF349CEC3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GU-Shop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6272037FC5934BCBF4F61AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GU-Shop/Pods-GU-Shop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GU-Shop/Pods-GU-Shop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		57871FA122675B090052E0A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DB49E3226F37AD000FCA53 /* RequestFactory.swift in Sources */,
 				57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */,
+				57DB49E5226F37E2000FCA53 /* LoginResult.swift in Sources */,
+				57DB49DA226F310B000FCA53 /* RequestRouter.swift in Sources */,
+				57DB49D6226F2FF5000FCA53 /* ErrorParser.swift in Sources */,
+				57DB49DF226F378F000FCA53 /* AuthRequestFactory.swift in Sources */,
+				57DB49D4226F2FCA000FCA53 /* AbstractErrorParser.swift in Sources */,
+				57DB49DC226F3163000FCA53 /* AbstractRequestFactory.swift in Sources */,
+				57DB49D8226F3065000FCA53 /* DataRequest.swift in Sources */,
+				57DB49E1226F379B000FCA53 /* Auth.swift in Sources */,
+				57DB49E7226F37ED000FCA53 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +459,7 @@
 		};
 		57871FB822675B0B0052E0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 552326635806B0B97705C5BB /* Pods-GU-Shop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,6 +478,7 @@
 		};
 		57871FB922675B0B0052E0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB36AAE7698ADF735BBC851E /* Pods-GU-Shop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
