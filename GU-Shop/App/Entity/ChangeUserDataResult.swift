@@ -1,5 +1,5 @@
 //
-//  RegistrResult.swift
+//  ChangeUserDataResult.swift
 //  GU-Shop
 //
 //  Created by Artem Kufaev on 23/04/2019.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-struct RegistrResult: Codable {
+struct ChangeUserDataResult: Codable {
     let result: Int
-    let userMessage: String
 }

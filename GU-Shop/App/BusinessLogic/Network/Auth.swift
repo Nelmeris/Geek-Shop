@@ -35,8 +35,13 @@ extension Auth: AuthRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func registr(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<RegistrResult>) -> Void) {
-        let requestModel = Registr(baseUrl: baseUrl, userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+    func register(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
+        let requestModel = Register(baseUrl: baseUrl, userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+    
+    func changeUserData(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<ChangeUserDataResult>) -> Void) {
+        let requestModel = Register(baseUrl: baseUrl, userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -57,10 +62,36 @@ extension Auth {
         }
     }
     
-    struct Registr: RequestRouter {
+    struct Register: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "registerUser.json"
+        
+        let userId: Int
+        let userName: String
+        let password: String
+        let email: String
+        let gender: String
+        let creditCard: String
+        let bio: String
+        
+        var parameters: Parameters? {
+            return [
+                "id_user": userId,
+                "username": userName,
+                "password": password,
+                "email": email,
+                "gender": gender,
+                "credit_card": creditCard,
+                "bio": bio,
+            ]
+        }
+    }
+    
+    struct ChangeUserData: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "changeUserData.json"
         
         let userId: Int
         let userName: String

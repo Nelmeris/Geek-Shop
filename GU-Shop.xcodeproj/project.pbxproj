@@ -20,8 +20,9 @@
 		57DB49E3226F37AD000FCA53 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E2226F37AD000FCA53 /* RequestFactory.swift */; };
 		57DB49E5226F37E2000FCA53 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E4226F37E2000FCA53 /* LoginResult.swift */; };
 		57DB49E7226F37ED000FCA53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E6226F37ED000FCA53 /* User.swift */; };
-		57DB49E9226F41C5000FCA53 /* RegistrResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E8226F41C5000FCA53 /* RegistrResult.swift */; };
+		57DB49E9226F41C5000FCA53 /* RegisterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E8226F41C5000FCA53 /* RegisterResult.swift */; };
 		57DB49EB226F43B6000FCA53 /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49EA226F43B6000FCA53 /* LogoutResult.swift */; };
+		57DB49ED226F450E000FCA53 /* ChangeUserDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49EC226F450E000FCA53 /* ChangeUserDataResult.swift */; };
 		C8E3DF1DC0BE9526C3509CBA /* Pods_GU_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AAE8DB460AA639C5BA46D8 /* Pods_GU_Shop.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +43,9 @@
 		57DB49E2226F37AD000FCA53 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		57DB49E4226F37E2000FCA53 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		57DB49E6226F37ED000FCA53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		57DB49E8226F41C5000FCA53 /* RegistrResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrResult.swift; sourceTree = "<group>"; };
+		57DB49E8226F41C5000FCA53 /* RegisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResult.swift; sourceTree = "<group>"; };
 		57DB49EA226F43B6000FCA53 /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
+		57DB49EC226F450E000FCA53 /* ChangeUserDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataResult.swift; sourceTree = "<group>"; };
 		65AAE8DB460AA639C5BA46D8 /* Pods_GU_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GU_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB36AAE7698ADF735BBC851E /* Pods-GU-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GU-Shop.release.xcconfig"; path = "Target Support Files/Pods-GU-Shop/Pods-GU-Shop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,8 +122,9 @@
 			children = (
 				57DB49E4226F37E2000FCA53 /* LoginResult.swift */,
 				57DB49EA226F43B6000FCA53 /* LogoutResult.swift */,
-				57DB49E8226F41C5000FCA53 /* RegistrResult.swift */,
+				57DB49E8226F41C5000FCA53 /* RegisterResult.swift */,
 				57DB49E6226F37ED000FCA53 /* User.swift */,
+				57DB49EC226F450E000FCA53 /* ChangeUserDataResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -322,10 +325,11 @@
 				57DB49E3226F37AD000FCA53 /* RequestFactory.swift in Sources */,
 				57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */,
 				57DB49EB226F43B6000FCA53 /* LogoutResult.swift in Sources */,
+				57DB49ED226F450E000FCA53 /* ChangeUserDataResult.swift in Sources */,
 				57DB49E5226F37E2000FCA53 /* LoginResult.swift in Sources */,
 				57DB49DA226F310B000FCA53 /* RequestRouter.swift in Sources */,
 				57DB49D6226F2FF5000FCA53 /* ErrorParser.swift in Sources */,
-				57DB49E9226F41C5000FCA53 /* RegistrResult.swift in Sources */,
+				57DB49E9226F41C5000FCA53 /* RegisterResult.swift in Sources */,
 				57DB49DF226F378F000FCA53 /* AuthRequestFactory.swift in Sources */,
 				57DB49D4226F2FCA000FCA53 /* AbstractErrorParser.swift in Sources */,
 				57DB49DC226F3163000FCA53 /* AbstractRequestFactory.swift in Sources */,
