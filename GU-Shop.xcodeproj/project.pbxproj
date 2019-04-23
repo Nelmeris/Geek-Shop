@@ -21,6 +21,7 @@
 		57DB49E5226F37E2000FCA53 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E4226F37E2000FCA53 /* LoginResult.swift */; };
 		57DB49E7226F37ED000FCA53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E6226F37ED000FCA53 /* User.swift */; };
 		57DB49E9226F41C5000FCA53 /* RegistrResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E8226F41C5000FCA53 /* RegistrResult.swift */; };
+		57DB49EB226F43B6000FCA53 /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49EA226F43B6000FCA53 /* LogoutResult.swift */; };
 		C8E3DF1DC0BE9526C3509CBA /* Pods_GU_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AAE8DB460AA639C5BA46D8 /* Pods_GU_Shop.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		57DB49E4226F37E2000FCA53 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		57DB49E6226F37ED000FCA53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		57DB49E8226F41C5000FCA53 /* RegistrResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrResult.swift; sourceTree = "<group>"; };
+		57DB49EA226F43B6000FCA53 /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
 		65AAE8DB460AA639C5BA46D8 /* Pods_GU_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GU_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB36AAE7698ADF735BBC851E /* Pods-GU-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GU-Shop.release.xcconfig"; path = "Target Support Files/Pods-GU-Shop/Pods-GU-Shop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				57DB49E4226F37E2000FCA53 /* LoginResult.swift */,
+				57DB49EA226F43B6000FCA53 /* LogoutResult.swift */,
 				57DB49E8226F41C5000FCA53 /* RegistrResult.swift */,
 				57DB49E6226F37ED000FCA53 /* User.swift */,
 			);
@@ -318,6 +321,7 @@
 			files = (
 				57DB49E3226F37AD000FCA53 /* RequestFactory.swift in Sources */,
 				57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */,
+				57DB49EB226F43B6000FCA53 /* LogoutResult.swift in Sources */,
 				57DB49E5226F37E2000FCA53 /* LoginResult.swift in Sources */,
 				57DB49DA226F310B000FCA53 /* RequestRouter.swift in Sources */,
 				57DB49D6226F2FF5000FCA53 /* ErrorParser.swift in Sources */,

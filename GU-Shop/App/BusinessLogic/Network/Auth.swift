@@ -30,6 +30,11 @@ extension Auth: AuthRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
+    func logout(userId: Int, completionHandler: @escaping (DataResponse<LogoutResult>) -> Void) {
+        let requestModel = Logout(baseUrl: baseUrl, userId: userId)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+    
     func registr(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<RegistrResult>) -> Void) {
         let requestModel = Registr(baseUrl: baseUrl, userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
@@ -74,6 +79,20 @@ extension Auth {
                 "gender": gender,
                 "credit_card": creditCard,
                 "bio": bio,
+            ]
+        }
+    }
+    
+    struct Logout: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "logout.json"
+        
+        let userId: Int
+        
+        var parameters: Parameters? {
+            return [
+                "id_user": userId
             ]
         }
     }
