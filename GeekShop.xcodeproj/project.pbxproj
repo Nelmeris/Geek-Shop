@@ -12,6 +12,11 @@
 		57871FB022675B0B0052E0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57871FAF22675B0B0052E0A4 /* Assets.xcassets */; };
 		57871FB322675B0B0052E0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57871FB122675B0B0052E0A4 /* LaunchScreen.storyboard */; };
 		57C6294B2273853200C6080F /* GeekShopAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6294A2273853200C6080F /* GeekShopAuthTests.swift */; };
+		57C6294D2273890800C6080F /* GeekShopCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6294C2273890800C6080F /* GeekShopCatalogTests.swift */; };
+		57C6294F2273894C00C6080F /* ShopRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6294E2273894C00C6080F /* ShopRequestFactory.swift */; };
+		57C6295122738A4400C6080F /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6295022738A4400C6080F /* Shop.swift */; };
+		57C6295522738C2C00C6080F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6295422738C2C00C6080F /* Product.swift */; };
+		57C629572273936600C6080F /* CatalogProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C629562273936600C6080F /* CatalogProduct.swift */; };
 		57DB49D4226F2FCA000FCA53 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49D3226F2FCA000FCA53 /* AbstractErrorParser.swift */; };
 		57DB49D6226F2FF5000FCA53 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49D5226F2FF5000FCA53 /* ErrorParser.swift */; };
 		57DB49D8226F3065000FCA53 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49D7226F3065000FCA53 /* DataRequest.swift */; };
@@ -53,6 +58,11 @@
 		57C629402273850100C6080F /* GeekShopUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeekShopUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C629442273850100C6080F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57C6294A2273853200C6080F /* GeekShopAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekShopAuthTests.swift; sourceTree = "<group>"; };
+		57C6294C2273890800C6080F /* GeekShopCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekShopCatalogTests.swift; sourceTree = "<group>"; };
+		57C6294E2273894C00C6080F /* ShopRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRequestFactory.swift; sourceTree = "<group>"; };
+		57C6295022738A4400C6080F /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		57C6295422738C2C00C6080F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		57C629562273936600C6080F /* CatalogProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogProduct.swift; sourceTree = "<group>"; };
 		57DB49D3226F2FCA000FCA53 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		57DB49D5226F2FF5000FCA53 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		57DB49D7226F3065000FCA53 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
@@ -165,6 +175,8 @@
 				57DB49E8226F41C5000FCA53 /* RegisterResult.swift */,
 				57DB49E6226F37ED000FCA53 /* User.swift */,
 				57DB49EC226F450E000FCA53 /* ChangeUserDataResult.swift */,
+				57C6295422738C2C00C6080F /* Product.swift */,
+				57C629562273936600C6080F /* CatalogProduct.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -206,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				57C6294A2273853200C6080F /* GeekShopAuthTests.swift */,
+				57C6294C2273890800C6080F /* GeekShopCatalogTests.swift */,
 				57C629442273850100C6080F /* Info.plist */,
 			);
 			path = GeekShopUnitTests;
@@ -228,6 +241,8 @@
 			children = (
 				57DB49DE226F378F000FCA53 /* AuthRequestFactory.swift */,
 				57DB49E0226F379B000FCA53 /* Auth.swift */,
+				57C6294E2273894C00C6080F /* ShopRequestFactory.swift */,
+				57C6295022738A4400C6080F /* Shop.swift */,
 				57DB49E2226F37AD000FCA53 /* RequestFactory.swift */,
 			);
 			path = Network;
@@ -463,6 +478,8 @@
 				57DB49E3226F37AD000FCA53 /* RequestFactory.swift in Sources */,
 				57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */,
 				57DB49EB226F43B6000FCA53 /* LogoutResult.swift in Sources */,
+				57C629572273936600C6080F /* CatalogProduct.swift in Sources */,
+				57C6295122738A4400C6080F /* Shop.swift in Sources */,
 				57DB49ED226F450E000FCA53 /* ChangeUserDataResult.swift in Sources */,
 				57DB49E5226F37E2000FCA53 /* LoginResult.swift in Sources */,
 				57DB49DA226F310B000FCA53 /* RequestRouter.swift in Sources */,
@@ -470,10 +487,12 @@
 				57DB49E9226F41C5000FCA53 /* RegisterResult.swift in Sources */,
 				57DB49DF226F378F000FCA53 /* AuthRequestFactory.swift in Sources */,
 				57DB49D4226F2FCA000FCA53 /* AbstractErrorParser.swift in Sources */,
+				57C6295522738C2C00C6080F /* Product.swift in Sources */,
 				57DB49DC226F3163000FCA53 /* AbstractRequestFactory.swift in Sources */,
 				57DB49D8226F3065000FCA53 /* DataRequest.swift in Sources */,
 				57DB49E1226F379B000FCA53 /* Auth.swift in Sources */,
 				57DB49E7226F37ED000FCA53 /* User.swift in Sources */,
+				57C6294F2273894C00C6080F /* ShopRequestFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57C6294B2273853200C6080F /* GeekShopAuthTests.swift in Sources */,
+				57C6294D2273890800C6080F /* GeekShopCatalogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

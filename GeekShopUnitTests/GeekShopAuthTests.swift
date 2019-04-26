@@ -2,7 +2,7 @@
 //  GeekShopAuthTests.swift
 //  GeekShopTests
 //
-//  Created by Артем Куфаев on 26/04/2019.
+//  Created by Artem Kufaev on 26/04/2019.
 //  Copyright © 2019 Artem Kufaev. All rights reserved.
 //
 
@@ -18,30 +18,6 @@ class GeekShopAuthTests: XCTestCase {
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         auth = requestFactory.makeAuthRequestFatory()
-        //        auth.register(userId: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
-        //            switch response.result {
-        //            case .success(let result):
-        //                print(result)
-        //            case .failure(let error):
-        //                print(error.localizedDescription)
-        //            }
-        //        }
-        //        auth.logout(userId: 123) { response in
-        //            switch response.result {
-        //            case .success(let result):
-        //                print(result)
-        //            case .failure(let error):
-        //                print(error.localizedDescription)
-        //            }
-        //        }
-        //        auth.changeUserData(userId: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
-        //            switch response.result {
-        //            case .success(let result):
-        //                print(result)
-        //            case .failure(let error):
-        //                print(error.localizedDescription)
-        //            }
-        //        }
     }
     
     override func tearDown() {
@@ -50,7 +26,7 @@ class GeekShopAuthTests: XCTestCase {
     }
     
     func testLogin() {
-        let expectation = XCTestExpectation(description: "Logining")
+        let expectation = XCTestExpectation(description: "Login")
         auth.login(userName: "Somebody", password: "mypassword") { response in
             switch response.result {
             case .success(_): break
@@ -63,7 +39,7 @@ class GeekShopAuthTests: XCTestCase {
     }
     
     func testLogout() {
-        let expectation = XCTestExpectation(description: "Logining")
+        let expectation = XCTestExpectation(description: "Logout")
         auth.logout(userId: 123) { response in
             switch response.result {
             case .success(_): break
@@ -89,7 +65,7 @@ class GeekShopAuthTests: XCTestCase {
     }
     
     func testChangeUserData() {
-        let expectation = XCTestExpectation(description: "Changing user data")
+        let expectation = XCTestExpectation(description: "Change user data")
         auth.changeUserData(userId: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success(_): break
