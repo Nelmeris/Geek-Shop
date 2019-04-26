@@ -1,5 +1,5 @@
 framework module Pods_GU_Shop {
-  umbrella header "Pods-GU-Shop-umbrella.h"
+  umbrella header "Pods-Geek-Shop-umbrella.h"
 
   export *
   module * { export * }

@@ -1,6 +1,6 @@
 //
-//  ChangeUserDataResult.swift
-//  GU-Shop
+//  RegisterResult.swift
+//  Geek-Shop
 //
 //  Created by Artem Kufaev on 23/04/2019.
 //  Copyright © 2019 Artem Kufaev. All rights reserved.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct ChangeUserDataResult: Codable {
+struct RegisterResult: Codable {
     let result: Int
+    let userMessage: String
 }

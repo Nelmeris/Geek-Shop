@@ -1,6 +1,6 @@
 //
-//  RegisterResult.swift
-//  GU-Shop
+//  LoginResult.swift
+//  Geek-Shop
 //
 //  Created by Artem Kufaev on 23/04/2019.
 //  Copyright © 2019 Artem Kufaev. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RegisterResult: Codable {
+struct LoginResult: Codable {
     let result: Int
-    let userMessage: String
+    let user: User
 }
