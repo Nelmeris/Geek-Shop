@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-HTTP.git",
         "state": {
           "branch": null,
-          "revision": "8041b3990e811ace806c1451765cd373161e699d",
-          "version": "3.2.5"
+          "revision": "a730fecd51cc7adca74adb260f5bcc0ad1378583",
+          "version": "3.2.6"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-HTTPServer.git",
         "state": {
           "branch": null,
-          "revision": "014f5641484509a8c09f371f715bd65fafae5462",
-          "version": "3.0.22"
+          "revision": "4843cd54762d59b7e70841663ae561b279b80946",
+          "version": "3.0.23"
         }
       },
       {
