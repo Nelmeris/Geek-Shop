@@ -13,7 +13,7 @@ class Shop: AbstractRequestFactory {
     let sessionManager: SessionManager
     let queue: DispatchQueue?
     let baseUrl = URL(string: "http://127.0.0.1:8181/")!
-    
+
     init(
         errorParser: AbstractErrorParser,
         sessionManager: SessionManager,
@@ -25,12 +25,12 @@ class Shop: AbstractRequestFactory {
 }
 
 extension Shop: ShopRequestFactory {
-    
+
     func getCatalogData(pageNumber: Int, categoryId: Int, completionHandler: @escaping (DataResponse<Array<CatalogProduct>>) -> Void) {
         let requestModel = CatalogRequest(baseUrl: baseUrl, pageNumber: pageNumber, categoryId: categoryId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
+
     func getGoodById(productId: Int, completionHandler: @escaping (DataResponse<Product>) -> Void) {
         let requestModel = ProductRequest(baseUrl: baseUrl, id: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
@@ -38,12 +38,12 @@ extension Shop: ShopRequestFactory {
 }
 
 extension Shop {
-    
+
     struct CatalogRequest: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "catalog.get"
-        
+
         let pageNumber: Int
         let categoryId: Int
         var parameters: Parameters? {
@@ -53,19 +53,19 @@ extension Shop {
             ]
         }
     }
-    
+
     struct ProductRequest: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "catalog.getGood"
-        
+
         let id: Int
-        
+
         var parameters: Parameters? {
             return [
                 "id_product": id
             ]
         }
     }
-    
+
 }
