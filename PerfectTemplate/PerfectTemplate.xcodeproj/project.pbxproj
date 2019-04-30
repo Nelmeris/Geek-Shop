@@ -16,6 +16,9 @@
 		574D3BBF2278C522001C6B00 /* LoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BA82278C49F001C6B00 /* LoginHandler.swift */; };
 		574D3BC02278C525001C6B00 /* LogoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */; };
 		574D3BC12278C527001C6B00 /* RegisterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */; };
+		574D3BC32278C667001C6B00 /* AddReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC22278C667001C6B00 /* AddReviewHandler.swift */; };
+		574D3BC52278C768001C6B00 /* RemoveReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */; };
+		574D3BC72278C7DD001C6B00 /* GetReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */; };
 		OBJ_375 /* a_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* a_.c */; };
 		OBJ_376 /* aes_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* aes_.c */; };
 		OBJ_377 /* ameth_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* ameth_lib.c */; };
@@ -576,6 +579,9 @@
 		574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutHandler.swift; sourceTree = "<group>"; };
 		574D3BAE2278C49F001C6B00 /* GetGoodByIdHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetGoodByIdHandler.swift; sourceTree = "<group>"; };
 		574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterHandler.swift; sourceTree = "<group>"; };
+		574D3BC22278C667001C6B00 /* AddReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewHandler.swift; sourceTree = "<group>"; };
+		574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewHandler.swift; sourceTree = "<group>"; };
+		574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReviewHandler.swift; sourceTree = "<group>"; };
 		"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = COpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_100 /* a_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_.c; sourceTree = "<group>"; };
 		OBJ_101 /* aes_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_.c; sourceTree = "<group>"; };
@@ -1030,6 +1036,9 @@
 				574D3BA82278C49F001C6B00 /* LoginHandler.swift */,
 				574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */,
 				574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */,
+				574D3BC22278C667001C6B00 /* AddReviewHandler.swift */,
+				574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */,
+				574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -1232,7 +1241,7 @@
 			path = ".build/checkouts/Perfect-CZlib-src/PerfectCZlib";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -1245,7 +1254,6 @@
 				OBJ_368 /* README.md */,
 				OBJ_369 /* README.zh_CN.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_57 /* include */ = {
@@ -1945,7 +1953,7 @@
 				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_355 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -2395,10 +2403,13 @@
 				574D3BB92278C505001C6B00 /* GetCatalogDataHandler.swift in Sources */,
 				574D3BC12278C527001C6B00 /* RegisterHandler.swift in Sources */,
 				574D3BBC2278C511001C6B00 /* ErrorHandler.swift in Sources */,
+				574D3BC32278C667001C6B00 /* AddReviewHandler.swift in Sources */,
+				574D3BC52278C768001C6B00 /* RemoveReviewHandler.swift in Sources */,
 				574D3BBF2278C522001C6B00 /* LoginHandler.swift in Sources */,
 				574D3BBA2278C50B001C6B00 /* AbstractHandler.swift in Sources */,
 				574D3BBD2278C51C001C6B00 /* GetGoodByIdHandler.swift in Sources */,
 				574D3BBB2278C50E001C6B00 /* ChangeUserDataHundler.swift in Sources */,
+				574D3BC72278C7DD001C6B00 /* GetReviewHandler.swift in Sources */,
 				574D3BC02278C525001C6B00 /* LogoutHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
