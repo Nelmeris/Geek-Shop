@@ -1,10 +1,6 @@
 //
 //  RequestFactory.swift
-<<<<<<< HEAD:Geek-Shop/App/BusinessLogic/Network/RequestFactory.swift
-//  Geek-Shop
-=======
 //  GeekShop
->>>>>>> remotes/origin/feature/lesson-3:GeekShop/App/BusinessLogic/Network/RequestFactory.swift
 //
 //  Created by Artem Kufaev on 23/04/2019.
 //  Copyright © 2019 Artem Kufaev. All rights reserved.
@@ -16,7 +12,7 @@ class RequestFactory {
     func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()
     }
-
+    
     lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpShouldSetCookies = false
@@ -24,14 +20,14 @@ class RequestFactory {
         let manager = SessionManager(configuration: configuration)
         return manager
     }()
-
+    
     let sessionQueue = DispatchQueue.global(qos: .utility)
-
+    
     func makeAuthRequestFatory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
     }
-
+    
     func makeShopRequestFactory() -> ShopRequestFactory {
         let errorParser = makeErrorParser()
         return Shop(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)

@@ -11,7 +11,7 @@ import PerfectHTTP
 class ErrorHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-
+    
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
@@ -25,7 +25,7 @@ extension ErrorHandler {
             "result": 0,
             "errorMessage": "Incorrect request"
         ]
-
+        
         do {
             try response.setBody(json: json)
         } catch {

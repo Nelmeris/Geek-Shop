@@ -1,10 +1,6 @@
 //
 //  DataRequest.swift
-<<<<<<< HEAD:Geek-Shop/Core/Network/DataRequest.swift
-//  Geek-Shop
-=======
 //  GeekShop
->>>>>>> remotes/origin/feature/lesson-3:GeekShop/Core/Network/DataRequest.swift
 //
 //  Created by Artem Kufaev on 23/04/2019.
 //  Copyright © 2019 Artem Kufaev. All rights reserved.
@@ -19,7 +15,7 @@ extension DataRequest {
         queue: DispatchQueue? = nil,
         completionHandler: @escaping (DataResponse<T>) -> Void)
         -> Self {
-            let responseSerializer = DataResponseSerializer<T> { _, response, data, error in
+            let responseSerializer = DataResponseSerializer<T> { request, response, data, error in
                 if let error = errorParser.parse(response: response, data: data, error: error) {
                     return .failure(error)
                 }
