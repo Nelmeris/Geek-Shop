@@ -11,7 +11,7 @@ import PerfectHTTP
 class LoginHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    
+
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
@@ -26,7 +26,7 @@ extension LoginHandler {
         }
         return true
     }
-    
+
     func process() {
         response.setHeader(.contentType, value: "application/json")
         guard dataValidation() else { return }
@@ -39,7 +39,7 @@ extension LoginHandler {
                 "user_lastname": "Doe"
             ]
         ]
-        
+
         do {
             try response.setBody(json: json)
         } catch {

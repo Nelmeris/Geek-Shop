@@ -16,7 +16,7 @@ class RequestFactory {
     func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()
     }
-    
+
     lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpShouldSetCookies = false
@@ -24,14 +24,14 @@ class RequestFactory {
         let manager = SessionManager(configuration: configuration)
         return manager
     }()
-    
+
     let sessionQueue = DispatchQueue.global(qos: .utility)
-    
+
     func makeAuthRequestFatory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
     }
-    
+
     func makeShopRequestFactory() -> ShopRequestFactory {
         let errorParser = makeErrorParser()
         return Shop(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)

@@ -41,4 +41,3 @@ try HTTPServer.launch(name: "localhost",
 					  routes: routes,
 					  responseFilters: [
 						(PerfectHTTPServer.HTTPFilter.contentCompression(data: [:]), HTTPFilterPriority.high)])
-

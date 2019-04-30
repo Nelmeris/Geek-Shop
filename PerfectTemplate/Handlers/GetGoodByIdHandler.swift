@@ -11,7 +11,7 @@ import PerfectHTTP
 class GetGoodByIdHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    
+
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
@@ -27,7 +27,7 @@ extension GetGoodByIdHandler {
         }
         return true
     }
-    
+
     func process() {
         response.setHeader(.contentType, value: "application/json")
         guard dataValidation() else { return }
@@ -37,7 +37,7 @@ extension GetGoodByIdHandler {
             "product_price": 123,
             "product_description": "Описание"
         ]
-        
+
         do {
             try response.setBody(json: json)
         } catch {
