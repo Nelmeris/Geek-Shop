@@ -239,11 +239,11 @@
 		57DB49DD226F3495000FCA53 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				57DB49E2226F37AD000FCA53 /* RequestFactory.swift */,
 				57DB49DE226F378F000FCA53 /* AuthRequestFactory.swift */,
 				57DB49E0226F379B000FCA53 /* Auth.swift */,
 				57C6294E2273894C00C6080F /* ShopRequestFactory.swift */,
 				57C6295022738A4400C6080F /* Shop.swift */,
-				57DB49E2226F37AD000FCA53 /* RequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
