@@ -11,7 +11,7 @@ import PerfectHTTP
 class LogoutHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    
+
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
@@ -26,14 +26,14 @@ extension LogoutHandler {
         }
         return true
     }
-    
+
     func process() {
         response.setHeader(.contentType, value: "application/json")
         guard dataValidation() else { return }
         let json: [String: Any] = [
             "result": 1
         ]
-        
+
         do {
             try response.setBody(json: json)
         } catch {

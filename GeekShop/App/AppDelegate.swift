@@ -1,10 +1,6 @@
 //
 //  AppDelegate.swift
-<<<<<<< HEAD:Geek-Shop/App/AppDelegate.swift
-//  Geek-Shop
-=======
 //  GeekShop
->>>>>>> remotes/origin/feature/lesson-3:GeekShop/App/AppDelegate.swift
 //
 //  Created by Artem Kufaev on 17/04/2019.
 //  Copyright © 2019 Artem Kufaev. All rights reserved.
@@ -44,6 +40,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-

@@ -1,10 +1,6 @@
 //
 //  AbstractRequestFactory.swift
-<<<<<<< HEAD:Geek-Shop/Core/Network/AbstractRequestFactory.swift
-//  Geek-Shop
-=======
 //  GeekShop
->>>>>>> remotes/origin/feature/lesson-3:GeekShop/Core/Network/AbstractRequestFactory.swift
 //
 //  Created by Artem Kufaev on 23/04/2019.
 //  Copyright © 2019 Artem Kufaev. All rights reserved.
@@ -16,7 +12,7 @@ protocol AbstractRequestFactory {
     var errorParser: AbstractErrorParser { get }
     var sessionManager: SessionManager { get }
     var queue: DispatchQueue? { get }
-    
+
     @discardableResult
     func request<T: Decodable>(
         request: URLRequestConvertible,
@@ -25,7 +21,7 @@ protocol AbstractRequestFactory {
 }
 
 extension AbstractRequestFactory {
-    
+
     @discardableResult
     public func request<T: Decodable>(
         request: URLRequestConvertible,

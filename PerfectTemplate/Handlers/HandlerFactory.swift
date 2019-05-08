@@ -22,6 +22,12 @@ class HandlerFactory {
             return GetCatalogDataHandler(request: request, response: response)
         case "/catalog.getGood":
             return GetGoodByIdHandler(request: request, response: response)
+        case "/review.add":
+            return AddReviewHandler(request: request, response: response)
+        case "/review.remove":
+            return RemoveReviewHandler(request: request, response: response)
+        case "/review.get":
+            return GetReviewHandler(request: request, response: response)
         default:
             return ErrorHandler(request: request, response: response)
         }

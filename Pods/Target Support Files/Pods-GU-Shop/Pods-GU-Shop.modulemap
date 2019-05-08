@@ -1,6 +1,0 @@
-framework module Pods_GU_Shop {
-  umbrella header "Pods-Geek-Shop-umbrella.h"
-
-  export *
-  module * { export * }
-}

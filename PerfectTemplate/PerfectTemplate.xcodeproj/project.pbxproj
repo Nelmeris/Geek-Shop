@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		570AEB512273F98700AB05FF /* GetGoodByIdHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570AEB4F2273F95B00AB05FF /* GetGoodByIdHandler.swift */; };
-		570AEB522273F98A00AB05FF /* GetCatalogDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570AEB4D2273F93F00AB05FF /* GetCatalogDataHandler.swift */; };
-		570AEB532273F98D00AB05FF /* ChangeUserDataHundler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570AEB4B2273F90400AB05FF /* ChangeUserDataHundler.swift */; };
-		570AEB542273F99000AB05FF /* RegisterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570AEB492273F8F000AB05FF /* RegisterHandler.swift */; };
-		570AEB552273F99300AB05FF /* LogoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570AEB472273F8E500AB05FF /* LogoutHandler.swift */; };
-		579916112273DEAC00792647 /* HandlerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5799160F2273DEA600792647 /* HandlerFactory.swift */; };
-		579916132273DEE600792647 /* AbstractHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579916122273DEE600792647 /* AbstractHandler.swift */; };
-		579916152273DEF300792647 /* LoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579916142273DEF300792647 /* LoginHandler.swift */; };
-		579916172273E0A100792647 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579916162273E0A100792647 /* ErrorHandler.swift */; };
+		574D3BB92278C505001C6B00 /* GetCatalogDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BA72278C49F001C6B00 /* GetCatalogDataHandler.swift */; };
+		574D3BBA2278C50B001C6B00 /* AbstractHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BAA2278C49F001C6B00 /* AbstractHandler.swift */; };
+		574D3BBB2278C50E001C6B00 /* ChangeUserDataHundler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BAC2278C49F001C6B00 /* ChangeUserDataHundler.swift */; };
+		574D3BBC2278C511001C6B00 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BAB2278C49F001C6B00 /* ErrorHandler.swift */; };
+		574D3BBD2278C51C001C6B00 /* GetGoodByIdHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BAE2278C49F001C6B00 /* GetGoodByIdHandler.swift */; };
+		574D3BBE2278C51F001C6B00 /* HandlerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BA92278C49F001C6B00 /* HandlerFactory.swift */; };
+		574D3BBF2278C522001C6B00 /* LoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BA82278C49F001C6B00 /* LoginHandler.swift */; };
+		574D3BC02278C525001C6B00 /* LogoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */; };
+		574D3BC12278C527001C6B00 /* RegisterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */; };
+		574D3BC32278C667001C6B00 /* AddReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC22278C667001C6B00 /* AddReviewHandler.swift */; };
+		574D3BC52278C768001C6B00 /* RemoveReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */; };
+		574D3BC72278C7DD001C6B00 /* GetReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */; };
 		OBJ_375 /* a_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* a_.c */; };
 		OBJ_376 /* aes_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* aes_.c */; };
 		OBJ_377 /* ameth_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* ameth_lib.c */; };
@@ -361,203 +364,203 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		579915F12273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B882278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectHTTPServer::PerfectHTTPServer";
 			remoteInfo = PerfectHTTPServer;
 		};
-		579915F22273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B892278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectCZlib::PerfectCZlib";
 			remoteInfo = PerfectCZlib;
 		};
-		579915F32273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B8A2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectHTTP::PerfectHTTP";
 			remoteInfo = PerfectHTTP;
 		};
-		579915F42273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B8B2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectNet::PerfectNet";
 			remoteInfo = PerfectNet;
 		};
-		579915F52273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B8C2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectCrypto::PerfectCrypto";
 			remoteInfo = PerfectCrypto;
 		};
-		579915F62273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B8D2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "COpenSSL::COpenSSL";
 			remoteInfo = COpenSSL;
 		};
-		579915F72273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B8E2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectThread::PerfectThread";
 			remoteInfo = PerfectThread;
 		};
-		579915F82273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B8F2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectLib::PerfectLib";
 			remoteInfo = PerfectLib;
 		};
-		579915F92273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B902278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "COpenSSL::COpenSSL";
 			remoteInfo = COpenSSL;
 		};
-		579915FA2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B912278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectThread::PerfectThread";
 			remoteInfo = PerfectThread;
 		};
-		579915FB2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B922278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectLib::PerfectLib";
 			remoteInfo = PerfectLib;
 		};
-		579915FC2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B932278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectCrypto::PerfectCrypto";
 			remoteInfo = PerfectCrypto;
 		};
-		579915FD2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B942278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "COpenSSL::COpenSSL";
 			remoteInfo = COpenSSL;
 		};
-		579915FE2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B952278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectThread::PerfectThread";
 			remoteInfo = PerfectThread;
 		};
-		579915FF2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B962278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectLib::PerfectLib";
 			remoteInfo = PerfectLib;
 		};
-		579916002273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B972278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectNet::PerfectNet";
 			remoteInfo = PerfectNet;
 		};
-		579916012273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B982278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectCrypto::PerfectCrypto";
 			remoteInfo = PerfectCrypto;
 		};
-		579916022273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B992278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "COpenSSL::COpenSSL";
 			remoteInfo = COpenSSL;
 		};
-		579916032273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B9A2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectThread::PerfectThread";
 			remoteInfo = PerfectThread;
 		};
-		579916042273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B9B2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectLib::PerfectLib";
 			remoteInfo = PerfectLib;
 		};
-		579916052273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B9C2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectHTTPServer::PerfectCHTTPParser";
 			remoteInfo = PerfectCHTTPParser;
 		};
-		579916062273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B9D2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectCZlib::PerfectCZlib";
 			remoteInfo = PerfectCZlib;
 		};
-		579916072273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B9E2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectHTTP::PerfectHTTP";
 			remoteInfo = PerfectHTTP;
 		};
-		579916082273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3B9F2278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectNet::PerfectNet";
 			remoteInfo = PerfectNet;
 		};
-		579916092273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3BA02278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectCrypto::PerfectCrypto";
 			remoteInfo = PerfectCrypto;
 		};
-		5799160A2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3BA12278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "COpenSSL::COpenSSL";
 			remoteInfo = COpenSSL;
 		};
-		5799160B2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3BA22278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectThread::PerfectThread";
 			remoteInfo = PerfectThread;
 		};
-		5799160C2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3BA32278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PerfectLib::PerfectLib";
 			remoteInfo = PerfectLib;
 		};
-		5799160D2273DE4A00792647 /* PBXContainerItemProxy */ = {
+		574D3BA42278C46D001C6B00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -567,15 +570,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		570AEB472273F8E500AB05FF /* LogoutHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutHandler.swift; sourceTree = "<group>"; };
-		570AEB492273F8F000AB05FF /* RegisterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHandler.swift; sourceTree = "<group>"; };
-		570AEB4B2273F90400AB05FF /* ChangeUserDataHundler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataHundler.swift; sourceTree = "<group>"; };
-		570AEB4D2273F93F00AB05FF /* GetCatalogDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogDataHandler.swift; sourceTree = "<group>"; };
-		570AEB4F2273F95B00AB05FF /* GetGoodByIdHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoodByIdHandler.swift; sourceTree = "<group>"; };
-		5799160F2273DEA600792647 /* HandlerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlerFactory.swift; sourceTree = "<group>"; };
-		579916122273DEE600792647 /* AbstractHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractHandler.swift; sourceTree = "<group>"; };
-		579916142273DEF300792647 /* LoginHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHandler.swift; sourceTree = "<group>"; };
-		579916162273E0A100792647 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		574D3BA72278C49F001C6B00 /* GetCatalogDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCatalogDataHandler.swift; sourceTree = "<group>"; };
+		574D3BA82278C49F001C6B00 /* LoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHandler.swift; sourceTree = "<group>"; };
+		574D3BA92278C49F001C6B00 /* HandlerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandlerFactory.swift; sourceTree = "<group>"; };
+		574D3BAA2278C49F001C6B00 /* AbstractHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractHandler.swift; sourceTree = "<group>"; };
+		574D3BAB2278C49F001C6B00 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		574D3BAC2278C49F001C6B00 /* ChangeUserDataHundler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeUserDataHundler.swift; sourceTree = "<group>"; };
+		574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutHandler.swift; sourceTree = "<group>"; };
+		574D3BAE2278C49F001C6B00 /* GetGoodByIdHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetGoodByIdHandler.swift; sourceTree = "<group>"; };
+		574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterHandler.swift; sourceTree = "<group>"; };
+		574D3BC22278C667001C6B00 /* AddReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewHandler.swift; sourceTree = "<group>"; };
+		574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewHandler.swift; sourceTree = "<group>"; };
+		574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReviewHandler.swift; sourceTree = "<group>"; };
 		"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = COpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_100 /* a_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_.c; sourceTree = "<group>"; };
 		OBJ_101 /* aes_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_.c; sourceTree = "<group>"; };
@@ -649,7 +655,7 @@
 		OBJ_167 /* e_gost_err.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_gost_err.c; sourceTree = "<group>"; };
 		OBJ_168 /* e_idea.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_idea.c; sourceTree = "<group>"; };
 		OBJ_169 /* e_null.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_null.c; sourceTree = "<group>"; };
-		OBJ_17 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/module.modulemap"; sourceTree = "<group>"; };
+		OBJ_17 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/module.modulemap"; sourceTree = "<group>"; };
 		OBJ_170 /* e_nuron.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_nuron.c; sourceTree = "<group>"; };
 		OBJ_171 /* e_nuron_err.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_nuron_err.c; sourceTree = "<group>"; };
 		OBJ_172 /* e_old.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = e_old.c; sourceTree = "<group>"; };
@@ -827,13 +833,13 @@
 		OBJ_331 /* xcbc_enc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = xcbc_enc.c; sourceTree = "<group>"; };
 		OBJ_332 /* xts128.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = xts128.c; sourceTree = "<group>"; };
 		OBJ_334 /* openssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = openssl.h; sourceTree = "<group>"; };
-		OBJ_335 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/module.modulemap"; sourceTree = "<group>"; };
-		OBJ_336 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-COpenSSL/Package.swift"; sourceTree = "<group>"; };
+		OBJ_335 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/module.modulemap"; sourceTree = "<group>"; };
+		OBJ_336 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-COpenSSL/Package.swift"; sourceTree = "<group>"; };
 		OBJ_339 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		OBJ_34 /* HTTPContentCompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPContentCompression.swift; sourceTree = "<group>"; };
 		OBJ_340 /* ThreadQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadQueue.swift; sourceTree = "<group>"; };
 		OBJ_341 /* Threading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
-		OBJ_342 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-Thread/Package.swift"; sourceTree = "<group>"; };
+		OBJ_342 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-Thread/Package.swift"; sourceTree = "<group>"; };
 		OBJ_345 /* Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bytes.swift; sourceTree = "<group>"; };
 		OBJ_346 /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
 		OBJ_347 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
@@ -844,7 +850,7 @@
 		OBJ_351 /* PerfectServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectServer.swift; sourceTree = "<group>"; };
 		OBJ_352 /* SysProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SysProcess.swift; sourceTree = "<group>"; };
 		OBJ_353 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		OBJ_354 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/PerfectLib/Package.swift"; sourceTree = "<group>"; };
+		OBJ_354 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/PerfectLib/Package.swift"; sourceTree = "<group>"; };
 		OBJ_36 /* HTTPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServer.swift; sourceTree = "<group>"; };
 		OBJ_366 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_367 /* LICENSE.zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.zh_CN; sourceTree = "<group>"; };
@@ -852,7 +858,7 @@
 		OBJ_369 /* README.zh_CN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.zh_CN.md; sourceTree = "<group>"; };
 		OBJ_37 /* HTTPServerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServerEx.swift; sourceTree = "<group>"; };
 		OBJ_38 /* HTTPServerExConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServerExConfig.swift; sourceTree = "<group>"; };
-		OBJ_39 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-HTTPServer/Package.swift"; sourceTree = "<group>"; };
+		OBJ_39 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-HTTPServer/Package.swift"; sourceTree = "<group>"; };
 		OBJ_42 /* adler32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = adler32.c; sourceTree = "<group>"; };
 		OBJ_43 /* compress.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = compress.c; sourceTree = "<group>"; };
 		OBJ_44 /* crc32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
@@ -874,8 +880,8 @@
 		OBJ_60 /* zlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zlib.h; sourceTree = "<group>"; };
 		OBJ_61 /* inflate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = inflate.h; sourceTree = "<group>"; };
 		OBJ_62 /* zconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zconf.h; sourceTree = "<group>"; };
-		OBJ_63 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/module.modulemap"; sourceTree = "<group>"; };
-		OBJ_64 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-CZlib-src/Package.swift"; sourceTree = "<group>"; };
+		OBJ_63 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/module.modulemap"; sourceTree = "<group>"; };
+		OBJ_64 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-CZlib-src/Package.swift"; sourceTree = "<group>"; };
 		OBJ_67 /* HTTPFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFilter.swift; sourceTree = "<group>"; };
 		OBJ_68 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
 		OBJ_69 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -886,7 +892,7 @@
 		OBJ_74 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		OBJ_75 /* StaticFileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticFileHandler.swift; sourceTree = "<group>"; };
 		OBJ_76 /* TypedRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedRoutes.swift; sourceTree = "<group>"; };
-		OBJ_77 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-HTTP/Package.swift"; sourceTree = "<group>"; };
+		OBJ_77 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-HTTP/Package.swift"; sourceTree = "<group>"; };
 		OBJ_80 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
 		OBJ_81 /* NetAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetAddress.swift; sourceTree = "<group>"; };
 		OBJ_82 /* NetEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetEvent.swift; sourceTree = "<group>"; };
@@ -894,7 +900,7 @@
 		OBJ_84 /* NetTCP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTCP.swift; sourceTree = "<group>"; };
 		OBJ_85 /* NetTCPSSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTCPSSL.swift; sourceTree = "<group>"; };
 		OBJ_86 /* NetUDP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetUDP.swift; sourceTree = "<group>"; };
-		OBJ_87 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-Net/Package.swift"; sourceTree = "<group>"; };
+		OBJ_87 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-Net/Package.swift"; sourceTree = "<group>"; };
 		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_90 /* Algorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
 		OBJ_91 /* ByteIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteIO.swift; sourceTree = "<group>"; };
@@ -903,7 +909,7 @@
 		OBJ_94 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		OBJ_95 /* OpenSSLInternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSSLInternal.swift; sourceTree = "<group>"; };
 		OBJ_96 /* PerfectCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectCrypto.swift; sourceTree = "<group>"; };
-		OBJ_97 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/GitKraken/geek-shop/PerfectTemplate/.build/checkouts/Perfect-Crypto/Package.swift"; sourceTree = "<group>"; };
+		OBJ_97 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Nelmeris/Desktop/untitled folder 2/PerfectTemplate/.build/checkouts/Perfect-Crypto/Package.swift"; sourceTree = "<group>"; };
 		"PerfectCZlib::PerfectCZlib::Product" /* PerfectCZlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PerfectCZlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PerfectCrypto::PerfectCrypto::Product" /* PerfectCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PerfectCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PerfectHTTP::PerfectHTTP::Product" /* PerfectHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PerfectHTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1018,18 +1024,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5799160E2273DE9A00792647 /* Handlers */ = {
+		574D3BA62278C48B001C6B00 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				5799160F2273DEA600792647 /* HandlerFactory.swift */,
-				579916122273DEE600792647 /* AbstractHandler.swift */,
-				579916162273E0A100792647 /* ErrorHandler.swift */,
-				579916142273DEF300792647 /* LoginHandler.swift */,
-				570AEB472273F8E500AB05FF /* LogoutHandler.swift */,
-				570AEB4B2273F90400AB05FF /* ChangeUserDataHundler.swift */,
-				570AEB492273F8F000AB05FF /* RegisterHandler.swift */,
-				570AEB4D2273F93F00AB05FF /* GetCatalogDataHandler.swift */,
-				570AEB4F2273F95B00AB05FF /* GetGoodByIdHandler.swift */,
+				574D3BA92278C49F001C6B00 /* HandlerFactory.swift */,
+				574D3BAA2278C49F001C6B00 /* AbstractHandler.swift */,
+				574D3BAB2278C49F001C6B00 /* ErrorHandler.swift */,
+				574D3BAC2278C49F001C6B00 /* ChangeUserDataHundler.swift */,
+				574D3BA72278C49F001C6B00 /* GetCatalogDataHandler.swift */,
+				574D3BAE2278C49F001C6B00 /* GetGoodByIdHandler.swift */,
+				574D3BA82278C49F001C6B00 /* LoginHandler.swift */,
+				574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */,
+				574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */,
+				574D3BC22278C667001C6B00 /* AddReviewHandler.swift */,
+				574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */,
+				574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -1044,9 +1053,9 @@
 		OBJ_11 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* PerfectHTTPServer 3.0.22 */,
+				OBJ_12 /* PerfectHTTPServer 3.0.23 */,
 				OBJ_40 /* PerfectCZlib 0.0.4 */,
-				OBJ_65 /* PerfectHTTP 3.2.5 */,
+				OBJ_65 /* PerfectHTTP 3.2.6 */,
 				OBJ_78 /* PerfectNet 3.2.2 */,
 				OBJ_88 /* PerfectCrypto 3.1.2 */,
 				OBJ_98 /* COpenSSL 3.2.1 */,
@@ -1056,14 +1065,14 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_12 /* PerfectHTTPServer 3.0.22 */ = {
+		OBJ_12 /* PerfectHTTPServer 3.0.23 */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_13 /* PerfectCHTTPParser */,
 				OBJ_18 /* PerfectHTTPServer */,
 				OBJ_39 /* Package.swift */,
 			);
-			name = "PerfectHTTPServer 3.0.22";
+			name = "PerfectHTTPServer 3.0.23";
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_13 /* PerfectCHTTPParser */ = {
@@ -1186,15 +1195,15 @@
 			isa = PBXGroup;
 			children = (
 				"PerfectTemplate::PerfectTemplate::Product" /* PerfectTemplate */,
-				"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */,
-				"PerfectLib::PerfectLib::Product" /* PerfectLib.framework */,
-				"PerfectCZlib::PerfectCZlib::Product" /* PerfectCZlib.framework */,
-				"PerfectThread::PerfectThread::Product" /* PerfectThread.framework */,
-				"PerfectHTTPServer::PerfectCHTTPParser::Product" /* PerfectCHTTPParser.framework */,
-				"PerfectCrypto::PerfectCrypto::Product" /* PerfectCrypto.framework */,
-				"PerfectHTTP::PerfectHTTP::Product" /* PerfectHTTP.framework */,
 				"PerfectHTTPServer::PerfectHTTPServer::Product" /* PerfectHTTPServer.framework */,
+				"PerfectThread::PerfectThread::Product" /* PerfectThread.framework */,
+				"PerfectLib::PerfectLib::Product" /* PerfectLib.framework */,
+				"PerfectHTTP::PerfectHTTP::Product" /* PerfectHTTP.framework */,
+				"PerfectCrypto::PerfectCrypto::Product" /* PerfectCrypto.framework */,
+				"PerfectHTTPServer::PerfectCHTTPParser::Product" /* PerfectCHTTPParser.framework */,
 				"PerfectNet::PerfectNet::Product" /* PerfectNet.framework */,
+				"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */,
+				"PerfectCZlib::PerfectCZlib::Product" /* PerfectCZlib.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -1260,13 +1269,13 @@
 			path = include;
 			sourceTree = "<group>";
 		};
-		OBJ_65 /* PerfectHTTP 3.2.5 */ = {
+		OBJ_65 /* PerfectHTTP 3.2.6 */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_66 /* PerfectHTTP */,
 				OBJ_77 /* Package.swift */,
 			);
-			name = "PerfectHTTP 3.2.5";
+			name = "PerfectHTTP 3.2.6";
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_66 /* PerfectHTTP */ = {
@@ -1290,7 +1299,7 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5799160E2273DE9A00792647 /* Handlers */,
+				574D3BA62278C48B001C6B00 /* Handlers */,
 				OBJ_8 /* PerfectTemplate */,
 			);
 			name = Sources;
@@ -2389,16 +2398,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				579916152273DEF300792647 /* LoginHandler.swift in Sources */,
-				570AEB542273F99000AB05FF /* RegisterHandler.swift in Sources */,
-				570AEB522273F98A00AB05FF /* GetCatalogDataHandler.swift in Sources */,
-				570AEB532273F98D00AB05FF /* ChangeUserDataHundler.swift in Sources */,
+				574D3BBE2278C51F001C6B00 /* HandlerFactory.swift in Sources */,
 				OBJ_806 /* main.swift in Sources */,
-				579916172273E0A100792647 /* ErrorHandler.swift in Sources */,
-				579916112273DEAC00792647 /* HandlerFactory.swift in Sources */,
-				570AEB512273F98700AB05FF /* GetGoodByIdHandler.swift in Sources */,
-				579916132273DEE600792647 /* AbstractHandler.swift in Sources */,
-				570AEB552273F99300AB05FF /* LogoutHandler.swift in Sources */,
+				574D3BB92278C505001C6B00 /* GetCatalogDataHandler.swift in Sources */,
+				574D3BC12278C527001C6B00 /* RegisterHandler.swift in Sources */,
+				574D3BBC2278C511001C6B00 /* ErrorHandler.swift in Sources */,
+				574D3BC32278C667001C6B00 /* AddReviewHandler.swift in Sources */,
+				574D3BC52278C768001C6B00 /* RemoveReviewHandler.swift in Sources */,
+				574D3BBF2278C522001C6B00 /* LoginHandler.swift in Sources */,
+				574D3BBA2278C50B001C6B00 /* AbstractHandler.swift in Sources */,
+				574D3BBD2278C51C001C6B00 /* GetGoodByIdHandler.swift in Sources */,
+				574D3BBB2278C50E001C6B00 /* ChangeUserDataHundler.swift in Sources */,
+				574D3BC72278C7DD001C6B00 /* GetReviewHandler.swift in Sources */,
+				574D3BC02278C525001C6B00 /* LogoutHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2434,147 +2446,147 @@
 		OBJ_665 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "COpenSSL::COpenSSL" /* COpenSSL */;
-			targetProxy = 579915F62273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B8D2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_666 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectThread::PerfectThread" /* PerfectThread */;
-			targetProxy = 579915F72273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B8E2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_668 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectLib::PerfectLib" /* PerfectLib */;
-			targetProxy = 579915F82273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B8F2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_697 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectNet::PerfectNet" /* PerfectNet */;
-			targetProxy = 579915F42273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B8B2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_699 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectCrypto::PerfectCrypto" /* PerfectCrypto */;
-			targetProxy = 579915FC2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B932278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_700 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "COpenSSL::COpenSSL" /* COpenSSL */;
-			targetProxy = 579915FD2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B942278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_701 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectThread::PerfectThread" /* PerfectThread */;
-			targetProxy = 579915FE2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B952278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_702 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectLib::PerfectLib" /* PerfectLib */;
-			targetProxy = 579915FF2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B962278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_741 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectCZlib::PerfectCZlib" /* PerfectCZlib */;
-			targetProxy = 579915F22273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B892278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_742 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectHTTP::PerfectHTTP" /* PerfectHTTP */;
-			targetProxy = 579915F32273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B8A2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_743 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectNet::PerfectNet" /* PerfectNet */;
-			targetProxy = 579916002273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B972278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_744 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectCrypto::PerfectCrypto" /* PerfectCrypto */;
-			targetProxy = 579916012273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B982278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_745 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "COpenSSL::COpenSSL" /* COpenSSL */;
-			targetProxy = 579916022273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B992278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_746 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectThread::PerfectThread" /* PerfectThread */;
-			targetProxy = 579916032273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B9A2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_747 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectLib::PerfectLib" /* PerfectLib */;
-			targetProxy = 579916042273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B9B2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_748 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectHTTPServer::PerfectCHTTPParser" /* PerfectCHTTPParser */;
-			targetProxy = 579916052273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B9C2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_791 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectCrypto::PerfectCrypto" /* PerfectCrypto */;
-			targetProxy = 579915F52273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B8C2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_792 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "COpenSSL::COpenSSL" /* COpenSSL */;
-			targetProxy = 579915F92273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B902278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_793 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectThread::PerfectThread" /* PerfectThread */;
-			targetProxy = 579915FA2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B912278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_794 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectLib::PerfectLib" /* PerfectLib */;
-			targetProxy = 579915FB2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B922278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_817 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectHTTPServer::PerfectHTTPServer" /* PerfectHTTPServer */;
-			targetProxy = 579915F12273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B882278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_818 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectCZlib::PerfectCZlib" /* PerfectCZlib */;
-			targetProxy = 579916062273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B9D2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_819 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectHTTP::PerfectHTTP" /* PerfectHTTP */;
-			targetProxy = 579916072273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B9E2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_820 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectNet::PerfectNet" /* PerfectNet */;
-			targetProxy = 579916082273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3B9F2278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_821 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectCrypto::PerfectCrypto" /* PerfectCrypto */;
-			targetProxy = 579916092273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3BA02278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_822 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "COpenSSL::COpenSSL" /* COpenSSL */;
-			targetProxy = 5799160A2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3BA12278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_823 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectThread::PerfectThread" /* PerfectThread */;
-			targetProxy = 5799160B2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3BA22278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_824 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectLib::PerfectLib" /* PerfectLib */;
-			targetProxy = 5799160C2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3BA32278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 		OBJ_825 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PerfectHTTPServer::PerfectCHTTPParser" /* PerfectCHTTPParser */;
-			targetProxy = 5799160D2273DE4A00792647 /* PBXContainerItemProxy */;
+			targetProxy = 574D3BA42278C46D001C6B00 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3205,15 +3217,19 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include",
 				);
 				INFOPLIST_FILE = PerfectTemplate.xcodeproj/PerfectTemplate_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/module.modulemap";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectTemplate;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -3231,15 +3247,19 @@
 					"$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include",
 				);
 				INFOPLIST_FILE = PerfectTemplate.xcodeproj/PerfectTemplate_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/module.modulemap";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = PerfectTemplate;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -3247,8 +3267,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3256,8 +3276,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

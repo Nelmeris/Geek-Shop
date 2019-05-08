@@ -1,24 +1,24 @@
 //
-//  GetGoodByIdHandler.swift
+//  GetReviewHandler.swift
 //  PerfectTemplate
 //
-//  Created by Artem Kufaev on 27/04/2019.
+//  Created by Artem Kufaev on 30/04/2019.
 //
 
 import Foundation
 import PerfectHTTP
 
-class GetGoodByIdHandler: AbstractHandler {
+class GetReviewHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-
+    
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
     }
 }
 
-extension GetGoodByIdHandler {
+extension GetReviewHandler {
     func dataValidation() -> Bool {
         guard request.param(name: "id_product") != nil
             else {
@@ -27,17 +27,31 @@ extension GetGoodByIdHandler {
         }
         return true
     }
-
+    
     func process() {
         response.setHeader(.contentType, value: "application/json")
         guard dataValidation() else { return }
-        let json: [String: Any] = [
-            "result": 1,
-            "product_name": "Название",
-            "product_price": 123,
-            "product_description": "Описание"
+        let json: [[String: Any]] = [
+            [
+                "user": [
+                    "id_user": 123,
+                    "user_login": "geekbrains",
+                    "user_name": "John",
+                    "user_lastname": "Doe"
+                ],
+                "text": "Some text"
+            ],
+            [
+                "user": [
+                    "id_user": 12,
+                    "user_login": "nelmeris",
+                    "user_name": "Alex",
+                    "user_lastname": "Morgan"
+                ],
+                "text": "Some text"
+            ]
         ]
-
+        
         do {
             try response.setBody(json: json)
         } catch {
