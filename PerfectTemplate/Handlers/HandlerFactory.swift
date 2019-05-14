@@ -8,6 +8,7 @@
 import PerfectHTTP
 
 class HandlerFactory {
+    
     public func handlerFor(request: HTTPRequest, response: HTTPResponse) -> AbstractHandler {
         switch request.path {
         case "/auth.login":
@@ -15,7 +16,7 @@ class HandlerFactory {
         case "/auth.register":
             return RegisterHandler(request: request, response: response)
         case "/user.changeData":
-            return ChangeUserDataHundler(request: request, response: response)
+            return ChangeUserDataHandler(request: request, response: response)
         case "/auth.logout":
             return LogoutHandler(request: request, response: response)
         case "/catalog.get":
@@ -28,8 +29,15 @@ class HandlerFactory {
             return RemoveReviewHandler(request: request, response: response)
         case "/review.get":
             return GetReviewHandler(request: request, response: response)
+        case "/basket.get":
+            return GetBasketHandler(request: request, response: response)
+        case "/basket.remove":
+            return RemoveFromBasketHandler(request: request, response: response)
+        case "/basket.add":
+            return AddToBasketHandler(request: request, response: response)
         default:
             return ErrorHandler(request: request, response: response)
         }
     }
+    
 }

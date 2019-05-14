@@ -25,28 +25,31 @@ class Auth: AbstractRequestFactory {
 }
 
 extension Auth: AuthRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
+    
+    func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResponse>) -> Void) {
         let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 
-    func logout(userId: Int, completionHandler: @escaping (DataResponse<LogoutResult>) -> Void) {
+    func logout(userId: Int, completionHandler: @escaping (DataResponse<ResultResponse>) -> Void) {
         let requestModel = Logout(baseUrl: baseUrl, userId: userId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 
-    func register(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
+    func register(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<RegisterResponse>) -> Void) {
         let requestModel = Register(baseUrl: baseUrl, userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 
-    func changeUserData(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<ChangeUserDataResult>) -> Void) {
+    func changeUserData(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<ResultResponse>) -> Void) {
         let requestModel = Register(baseUrl: baseUrl, userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
+    
 }
 
 extension Auth {
+    
     struct Login: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
@@ -127,4 +130,5 @@ extension Auth {
             ]
         }
     }
+    
 }

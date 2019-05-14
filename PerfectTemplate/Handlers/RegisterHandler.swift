@@ -19,6 +19,7 @@ class RegisterHandler: AbstractHandler {
 }
 
 extension RegisterHandler {
+    
     func dataValidation() -> Bool {
         guard request.param(name: "id_user") != nil &&
             request.param(name: "username") != nil &&
@@ -39,7 +40,7 @@ extension RegisterHandler {
         guard dataValidation() else { return }
         let json: [String: Any] = [
             "result": 1,
-            "userMessage": "Регистрация прошла успешно!"
+            "user_message": "Регистрация прошла успешно!"
         ]
 
         do {
@@ -49,4 +50,5 @@ extension RegisterHandler {
         }
         response.completed()
     }
+    
 }

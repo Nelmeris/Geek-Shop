@@ -1,14 +1,14 @@
 //
-//  RemoveReviewHandler.swift
+//  AddToBasketHandler.swift
 //  PerfectTemplate
 //
-//  Created by Artem Kufaev on 30/04/2019.
+//  Created by Artem Kufaev on 14/05/2019.
 //
 
 import Foundation
 import PerfectHTTP
 
-class RemoveReviewHandler: AbstractHandler {
+class AddToBasketHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
     
@@ -18,10 +18,11 @@ class RemoveReviewHandler: AbstractHandler {
     }
 }
 
-extension RemoveReviewHandler {
+extension AddToBasketHandler {
     
     func dataValidation() -> Bool {
-        guard request.param(name: "id_comment") != nil
+        guard request.param(name: "id_product") != nil,
+            request.param(name: "quantity") != nil
             else {
                 ErrorHandler(request: request, response: response).process()
                 return false

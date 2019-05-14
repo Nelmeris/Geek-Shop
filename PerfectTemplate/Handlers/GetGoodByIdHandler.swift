@@ -19,6 +19,7 @@ class GetGoodByIdHandler: AbstractHandler {
 }
 
 extension GetGoodByIdHandler {
+    
     func dataValidation() -> Bool {
         guard request.param(name: "id_product") != nil
             else {
@@ -45,4 +46,5 @@ extension GetGoodByIdHandler {
         }
         response.completed()
     }
+    
 }

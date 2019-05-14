@@ -1,5 +1,5 @@
 //
-//  ChangeUserDataResult.swift
+//  LoginResponse.swift
 //  GeekShop
 //
 //  Created by Artem Kufaev on 23/04/2019.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct ChangeUserDataResult: Codable {
+struct LoginResponse: Codable {
     let result: Int
+    let user: User
 }

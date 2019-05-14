@@ -35,6 +35,7 @@ extension Shop: ShopRequestFactory {
         let requestModel = ProductRequest(baseUrl: baseUrl, id: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
+    
 }
 
 extension Shop {

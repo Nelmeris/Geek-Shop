@@ -19,6 +19,7 @@ class LoginHandler: AbstractHandler {
 }
 
 extension LoginHandler {
+    
     func dataValidation() -> Bool {
         guard request.param(name: "username") != nil && request.param(name: "password") != nil else {
             ErrorHandler(request: request, response: response).process()
@@ -47,4 +48,5 @@ extension LoginHandler {
         }
         response.completed()
     }
+    
 }
