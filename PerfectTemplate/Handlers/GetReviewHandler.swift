@@ -19,6 +19,7 @@ class GetReviewHandler: AbstractHandler {
 }
 
 extension GetReviewHandler {
+    
     func dataValidation() -> Bool {
         guard request.param(name: "id_product") != nil
             else {
@@ -59,4 +60,5 @@ extension GetReviewHandler {
         }
         response.completed()
     }
+    
 }

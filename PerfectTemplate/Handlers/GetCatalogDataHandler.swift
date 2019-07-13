@@ -19,6 +19,7 @@ class GetCatalogDataHandler: AbstractHandler {
 }
 
 extension GetCatalogDataHandler {
+    
     func dataValidation() -> Bool {
         guard request.param(name: "page_number") != nil &&
             request.param(name: "id_category") != nil
@@ -52,4 +53,5 @@ extension GetCatalogDataHandler {
         }
         response.completed()
     }
+    
 }

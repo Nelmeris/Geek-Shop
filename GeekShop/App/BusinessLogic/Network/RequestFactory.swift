@@ -9,6 +9,7 @@
 import Alamofire
 
 class RequestFactory {
+    
     func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()
     }
@@ -32,4 +33,10 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return Shop(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
     }
+    
+    func makeBasketRequestFactory() -> BasketRequestFactory {
+        let errorParser = makeErrorParser()
+        return Basket(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+    }
+    
 }

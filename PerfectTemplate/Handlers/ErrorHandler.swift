@@ -19,6 +19,7 @@ class ErrorHandler: AbstractHandler {
 }
 
 extension ErrorHandler {
+    
     func process() {
         response.setHeader(.contentType, value: "application/json")
         let json: [String: Any] = [
@@ -33,4 +34,5 @@ extension ErrorHandler {
         }
         response.completed()
     }
+    
 }

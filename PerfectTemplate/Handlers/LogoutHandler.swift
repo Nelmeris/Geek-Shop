@@ -19,6 +19,7 @@ class LogoutHandler: AbstractHandler {
 }
 
 extension LogoutHandler {
+    
     func dataValidation() -> Bool {
         guard request.param(name: "id_user") != nil else {
             ErrorHandler(request: request, response: response).process()
@@ -41,4 +42,5 @@ extension LogoutHandler {
         }
         response.completed()
     }
+    
 }

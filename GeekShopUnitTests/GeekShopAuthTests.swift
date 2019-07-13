@@ -30,7 +30,8 @@ class GeekShopAuthTests: XCTestCase {
         auth.login(userName: "Somebody", password: "mypassword") { response in
             switch response.result {
             case .success: break
-            case .failure:
+            case .failure (let error):
+                print(error)
                 XCTFail()
             }
             expectation.fulfill()
@@ -43,7 +44,8 @@ class GeekShopAuthTests: XCTestCase {
         auth.logout(userId: 123) { response in
             switch response.result {
             case .success: break
-            case .failure:
+            case .failure (let error):
+                print(error)
                 XCTFail()
             }
             expectation.fulfill()
@@ -56,7 +58,8 @@ class GeekShopAuthTests: XCTestCase {
         auth.register(userId: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success: break
-            case .failure:
+            case .failure (let error):
+                print(error)
                 XCTFail()
             }
             expectation.fulfill()
@@ -69,7 +72,8 @@ class GeekShopAuthTests: XCTestCase {
         auth.changeUserData(userId: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success: break
-            case .failure:
+            case .failure (let error):
+                print(error)
                 XCTFail()
             }
             expectation.fulfill()

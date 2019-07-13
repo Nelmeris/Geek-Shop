@@ -9,8 +9,8 @@
 import Alamofire
 
 protocol AuthRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void)
-    func logout(userId: Int, completionHandler: @escaping (DataResponse<LogoutResult>) -> Void)
-    func register(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<RegisterResult>) -> Void)
-    func changeUserData(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<ChangeUserDataResult>) -> Void)
+    func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResponse>) -> Void)
+    func logout(userId: Int, completionHandler: @escaping (DataResponse<ResultResponse>) -> Void)
+    func register(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<RegisterResponse>) -> Void)
+    func changeUserData(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<ResultResponse>) -> Void)
 }

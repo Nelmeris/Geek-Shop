@@ -1,5 +1,5 @@
 //
-//  RegisterResult.swift
+//  RegisterResponse.swift
 //  GeekShop
 //
 //  Created by Artem Kufaev on 23/04/2019.
@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct RegisterResult: Codable {
+struct RegisterResponse: Codable {
     let result: Int
     let userMessage: String
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+        case userMessage = "user_message"
+    }
 }
