@@ -14,6 +14,11 @@
 		570B6799228AE69A00CA814F /* ResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B6798228AE69A00CA814F /* ResultResponse.swift */; };
 		570B679C228AE7A200CA814F /* GetBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B679B228AE7A200CA814F /* GetBasketResponse.swift */; };
 		570B679E228AE7FD00CA814F /* BasketProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B679D228AE7FD00CA814F /* BasketProduct.swift */; };
+		5724F67B22DB8BEB002360EE /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724F67A22DB8BEB002360EE /* UITextViewPlaceholder.swift */; };
+		576F036C22D9C69A004015F9 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576F036B22D9C69A004015F9 /* Authorization.storyboard */; };
+		576F036E22D9C6F8004015F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F036D22D9C6F8004015F9 /* LoginViewController.swift */; };
+		576F037022D9C704004015F9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F036F22D9C704004015F9 /* RegisterViewController.swift */; };
+		576F037222D9C71B004015F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F037122D9C71B004015F9 /* ProfileViewController.swift */; };
 		57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57871FA822675B090052E0A4 /* AppDelegate.swift */; };
 		57871FB022675B0B0052E0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57871FAF22675B0B0052E0A4 /* Assets.xcassets */; };
 		57871FB322675B0B0052E0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57871FB122675B0B0052E0A4 /* LaunchScreen.storyboard */; };
@@ -59,7 +64,12 @@
 		570B6798228AE69A00CA814F /* ResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultResponse.swift; sourceTree = "<group>"; };
 		570B679B228AE7A200CA814F /* GetBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResponse.swift; sourceTree = "<group>"; };
 		570B679D228AE7FD00CA814F /* BasketProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProduct.swift; sourceTree = "<group>"; };
+		5724F67A22DB8BEB002360EE /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
 		5733BC76D9D89E574B953768 /* Pods_GeekShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		576F036B22D9C69A004015F9 /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		576F036D22D9C6F8004015F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		576F036F22D9C704004015F9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		576F037122D9C71B004015F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		57871FA522675B090052E0A4 /* GeekShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57871FA822675B090052E0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57871FAF22675B0B0052E0A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,7 +176,6 @@
 				57871FA822675B090052E0A4 /* AppDelegate.swift */,
 				57871FBE22675E960052E0A4 /* BusinessLogic */,
 				57871FBD22675E910052E0A4 /* Entity */,
-				57871FBC22675E8B0052E0A4 /* Assembly */,
 				57871FBB22675E860052E0A4 /* Flows */,
 			);
 			path = App;
@@ -175,15 +184,12 @@
 		57871FBB22675E860052E0A4 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				576F036B22D9C69A004015F9 /* Authorization.storyboard */,
+				576F036D22D9C6F8004015F9 /* LoginViewController.swift */,
+				576F036F22D9C704004015F9 /* RegisterViewController.swift */,
+				576F037122D9C71B004015F9 /* ProfileViewController.swift */,
 			);
 			path = Flows;
-			sourceTree = "<group>";
-		};
-		57871FBC22675E8B0052E0A4 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		57871FBD22675E910052E0A4 /* Entity */ = {
@@ -210,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				57DB49D2226F2F9E000FCA53 /* Network */,
+				5724F67A22DB8BEB002360EE /* UITextViewPlaceholder.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -385,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576F036C22D9C69A004015F9 /* Authorization.storyboard in Resources */,
 				57871FB322675B0B0052E0A4 /* LaunchScreen.storyboard in Resources */,
 				57871FB022675B0B0052E0A4 /* Assets.xcassets in Resources */,
 			);
@@ -501,13 +509,17 @@
 				57C629572273936600C6080F /* CatalogProduct.swift in Sources */,
 				570B6793228ADF7800CA814F /* BasketRequestFactory.swift in Sources */,
 				57C6295122738A4400C6080F /* Shop.swift in Sources */,
+				576F037222D9C71B004015F9 /* ProfileViewController.swift in Sources */,
 				570B6791228ADF6C00CA814F /* Basket.swift in Sources */,
 				57DB49E5226F37E2000FCA53 /* LoginResponse.swift in Sources */,
 				570B6799228AE69A00CA814F /* ResultResponse.swift in Sources */,
 				57DB49DA226F310B000FCA53 /* RequestRouter.swift in Sources */,
+				576F036E22D9C6F8004015F9 /* LoginViewController.swift in Sources */,
 				57DB49D6226F2FF5000FCA53 /* ErrorParser.swift in Sources */,
 				57DB49E9226F41C5000FCA53 /* RegisterResponse.swift in Sources */,
 				57DB49DF226F378F000FCA53 /* AuthRequestFactory.swift in Sources */,
+				576F037022D9C704004015F9 /* RegisterViewController.swift in Sources */,
+				5724F67B22DB8BEB002360EE /* UITextViewPlaceholder.swift in Sources */,
 				57DB49D4226F2FCA000FCA53 /* AbstractErrorParser.swift in Sources */,
 				57C6295522738C2C00C6080F /* Product.swift in Sources */,
 				57DB49DC226F3163000FCA53 /* AbstractRequestFactory.swift in Sources */,

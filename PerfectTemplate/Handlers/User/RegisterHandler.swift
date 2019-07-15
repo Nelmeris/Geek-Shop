@@ -21,8 +21,7 @@ class RegisterHandler: AbstractHandler {
 extension RegisterHandler {
     
     func dataValidation() -> Bool {
-        guard request.param(name: "id_user") != nil &&
-            request.param(name: "username") != nil &&
+        guard request.param(name: "username") != nil &&
             request.param(name: "password") != nil &&
             request.param(name: "email") != nil &&
             request.param(name: "gender") != nil &&

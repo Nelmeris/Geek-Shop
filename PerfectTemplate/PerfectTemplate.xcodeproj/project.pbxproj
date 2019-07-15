@@ -1033,6 +1033,10 @@
 		570B679F228AEAAF00CA814F /* User */ = {
 			isa = PBXGroup;
 			children = (
+				574D3BAC2278C49F001C6B00 /* ChangeUserDataHandler.swift */,
+				574D3BA82278C49F001C6B00 /* LoginHandler.swift */,
+				574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */,
+				574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1040,6 +1044,9 @@
 		570B67A0228AEABF00CA814F /* Basket */ = {
 			isa = PBXGroup;
 			children = (
+				570B678E228ADE1300CA814F /* GetBasketHandler.swift */,
+				570B6794228AE3A000CA814F /* RemoveFromBasketHandler.swift */,
+				570B678A228ADDF500CA814F /* AddToBasketHandler.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -1047,6 +1054,8 @@
 		570B67A1228AEAC400CA814F /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				574D3BA72278C49F001C6B00 /* GetCatalogDataHandler.swift */,
+				574D3BAE2278C49F001C6B00 /* GetGoodByIdHandler.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -1054,26 +1063,25 @@
 		574D3BA62278C48B001C6B00 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				576F037422D9C7AD004015F9 /* Review */,
 				570B67A1228AEAC400CA814F /* Catalog */,
 				570B67A0228AEABF00CA814F /* Basket */,
 				570B679F228AEAAF00CA814F /* User */,
 				574D3BA92278C49F001C6B00 /* HandlerFactory.swift */,
 				574D3BAA2278C49F001C6B00 /* AbstractHandler.swift */,
 				574D3BAB2278C49F001C6B00 /* ErrorHandler.swift */,
-				574D3BAC2278C49F001C6B00 /* ChangeUserDataHandler.swift */,
-				574D3BA72278C49F001C6B00 /* GetCatalogDataHandler.swift */,
-				574D3BAE2278C49F001C6B00 /* GetGoodByIdHandler.swift */,
-				574D3BA82278C49F001C6B00 /* LoginHandler.swift */,
-				574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */,
-				574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */,
-				574D3BC22278C667001C6B00 /* AddReviewHandler.swift */,
-				574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */,
-				574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */,
-				570B678A228ADDF500CA814F /* AddToBasketHandler.swift */,
-				570B6794228AE3A000CA814F /* RemoveFromBasketHandler.swift */,
-				570B678E228ADE1300CA814F /* GetBasketHandler.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		576F037422D9C7AD004015F9 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				574D3BC22278C667001C6B00 /* AddReviewHandler.swift */,
+				574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */,
+				574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
