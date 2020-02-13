@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06595128A77ED2BB027B25A6 /* Pods_GeekShopUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B01E7A1974F9F07CFAE0F /* Pods_GeekShopUnitTests.framework */; };
 		570B6791228ADF6C00CA814F /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B6790228ADF6C00CA814F /* Basket.swift */; };
 		570B6793228ADF7800CA814F /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B6792228ADF7800CA814F /* BasketRequestFactory.swift */; };
 		570B6797228AE5E600CA814F /* GeekShopBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B6796228AE5E600CA814F /* GeekShopBasketTests.swift */; };
@@ -15,13 +14,22 @@
 		570B679C228AE7A200CA814F /* GetBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B679B228AE7A200CA814F /* GetBasketResponse.swift */; };
 		570B679E228AE7FD00CA814F /* BasketProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B679D228AE7FD00CA814F /* BasketProduct.swift */; };
 		5724F67B22DB8BEB002360EE /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724F67A22DB8BEB002360EE /* UITextViewPlaceholder.swift */; };
-		576F036C22D9C69A004015F9 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576F036B22D9C69A004015F9 /* Authorization.storyboard */; };
-		576F036E22D9C6F8004015F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F036D22D9C6F8004015F9 /* LoginViewController.swift */; };
 		576F037022D9C704004015F9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F036F22D9C704004015F9 /* RegisterViewController.swift */; };
-		576F037222D9C71B004015F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F037122D9C71B004015F9 /* ProfileViewController.swift */; };
 		57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57871FA822675B090052E0A4 /* AppDelegate.swift */; };
 		57871FB022675B0B0052E0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57871FAF22675B0B0052E0A4 /* Assets.xcassets */; };
 		57871FB322675B0B0052E0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57871FB122675B0B0052E0A4 /* LaunchScreen.storyboard */; };
+		578C337E23F4276700897182 /* CreditCardField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C337D23F4276700897182 /* CreditCardField.swift */; };
+		578C338023F42E6F00897182 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C337F23F42E6F00897182 /* RegisterView.swift */; };
+		578C338423F44F0900897182 /* ScrollableKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C338323F44F0900897182 /* ScrollableKeyboard.swift */; };
+		578C338A23F4545C00897182 /* GenderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C338923F4545C00897182 /* GenderPicker.swift */; };
+		578C338C23F4561000897182 /* TapGestureToHideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C338B23F4561000897182 /* TapGestureToHideKeyboard.swift */; };
+		578C338F23F462F000897182 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C338E23F462F000897182 /* LoginViewController.swift */; };
+		578C339123F4634600897182 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339023F4634600897182 /* LoginView.swift */; };
+		578C339423F4659000897182 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339323F4659000897182 /* AuthorizationViewController.swift */; };
+		578C339723F4663D00897182 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339623F4663D00897182 /* AuthorizationView.swift */; };
+		578C339B23F4680F00897182 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339A23F4680F00897182 /* BaseRouter.swift */; };
+		578C339D23F4682900897182 /* AuthorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339C23F4682900897182 /* AuthorizationRouter.swift */; };
+		578C339F23F4683900897182 /* AppStartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339E23F4683900897182 /* AppStartManager.swift */; };
 		57C6294B2273853200C6080F /* GeekShopAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6294A2273853200C6080F /* GeekShopAuthTests.swift */; };
 		57C6294D2273890800C6080F /* GeekShopCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6294C2273890800C6080F /* GeekShopCatalogTests.swift */; };
 		57C6294F2273894C00C6080F /* ShopRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6294E2273894C00C6080F /* ShopRequestFactory.swift */; };
@@ -39,7 +47,10 @@
 		57DB49E5226F37E2000FCA53 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E4226F37E2000FCA53 /* LoginResponse.swift */; };
 		57DB49E7226F37ED000FCA53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E6226F37ED000FCA53 /* User.swift */; };
 		57DB49E9226F41C5000FCA53 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB49E8226F41C5000FCA53 /* RegisterResponse.swift */; };
-		7948A390CDDD59027178F8DE /* Pods_GeekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F3D679EFD7083BB89A7962 /* Pods_GeekShop.framework */; };
+		57F688D023F524DD00ECF27D /* Pods_GeekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCFE3E41F872718AD898553 /* Pods_GeekShop.framework */; };
+		57F688D123F524DD00ECF27D /* Pods_GeekShop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCFE3E41F872718AD898553 /* Pods_GeekShop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57F688D423F5283400ECF27D /* AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F688D323F5283400ECF27D /* AlertDelegate.swift */; };
+		F21008C9A6FDA44A37836DFE /* libPods-GeekShopUnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A73A945C30A217B63470E9A /* libPods-GeekShopUnitTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,12 +63,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		57F688D223F524DD00ECF27D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				57F688D123F524DD00ECF27D /* Pods_GeekShop.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1A0E3774A515F112747ACED2 /* Pods-GeekShopUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2EEB3DC7E61D47CE0AFBC52A /* Pods-Geek-ShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geek-ShopTests.debug.xcconfig"; path = "Target Support Files/Pods-Geek-ShopTests/Pods-Geek-ShopTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3C7A4F608D4060E4221A2C60 /* Pods_Geek_ShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geek_ShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		552326635806B0B97705C5BB /* Pods-GU-Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GU-Shop.debug.xcconfig"; path = "Target Support Files/Pods-GU-Shop/Pods-GU-Shop.debug.xcconfig"; sourceTree = "<group>"; };
-		56F3D679EFD7083BB89A7962 /* Pods_GeekShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		384087D43BBB4467CEC2535E /* Pods-GeekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.debug.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.debug.xcconfig"; sourceTree = "<group>"; };
 		570B6790228ADF6C00CA814F /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		570B6792228ADF7800CA814F /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
 		570B6796228AE5E600CA814F /* GeekShopBasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekShopBasketTests.swift; sourceTree = "<group>"; };
@@ -65,16 +86,25 @@
 		570B679B228AE7A200CA814F /* GetBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResponse.swift; sourceTree = "<group>"; };
 		570B679D228AE7FD00CA814F /* BasketProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProduct.swift; sourceTree = "<group>"; };
 		5724F67A22DB8BEB002360EE /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
-		5733BC76D9D89E574B953768 /* Pods_GeekShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		576F036B22D9C69A004015F9 /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
-		576F036D22D9C6F8004015F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		576F036F22D9C704004015F9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		576F037122D9C71B004015F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		57871FA522675B090052E0A4 /* GeekShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57871FA822675B090052E0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57871FAF22675B0B0052E0A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57871FB222675B0B0052E0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57871FB422675B0B0052E0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		578C337D23F4276700897182 /* CreditCardField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardField.swift; sourceTree = "<group>"; };
+		578C337F23F42E6F00897182 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		578C338323F44F0900897182 /* ScrollableKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableKeyboard.swift; sourceTree = "<group>"; };
+		578C338923F4545C00897182 /* GenderPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPicker.swift; sourceTree = "<group>"; };
+		578C338B23F4561000897182 /* TapGestureToHideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureToHideKeyboard.swift; sourceTree = "<group>"; };
+		578C338E23F462F000897182 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		578C339023F4634600897182 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		578C339323F4659000897182 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		578C339623F4663D00897182 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		578C339A23F4680F00897182 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		578C339C23F4682900897182 /* AuthorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouter.swift; sourceTree = "<group>"; };
+		578C339E23F4683900897182 /* AppStartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartManager.swift; sourceTree = "<group>"; };
+		578C33A023F46DDA00897182 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C629402273850100C6080F /* GeekShopUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeekShopUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C629442273850100C6080F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57C6294A2273853200C6080F /* GeekShopAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekShopAuthTests.swift; sourceTree = "<group>"; };
@@ -94,18 +124,14 @@
 		57DB49E4226F37E2000FCA53 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		57DB49E6226F37ED000FCA53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		57DB49E8226F41C5000FCA53 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
-		57FAD856D54FA9D9FF55B58F /* Pods_Geek_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geek_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61D9150C4DC934F40950A222 /* Pods-GeekShopUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopUnitTests.release.xcconfig"; path = "Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests.release.xcconfig"; sourceTree = "<group>"; };
-		65AAE8DB460AA639C5BA46D8 /* Pods_GU_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GU_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CAEB444156FD12AFA5229AB /* Pods-Geek-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geek-Shop.release.xcconfig"; path = "Target Support Files/Pods-Geek-Shop/Pods-Geek-Shop.release.xcconfig"; sourceTree = "<group>"; };
-		6D5EB7D66DFF255A37125F3F /* Pods-GeekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.debug.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.debug.xcconfig"; sourceTree = "<group>"; };
-		B07B01E7A1974F9F07CFAE0F /* Pods_GeekShopUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShopUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C616476389069EF4596673D9 /* Pods-GeekShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopTests.release.xcconfig"; path = "Target Support Files/Pods-GeekShopTests/Pods-GeekShopTests.release.xcconfig"; sourceTree = "<group>"; };
-		D1EA3FD6DA625A15DC7010A8 /* Pods-GeekShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.release.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.release.xcconfig"; sourceTree = "<group>"; };
-		DCB8E88543F85405F56F6A9B /* Pods-Geek-ShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geek-ShopTests.release.xcconfig"; path = "Target Support Files/Pods-Geek-ShopTests/Pods-Geek-ShopTests.release.xcconfig"; sourceTree = "<group>"; };
-		EB36AAE7698ADF735BBC851E /* Pods-GU-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GU-Shop.release.xcconfig"; path = "Target Support Files/Pods-GU-Shop/Pods-GU-Shop.release.xcconfig"; sourceTree = "<group>"; };
-		F898874F3EF79A637205BA8C /* Pods-GeekShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopTests.debug.xcconfig"; path = "Target Support Files/Pods-GeekShopTests/Pods-GeekShopTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FA71138EA78A10D5857D555F /* Pods-Geek-Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geek-Shop.debug.xcconfig"; path = "Target Support Files/Pods-Geek-Shop/Pods-Geek-Shop.debug.xcconfig"; sourceTree = "<group>"; };
+		57F688C923F524C300ECF27D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F688CD23F524C700ECF27D /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F688D323F5283400ECF27D /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
+		62C3873B4EAD58530316CBC6 /* Pods-GeekShopUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73998769596CA2419D7EEE6B /* Pods-GeekShopUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopUnitTests.release.xcconfig"; path = "Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A73A945C30A217B63470E9A /* libPods-GeekShopUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeekShopUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCFE3E41F872718AD898553 /* Pods_GeekShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A113277601C2C392B02714BF /* Pods-GeekShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.release.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7948A390CDDD59027178F8DE /* Pods_GeekShop.framework in Frameworks */,
+				57F688D023F524DD00ECF27D /* Pods_GeekShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06595128A77ED2BB027B25A6 /* Pods_GeekShopUnitTests.framework in Frameworks */,
+				F21008C9A6FDA44A37836DFE /* libPods-GeekShopUnitTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +172,7 @@
 				57C629412273850100C6080F /* GeekShopUnitTests */,
 				57871FA622675B090052E0A4 /* Products */,
 				AAE1AEB4C45A0453DBB0173C /* Pods */,
-				BE64A779A15558484FB58E5D /* Frameworks */,
+				72AC838FAD3526BDFCEF0290 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,10 +210,10 @@
 		57871FBB22675E860052E0A4 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				576F036B22D9C69A004015F9 /* Authorization.storyboard */,
-				576F036D22D9C6F8004015F9 /* LoginViewController.swift */,
-				576F036F22D9C704004015F9 /* RegisterViewController.swift */,
-				576F037122D9C71B004015F9 /* ProfileViewController.swift */,
+				578C339223F4658300897182 /* Authorization */,
+				578C338D23F462E400897182 /* Login */,
+				578C338623F4543400897182 /* Register */,
+				578C338523F4542700897182 /* CustomViews */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -207,6 +233,8 @@
 		57871FBE22675E960052E0A4 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				578C339E23F4683900897182 /* AppStartManager.swift */,
+				578C339523F465CB00897182 /* Routers */,
 				57DB49DD226F3495000FCA53 /* Network */,
 			);
 			path = BusinessLogic;
@@ -215,8 +243,9 @@
 		57871FBF22675EA40052E0A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				578C339923F4680300897182 /* Router */,
+				578C339823F467FD00897182 /* UI */,
 				57DB49D2226F2F9E000FCA53 /* Network */,
-				5724F67A22DB8BEB002360EE /* UITextViewPlaceholder.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -236,6 +265,85 @@
 				57871FB422675B0B0052E0A4 /* Info.plist */,
 			);
 			path = Environments;
+			sourceTree = "<group>";
+		};
+		578C338523F4542700897182 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				578C337D23F4276700897182 /* CreditCardField.swift */,
+				578C338923F4545C00897182 /* GenderPicker.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		578C338623F4543400897182 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				578C338723F4543D00897182 /* Controller */,
+				578C338823F4544400897182 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		578C338723F4543D00897182 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				576F036F22D9C704004015F9 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		578C338823F4544400897182 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				578C337F23F42E6F00897182 /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		578C338D23F462E400897182 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				578C338E23F462F000897182 /* LoginViewController.swift */,
+				578C339023F4634600897182 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		578C339223F4658300897182 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				578C339323F4659000897182 /* AuthorizationViewController.swift */,
+				578C339623F4663D00897182 /* AuthorizationView.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		578C339523F465CB00897182 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				578C339C23F4682900897182 /* AuthorizationRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		578C339823F467FD00897182 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5724F67A22DB8BEB002360EE /* UITextViewPlaceholder.swift */,
+				578C338323F44F0900897182 /* ScrollableKeyboard.swift */,
+				578C338B23F4561000897182 /* TapGestureToHideKeyboard.swift */,
+				57F688D323F5283400ECF27D /* AlertDelegate.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		578C339923F4680300897182 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				578C339A23F4680F00897182 /* BaseRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		57C629412273850100C6080F /* GeekShopUnitTests */ = {
@@ -275,36 +383,27 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		72AC838FAD3526BDFCEF0290 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57F688CD23F524C700ECF27D /* RxSwift.framework */,
+				57F688C923F524C300ECF27D /* Alamofire.framework */,
+				578C33A023F46DDA00897182 /* Alamofire.framework */,
+				7BCFE3E41F872718AD898553 /* Pods_GeekShop.framework */,
+				7A73A945C30A217B63470E9A /* libPods-GeekShopUnitTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AAE1AEB4C45A0453DBB0173C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				552326635806B0B97705C5BB /* Pods-GU-Shop.debug.xcconfig */,
-				EB36AAE7698ADF735BBC851E /* Pods-GU-Shop.release.xcconfig */,
-				FA71138EA78A10D5857D555F /* Pods-Geek-Shop.debug.xcconfig */,
-				6CAEB444156FD12AFA5229AB /* Pods-Geek-Shop.release.xcconfig */,
-				2EEB3DC7E61D47CE0AFBC52A /* Pods-Geek-ShopTests.debug.xcconfig */,
-				DCB8E88543F85405F56F6A9B /* Pods-Geek-ShopTests.release.xcconfig */,
-				6D5EB7D66DFF255A37125F3F /* Pods-GeekShop.debug.xcconfig */,
-				D1EA3FD6DA625A15DC7010A8 /* Pods-GeekShop.release.xcconfig */,
-				F898874F3EF79A637205BA8C /* Pods-GeekShopTests.debug.xcconfig */,
-				C616476389069EF4596673D9 /* Pods-GeekShopTests.release.xcconfig */,
-				1A0E3774A515F112747ACED2 /* Pods-GeekShopUnitTests.debug.xcconfig */,
-				61D9150C4DC934F40950A222 /* Pods-GeekShopUnitTests.release.xcconfig */,
+				384087D43BBB4467CEC2535E /* Pods-GeekShop.debug.xcconfig */,
+				A113277601C2C392B02714BF /* Pods-GeekShop.release.xcconfig */,
+				62C3873B4EAD58530316CBC6 /* Pods-GeekShopUnitTests.debug.xcconfig */,
+				73998769596CA2419D7EEE6B /* Pods-GeekShopUnitTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		BE64A779A15558484FB58E5D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				65AAE8DB460AA639C5BA46D8 /* Pods_GU_Shop.framework */,
-				57FAD856D54FA9D9FF55B58F /* Pods_Geek_Shop.framework */,
-				3C7A4F608D4060E4221A2C60 /* Pods_Geek_ShopTests.framework */,
-				56F3D679EFD7083BB89A7962 /* Pods_GeekShop.framework */,
-				5733BC76D9D89E574B953768 /* Pods_GeekShopTests.framework */,
-				B07B01E7A1974F9F07CFAE0F /* Pods_GeekShopUnitTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,11 +413,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57871FB722675B0B0052E0A4 /* Build configuration list for PBXNativeTarget "GeekShop" */;
 			buildPhases = (
-				98BE9A24DC5475BF349CEC3F /* [CP] Check Pods Manifest.lock */,
+				78DC2E5A730478BD3D4184DE /* [CP] Check Pods Manifest.lock */,
 				57871FA122675B090052E0A4 /* Sources */,
 				57871FA222675B090052E0A4 /* Frameworks */,
 				57871FA322675B090052E0A4 /* Resources */,
-				F6272037FC5934BCBF4F61AE /* [CP] Embed Pods Frameworks */,
+				256D6FFD7C195BE9E0838F2C /* [CP] Embed Pods Frameworks */,
+				57F688D223F524DD00ECF27D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,11 +433,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57C629472273850100C6080F /* Build configuration list for PBXNativeTarget "GeekShopUnitTests" */;
 			buildPhases = (
-				2DCA5F8FB8A619FCE81F0313 /* [CP] Check Pods Manifest.lock */,
+				B2A9EC0E6169AFDD9E32BB7A /* [CP] Check Pods Manifest.lock */,
 				57C6293C2273850100C6080F /* Sources */,
 				57C6293D2273850100C6080F /* Frameworks */,
 				57C6293E2273850100C6080F /* Resources */,
-				49AB7D125F0F8CA2AF906EB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -392,7 +491,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576F036C22D9C69A004015F9 /* Authorization.storyboard in Resources */,
 				57871FB322675B0B0052E0A4 /* LaunchScreen.storyboard in Resources */,
 				57871FB022675B0B0052E0A4 /* Assets.xcassets in Resources */,
 			);
@@ -408,51 +506,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2DCA5F8FB8A619FCE81F0313 /* [CP] Check Pods Manifest.lock */ = {
+		256D6FFD7C195BE9E0838F2C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GeekShopUnitTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49AB7D125F0F8CA2AF906EB7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98BE9A24DC5475BF349CEC3F /* [CP] Check Pods Manifest.lock */ = {
+		78DC2E5A730478BD3D4184DE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -474,7 +545,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6272037FC5934BCBF4F61AE /* [CP] Embed Pods Frameworks */ = {
+		B2A9EC0E6169AFDD9E32BB7A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -482,18 +553,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"$(DERIVED_FILE_DIR)/Pods-GeekShopUnitTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -504,29 +575,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				570B679E228AE7FD00CA814F /* BasketProduct.swift in Sources */,
+				57F688D423F5283400ECF27D /* AlertDelegate.swift in Sources */,
 				57DB49E3226F37AD000FCA53 /* RequestFactory.swift in Sources */,
+				578C339423F4659000897182 /* AuthorizationViewController.swift in Sources */,
 				57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */,
 				57C629572273936600C6080F /* CatalogProduct.swift in Sources */,
 				570B6793228ADF7800CA814F /* BasketRequestFactory.swift in Sources */,
+				578C338F23F462F000897182 /* LoginViewController.swift in Sources */,
+				578C339F23F4683900897182 /* AppStartManager.swift in Sources */,
+				578C339B23F4680F00897182 /* BaseRouter.swift in Sources */,
 				57C6295122738A4400C6080F /* Shop.swift in Sources */,
-				576F037222D9C71B004015F9 /* ProfileViewController.swift in Sources */,
 				570B6791228ADF6C00CA814F /* Basket.swift in Sources */,
 				57DB49E5226F37E2000FCA53 /* LoginResponse.swift in Sources */,
+				578C338023F42E6F00897182 /* RegisterView.swift in Sources */,
 				570B6799228AE69A00CA814F /* ResultResponse.swift in Sources */,
 				57DB49DA226F310B000FCA53 /* RequestRouter.swift in Sources */,
-				576F036E22D9C6F8004015F9 /* LoginViewController.swift in Sources */,
 				57DB49D6226F2FF5000FCA53 /* ErrorParser.swift in Sources */,
 				57DB49E9226F41C5000FCA53 /* RegisterResponse.swift in Sources */,
 				57DB49DF226F378F000FCA53 /* AuthRequestFactory.swift in Sources */,
 				576F037022D9C704004015F9 /* RegisterViewController.swift in Sources */,
+				578C338423F44F0900897182 /* ScrollableKeyboard.swift in Sources */,
 				5724F67B22DB8BEB002360EE /* UITextViewPlaceholder.swift in Sources */,
+				578C339123F4634600897182 /* LoginView.swift in Sources */,
 				57DB49D4226F2FCA000FCA53 /* AbstractErrorParser.swift in Sources */,
 				57C6295522738C2C00C6080F /* Product.swift in Sources */,
+				578C337E23F4276700897182 /* CreditCardField.swift in Sources */,
 				57DB49DC226F3163000FCA53 /* AbstractRequestFactory.swift in Sources */,
 				57DB49D8226F3065000FCA53 /* DataRequest.swift in Sources */,
+				578C339D23F4682900897182 /* AuthorizationRouter.swift in Sources */,
 				57DB49E1226F379B000FCA53 /* Auth.swift in Sources */,
+				578C338C23F4561000897182 /* TapGestureToHideKeyboard.swift in Sources */,
 				57DB49E7226F37ED000FCA53 /* User.swift in Sources */,
+				578C338A23F4545C00897182 /* GenderPicker.swift in Sources */,
 				57C6294F2273894C00C6080F /* ShopRequestFactory.swift in Sources */,
+				578C339723F4663D00897182 /* AuthorizationView.swift in Sources */,
 				570B679C228AE7A200CA814F /* GetBasketResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,13 +763,14 @@
 		};
 		57871FB822675B0B0052E0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D5EB7D66DFF255A37125F3F /* Pods-GeekShop.debug.xcconfig */;
+			baseConfigurationReference = 384087D43BBB4467CEC2535E /* Pods-GeekShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YX6VKW92JQ;
 				INFOPLIST_FILE = GeekShop/Environments/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,13 +785,14 @@
 		};
 		57871FB922675B0B0052E0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1EA3FD6DA625A15DC7010A8 /* Pods-GeekShop.release.xcconfig */;
+			baseConfigurationReference = A113277601C2C392B02714BF /* Pods-GeekShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YX6VKW92JQ;
 				INFOPLIST_FILE = GeekShop/Environments/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -723,7 +807,7 @@
 		};
 		57C629482273850100C6080F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0E3774A515F112747ACED2 /* Pods-GeekShopUnitTests.debug.xcconfig */;
+			baseConfigurationReference = 62C3873B4EAD58530316CBC6 /* Pods-GeekShopUnitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -743,7 +827,7 @@
 		};
 		57C629492273850100C6080F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61D9150C4DC934F40950A222 /* Pods-GeekShopUnitTests.release.xcconfig */;
+			baseConfigurationReference = 73998769596CA2419D7EEE6B /* Pods-GeekShopUnitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

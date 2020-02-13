@@ -1,70 +1,32 @@
 //
-//  RegisterViewController.swift
+//  CreditCardField.swift
 //  GeekShop
 //
-//  Created by Артем Куфаев on 13/07/2019.
-//  Copyright © 2019 Artem Kufaev. All rights reserved.
+//  Created by Artem Kufaev on 12.02.2020.
+//  Copyright © 2020 Artem Kufaev. All rights reserved.
 //
 
 import UIKit
 
-class RegisterViewController: UIViewController, UITextFieldDelegate {
+class CreditCardField: UITextField, UITextFieldDelegate {
     
-    @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var repeatPasswordField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var genderField: UITextField!
-    @IBOutlet weak var creditCardField: UITextField!
-    @IBOutlet weak var bioTextView: UITextView!
-    @IBOutlet weak var bottomMargin: NSLayoutConstraint!
-    var bottomMarginStaticConstant: CGFloat!
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    var genderPicker: UIPickerView!
-    let genders = ["Male", "Female"]
     private var previousTextFieldContent: String?
     private var previousSelection: UITextRange?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureGenderPicker()
-        configureCreditCardField()
-        configureScrollView()
-        bottomMarginStaticConstant = bottomMargin.constant
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupLayout()
     }
     
-    func configureScrollView() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCreditCardField() {
-        creditCardField.addTarget(self, action: #selector(reformatAsCardNumber), for: .editingChanged)
-        creditCardField.delegate = self
+    private func setupLayout() {
+        self.delegate = self
+        self.keyboardType = .numberPad
+        self.addTarget(self, action: #selector(reformatAsCardNumber), for: .editingChanged)
     }
-    
-    func configureGenderPicker() {
-        genderPicker = UIPickerView()
-        genderPicker.dataSource = self
-        genderPicker.delegate = self
-        
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneGenderPicker))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        toolbar.setItems([spaceButton, doneButton], animated: false)
-        genderField.inputAccessoryView = toolbar
-        genderField.inputView = genderPicker
-    }
-    
-    @objc func doneGenderPicker() {
-        self.view.endEditing(true)
-    }
-
-}
-
-extension RegisterViewController {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         previousTextFieldContent = textField.text
@@ -158,43 +120,6 @@ extension RegisterViewController {
         }
         
         return stringWithAddedSpaces
-    }
-}
-
-extension RegisterViewController: UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return genders.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genders[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderField.text = genders[row]
-    }
-    
-}
-
-
-// MARK: - Keyboard
-extension RegisterViewController {
-    
-    @objc func keyboardWillShow(notification:NSNotification) {
-        var userInfo = notification.userInfo!
-        var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-        
-        bottomMargin.constant = bottomMarginStaticConstant + keyboardFrame.size.height
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        bottomMargin.constant = bottomMarginStaticConstant
     }
     
 }

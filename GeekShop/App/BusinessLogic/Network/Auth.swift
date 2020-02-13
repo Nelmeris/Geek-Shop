@@ -36,13 +36,13 @@ extension Auth: AuthRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 
-    func register(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<RegisterResponse>) -> Void) {
-        let requestModel = Register(baseUrl: baseUrl, userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+    func register(userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<RegisterResponse>) -> Void) {
+        let requestModel = Register(baseUrl: baseUrl, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 
     func changeUserData(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (DataResponse<ResultResponse>) -> Void) {
-        let requestModel = Register(baseUrl: baseUrl, userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        let requestModel = ChangeUserData(baseUrl: baseUrl, userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
@@ -70,7 +70,6 @@ extension Auth {
         let method: HTTPMethod = .get
         let path: String = "auth.register"
 
-        let userId: Int
         let userName: String
         let password: String
         let email: String
@@ -80,7 +79,6 @@ extension Auth {
 
         var parameters: Parameters? {
             return [
-                "id_user": userId,
                 "username": userName,
                 "password": password,
                 "email": email,

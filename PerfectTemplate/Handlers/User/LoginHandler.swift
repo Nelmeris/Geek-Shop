@@ -35,7 +35,7 @@ extension LoginHandler {
             "result": 1,
             "user": [
                 "id_user": 123,
-                "user_login": "geekbrains",
+                "user_login": request.param(name: "username")!,
                 "user_name": "John",
                 "user_lastname": "Doe"
             ]
