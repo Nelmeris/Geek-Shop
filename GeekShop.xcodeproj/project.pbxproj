@@ -199,7 +199,7 @@
 		57871FBA22675E800052E0A4 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				57871FA822675B090052E0A4 /* AppDelegate.swift */,
+				57F688D523F5298600ECF27D /* AppDelegate */,
 				57871FBE22675E960052E0A4 /* BusinessLogic */,
 				57871FBD22675E910052E0A4 /* Entity */,
 				57871FBB22675E860052E0A4 /* Flows */,
@@ -233,7 +233,6 @@
 		57871FBE22675E960052E0A4 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				578C339E23F4683900897182 /* AppStartManager.swift */,
 				578C339523F465CB00897182 /* Routers */,
 				57DB49DD226F3495000FCA53 /* Network */,
 			);
@@ -381,6 +380,15 @@
 				570B6790228ADF6C00CA814F /* Basket.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		57F688D523F5298600ECF27D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				57871FA822675B090052E0A4 /* AppDelegate.swift */,
+				578C339E23F4683900897182 /* AppStartManager.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		72AC838FAD3526BDFCEF0290 /* Frameworks */ = {

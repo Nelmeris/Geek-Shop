@@ -11,15 +11,17 @@ import UIKit
 
 class AuthorizationViewController: UIViewController {
     
+    // MARK: - Properties
+    
     private var router: AuthorizationRouter! {
-        didSet {
-            router.controller = self
-        }
+        didSet { router.controller = self }
     }
     
     private var authView: AuthorizationView {
         return self.view as! AuthorizationView
     }
+    
+    // MARK: - Lifecycle
     
     override func loadView() {
         super.loadView()
@@ -29,10 +31,11 @@ class AuthorizationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.router = AuthorizationRouter()
-        self.router.controller = self
         self.authView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
         self.authView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
     }
+    
+    // MARK: - Actions
     
     @objc private func login() {
         router.toLogin()

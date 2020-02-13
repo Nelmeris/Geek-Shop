@@ -10,11 +10,18 @@ import UIKit
 
 class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelegate {
     
-    private var auth: AuthRequestFactory!
+    // MARK: - Properties
+    
+    private lazy var auth: AuthRequestFactory! = {
+        let requestFactory = RequestFactory()
+        return requestFactory.makeAuthRequestFatory()
+    }()
     
     private var registerView: RegisterView {
         return self.view as! RegisterView
     }
+    
+    // MARK: - Lifecycle
     
     override func loadView() {
         super.loadView()
@@ -26,9 +33,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelega
         addTapGestureToHideKeyboard()
         registerForKeyboardNotifications(with: self.registerView.scrollView)
         self.registerView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
-        let requestFactory = RequestFactory()
-        auth = requestFactory.makeAuthRequestFatory()
     }
+    
+    deinit {
+        removeKeyboardNotifications()
+    }
+    
+    // MARK: - Actions
     
     @objc func register() {
         guard let username = self.registerView.usernameField.text, !username.isEmpty,
@@ -48,10 +59,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelega
                 self.showAlert(title: error.localizedDescription)
             }
         }
-    }
-    
-    deinit {
-        removeKeyboardNotifications()
     }
 
 }

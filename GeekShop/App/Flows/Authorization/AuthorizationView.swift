@@ -11,6 +11,8 @@ import UIKit
 
 class AuthorizationView: UIView {
     
+    // MARK: - Subviews
+    
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

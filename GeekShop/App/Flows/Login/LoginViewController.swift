@@ -11,11 +11,18 @@ import UIKit
 
 class LoginViewController: UIViewController, AlertDelegate {
     
-    private var auth: AuthRequestFactory!
+    // MARK: - Properties
+    
+    private lazy var auth: AuthRequestFactory! = {
+        let requestFactory = RequestFactory()
+        return requestFactory.makeAuthRequestFatory()
+    }()
     
     private var loginView: LoginView {
         return self.view as! LoginView
     }
+    
+    // MARK: - Lifecycle
     
     override func loadView() {
         super.loadView()
@@ -26,9 +33,13 @@ class LoginViewController: UIViewController, AlertDelegate {
         super.viewDidLoad()
         addTapGestureToHideKeyboard()
         self.loginView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
-        let requestFactory = RequestFactory()
-        auth = requestFactory.makeAuthRequestFatory()
     }
+    
+    deinit {
+        removeKeyboardNotifications()
+    }
+    
+    // MARK: - Actions
     
     @objc func login() {
         guard let username = self.loginView.usernameField.text, !username.isEmpty,
@@ -43,10 +54,6 @@ class LoginViewController: UIViewController, AlertDelegate {
                 self.showAlert(title: error.localizedDescription)
             }
         }
-    }
-    
-    deinit {
-        removeKeyboardNotifications()
     }
     
 }
