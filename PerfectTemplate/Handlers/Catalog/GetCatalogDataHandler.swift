@@ -22,7 +22,7 @@ extension GetCatalogDataHandler {
     
     func dataValidation() -> Bool {
         guard request.param(name: "page_number") != nil &&
-            request.param(name: "id_category") != nil
+            request.param(name: "category_id") != nil
             else {
                 ErrorHandler(request: request, response: response).process()
                 return false

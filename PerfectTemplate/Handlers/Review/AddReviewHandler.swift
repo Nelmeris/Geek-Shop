@@ -21,7 +21,7 @@ class AddReviewHandler: AbstractHandler {
 extension AddReviewHandler {
     
     func dataValidation() -> Bool {
-        guard request.param(name: "id_user") != nil &&
+        guard request.param(name: "product_id") != nil &&
             request.param(name: "text") != nil
             else {
                 ErrorHandler(request: request, response: response).process()

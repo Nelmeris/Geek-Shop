@@ -19,28 +19,27 @@ class LogoutHandler: AbstractHandler {
 }
 
 extension LogoutHandler {
-    
-    func dataValidation() -> Bool {
-        guard request.param(name: "id_user") != nil else {
-            ErrorHandler(request: request, response: response).process()
-            return false
-        }
-        return true
-    }
 
     func process() {
-        response.setHeader(.contentType, value: "application/json")
-        guard dataValidation() else { return }
-        let json: [String: Any] = [
-            "result": 1
-        ]
-
-        do {
-            try response.setBody(json: json)
-        } catch {
-            print(error)
+        guard let _ = request.param(name: "user_id") else {
+            ErrorHandler(request: request, response: response).process(with: "Не полные данные")
+            return
         }
+        do {
+            try sendingResponse()
+        } catch {
+            ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
+        }
+    }
+    
+    private func sendingResponse() throws {
+        response.setHeader(.contentType, value: "application/json")
+        try response.setBody(json: Response())
         response.completed()
+    }
+    
+    struct Response: Encodable {
+        let result = 1
     }
     
 }

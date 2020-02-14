@@ -21,8 +21,9 @@ class AddToBasketHandler: AbstractHandler {
 extension AddToBasketHandler {
     
     func dataValidation() -> Bool {
-        guard request.param(name: "id_product") != nil,
-            request.param(name: "quantity") != nil
+        guard request.param(name: "product_id") != nil,
+            request.param(name: "quantity") != nil,
+            request.param(name: "user_id") != nil
             else {
                 ErrorHandler(request: request, response: response).process()
                 return false

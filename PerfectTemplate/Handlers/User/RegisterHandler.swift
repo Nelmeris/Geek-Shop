@@ -11,43 +11,66 @@ import PerfectHTTP
 class RegisterHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
+    let db: UserDBService
 
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
+        self.db = UserDBService()
     }
 }
 
 extension RegisterHandler {
-    
-    func dataValidation() -> Bool {
-        guard request.param(name: "username") != nil &&
-            request.param(name: "password") != nil &&
-            request.param(name: "email") != nil &&
-            request.param(name: "gender") != nil &&
-            request.param(name: "credit_card") != nil &&
-            request.param(name: "bio") != nil
-            else {
-                ErrorHandler(request: request, response: response).process()
-                return false
-        }
-        return true
-    }
 
     func process() {
-        response.setHeader(.contentType, value: "application/json")
-        guard dataValidation() else { return }
-        let json: [String: Any] = [
-            "result": 1,
-            "user_message": "Регистрация прошла успешно!"
-        ]
-
-        do {
-            try response.setBody(json: json)
-        } catch {
-            print(error)
+        switch validate() {
+        case .success(let data):
+            do {
+                let user = try db.save(with: data)
+                try sendingResponse(with: user)
+            } catch {
+                ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
+            }
+        case .badData:
+            ErrorHandler(request: request, response: response).process(with: "Не полные данные")
+        case .usernameBusy:
+            ErrorHandler(request: request, response: response).process(with: "Пользователь с таким именем уже существует")
         }
-        response.completed()
+    }
+    
+    enum ValidateResult {
+        case success(UserData)
+        case badData
+        case usernameBusy
+    }
+    
+    private func validate() -> ValidateResult {
+        guard let username = request.param(name: "username"),
+            let password = request.param(name: "password") else {
+                return .badData
+        }
+        guard try! db.load(username: username) == nil else {
+            return .usernameBusy
+        }
+        return .success(UserData(username: username, password: password,
+                                 name: request.param(name: "name"),
+                                 surname: request.param(name: "surname"),
+                                 email: request.param(name: "email"),
+                                 gender: request.param(name: "gender"),
+                                 creditCard: request.param(name: "credit_card"),
+                                 bio: request.param(name: "bio")))
+    }
+    
+    private func sendingResponse(with user: User) throws {
+        self.response.setHeader(.contentType, value: "application/json")
+        try self.response.setBody(json: Response(user: user))
+        self.response.completed()
+    }
+    
+    struct Response: Encodable {
+        let result = 1
+        let message = "Регистрация прошла успешно!"
+        let user: User
     }
     
 }

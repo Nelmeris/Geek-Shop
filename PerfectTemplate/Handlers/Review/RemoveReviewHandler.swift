@@ -21,7 +21,7 @@ class RemoveReviewHandler: AbstractHandler {
 extension RemoveReviewHandler {
     
     func dataValidation() -> Bool {
-        guard request.param(name: "id_comment") != nil
+        guard request.param(name: "review_id") != nil
             else {
                 ErrorHandler(request: request, response: response).process()
                 return false

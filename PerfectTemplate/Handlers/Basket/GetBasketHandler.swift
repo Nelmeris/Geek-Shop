@@ -21,7 +21,7 @@ class GetBasketHandler: AbstractHandler {
 extension GetBasketHandler {
     
     func dataValidation() -> Bool {
-        guard request.param(name: "id_user") != nil
+        guard request.param(name: "user_id") != nil
             else {
                 ErrorHandler(request: request, response: response).process()
                 return false
