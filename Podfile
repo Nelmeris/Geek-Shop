@@ -1,17 +1,17 @@
 platform :ios, '13.2'
 
 inhibit_all_warnings!
+use_frameworks!
 
-target 'GeekShop' do
-  use_frameworks!
-
+def shared_pods
   pod 'Alamofire'
   pod 'RxSwift'
 end
 
-target 'GeekShopUnitTests' do
-  use_frameworks!
+target 'GeekShop' do
+  shared_pods
+end
 
-  pod 'Alamofire'
-  pod 'RxSwift'
+target 'GeekShopUnitTests' do
+  shared_pods
 end
