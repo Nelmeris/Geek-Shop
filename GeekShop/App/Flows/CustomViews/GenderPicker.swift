@@ -30,6 +30,7 @@ class GenderPicker: UITextField {
         genderPicker.dataSource = self
         genderPicker.delegate = self
 
+        self.text = genders[0]
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneGenderPicker))

@@ -8,14 +8,23 @@
 
 import UIKit
 
+struct RegisterInputModel {
+    let username: String
+    let name: String
+    let surname: String
+    let password: String
+    let repeatPassword: String
+    let email: String
+    let gender: String
+    let creditCard: String
+    let bio: String
+}
+
 class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelegate {
     
     // MARK: - Properties
     
-    private lazy var auth: AuthRequestFactory! = {
-        let requestFactory = RequestFactory()
-        return requestFactory.makeAuthRequestFatory()
-    }()
+    var presenter: RegisterPresenter!
     
     private var registerView: RegisterView {
         return self.view as! RegisterView
@@ -42,23 +51,34 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelega
     // MARK: - Actions
     
     @objc func register() {
-        guard let username = self.registerView.usernameField.text, !username.isEmpty,
-            let password = self.registerView.passwordField.text, !password.isEmpty,
-            password == self.registerView.repeatPasswordField.text,
-            let email = self.registerView.emailField.text, !email.isEmpty,
-            let gender = self.registerView.genderField.text, !gender.isEmpty,
-            let creditCard = self.registerView.creditCardField.text, !creditCard.isEmpty,
+        guard let username = self.registerView.usernameField.text,
+            let name = self.registerView.nameField.text,
+            let surname = self.registerView.surnameField.text,
+            let password = self.registerView.passwordField.text,
+            let repeatPassword = self.registerView.repeatPasswordField.text,
+            let email = self.registerView.emailField.text,
+            let gender = self.registerView.genderField.text,
+            let creditCard = self.registerView.creditCardField.text,
             let bio = self.registerView.bioTextView.text
-            else { return }
+            else { fatalError("Ошибка введения данных") }
         
-        auth.register(userName: username, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio) { response in
-            switch response.result {
-            case .success(let response):
-                self.showAlert(title: response.userMessage)
-            case .failure(let error):
-                self.showAlert(title: error.localizedDescription)
-            }
-        }
+        let model = RegisterInputModel(username: username, name: name, surname: surname, password: password, repeatPassword: repeatPassword, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        
+        presenter.registerProcess(with: model)
     }
 
+}
+
+extension RegisterViewController: RegisterController {
+    
+    func showResult(_ msg: String, completion: @escaping () -> () = {}) {
+        self.showAlert(title: msg) { _ in
+            completion()
+        }
+    }
+    
+    func showError(_ error: Error) {
+        fatalError(error.localizedDescription)
+    }
+    
 }

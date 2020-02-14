@@ -13,6 +13,8 @@ class LoginViewController: UIViewController, AlertDelegate {
     
     // MARK: - Properties
     
+    private lazy var router: LoginRouter = { return LoginRouter(controller: self) }()
+    
     private lazy var auth: AuthRequestFactory! = {
         let requestFactory = RequestFactory()
         return requestFactory.makeAuthRequestFatory()
@@ -49,7 +51,9 @@ class LoginViewController: UIViewController, AlertDelegate {
         auth.login(userName: username, password: password) { response in
             switch response.result {
             case .success(let response):
-                self.showAlert(title: "Успешно! ID: \(response.user.id)")
+                self.showAlert(title: "Успешно! ID: \(response.user.id)") { _ in
+                    self.router.toProfile(response.user)
+                }
             case .failure(let error):
                 self.showAlert(title: error.localizedDescription)
             }

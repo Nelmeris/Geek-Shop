@@ -50,19 +50,21 @@ class LoginView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+        setupLayout()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureUI()
+        setupLayout()
+        setupConstraints()
     }
     
     // MARK: - Configure
     
     private func configureUI() {
         self.backgroundColor = .white
-        setupLayout()
-        setupConstraints()
     }
     
     // MARK: - Layout

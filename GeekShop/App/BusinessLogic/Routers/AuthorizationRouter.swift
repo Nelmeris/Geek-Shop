@@ -16,7 +16,7 @@ final class AuthorizationRouter: BaseRouter {
     }
     
     func toRegister() {
-        let registerVC = RegisterViewController()
+        let registerVC = RegisterModuleBuilder.build()
         self.push(registerVC, animated: true)
     }
     

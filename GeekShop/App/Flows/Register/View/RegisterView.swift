@@ -29,6 +29,24 @@ class RegisterView: UIView {
         return view
     }()
     
+    private(set) lazy var nameField: UITextField = {
+        let view = UITextField()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.placeholder = "Имя"
+        view.borderStyle = .roundedRect
+        view.textContentType = .givenName
+        return view
+    }()
+    
+    private(set) lazy var surnameField: UITextField = {
+        let view = UITextField()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.placeholder = "Фамилия"
+        view.borderStyle = .roundedRect
+        view.textContentType = .familyName
+        return view
+    }()
+    
     private(set) lazy var passwordField: UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -112,19 +130,21 @@ class RegisterView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+        setupLayout()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureUI()
+        setupLayout()
+        setupConstraints()
     }
     
     // MARK: - Configure
     
     private func configureUI() {
         self.backgroundColor = .white
-        setupLayout()
-        setupConstraints()
     }
     
     // MARK: - Layout
@@ -134,6 +154,8 @@ class RegisterView: UIView {
         self.addSubview(scrollView)
         self.scrollView.addSubview(scrollContainerView)
         self.scrollContainerView.addSubview(usernameField)
+        self.scrollContainerView.addSubview(nameField)
+        self.scrollContainerView.addSubview(surnameField)
         self.scrollContainerView.addSubview(passwordField)
         self.scrollContainerView.addSubview(repeatPasswordField)
         self.scrollContainerView.addSubview(emailField)
@@ -171,7 +193,15 @@ class RegisterView: UIView {
             self.usernameField.leftAnchor.constraint(equalTo: self.scrollContainerView.leftAnchor, constant: 20),
             self.usernameField.rightAnchor.constraint(equalTo: self.scrollContainerView.rightAnchor, constant: -20),
             
-            self.passwordField.topAnchor.constraint(equalTo: self.usernameField.bottomAnchor, constant: 20),
+            self.nameField.topAnchor.constraint(equalTo: self.usernameField.bottomAnchor, constant: 20),
+            self.nameField.leftAnchor.constraint(equalTo: self.scrollContainerView.leftAnchor, constant: 20),
+            self.nameField.rightAnchor.constraint(equalTo: self.scrollContainerView.rightAnchor, constant: -20),
+            
+            self.surnameField.topAnchor.constraint(equalTo: self.nameField.bottomAnchor, constant: 20),
+            self.surnameField.leftAnchor.constraint(equalTo: self.scrollContainerView.leftAnchor, constant: 20),
+            self.surnameField.rightAnchor.constraint(equalTo: self.scrollContainerView.rightAnchor, constant: -20),
+            
+            self.passwordField.topAnchor.constraint(equalTo: self.surnameField.bottomAnchor, constant: 20),
             self.passwordField.leftAnchor.constraint(equalTo: self.scrollContainerView.leftAnchor, constant: 20),
             self.passwordField.rightAnchor.constraint(equalTo: self.scrollContainerView.rightAnchor, constant: -20),
             

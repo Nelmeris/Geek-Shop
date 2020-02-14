@@ -13,9 +13,7 @@ class AuthorizationViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var router: AuthorizationRouter! {
-        didSet { router.controller = self }
-    }
+    private lazy var router: AuthorizationRouter = { return AuthorizationRouter(controller: self) }()
     
     private var authView: AuthorizationView {
         return self.view as! AuthorizationView
@@ -30,7 +28,6 @@ class AuthorizationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.router = AuthorizationRouter()
         self.authView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
         self.authView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
     }

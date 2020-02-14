@@ -11,7 +11,11 @@ import UIKit
 
 class BaseRouter: NSObject {
     
-    var controller: UIViewController!
+    let controller: UIViewController
+    
+    init(controller: UIViewController) {
+        self.controller = controller
+    }
     
     func show(_ controller: UIViewController, sender: Any?) {
         self.controller.show(controller, sender: sender)
