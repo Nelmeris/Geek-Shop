@@ -22,6 +22,8 @@
 		574D3BC32278C667001C6B00 /* AddReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC22278C667001C6B00 /* AddReviewHandler.swift */; };
 		574D3BC52278C768001C6B00 /* RemoveReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */; };
 		574D3BC72278C7DD001C6B00 /* GetReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */; };
+		57F688ED23F6CA1800ECF27D /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F688EC23F6CA1800ECF27D /* CoreDataService.swift */; };
+		57F688F023F6CA4D00ECF27D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57F688EE23F6CA4D00ECF27D /* DataModel.xcdatamodeld */; };
 		OBJ_375 /* a_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* a_.c */; };
 		OBJ_376 /* aes_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* aes_.c */; };
 		OBJ_377 /* ameth_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* ameth_lib.c */; };
@@ -588,6 +590,8 @@
 		574D3BC22278C667001C6B00 /* AddReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewHandler.swift; sourceTree = "<group>"; };
 		574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewHandler.swift; sourceTree = "<group>"; };
 		574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReviewHandler.swift; sourceTree = "<group>"; };
+		57F688EC23F6CA1800ECF27D /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		57F688EF23F6CA4D00ECF27D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = COpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_100 /* a_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_.c; sourceTree = "<group>"; };
 		OBJ_101 /* aes_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_.c; sourceTree = "<group>"; };
@@ -1084,6 +1088,15 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
+		57F688EB23F6CA0900ECF27D /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				57F688EC23F6CA1800ECF27D /* CoreDataService.swift */,
+				57F688EE23F6CA4D00ECF27D /* DataModel.xcdatamodeld */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1340,6 +1353,7 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				57F688EB23F6CA0900ECF27D /* DataBase */,
 				574D3BA62278C48B001C6B00 /* Handlers */,
 				OBJ_8 /* PerfectTemplate */,
 			);
@@ -2439,6 +2453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				57F688ED23F6CA1800ECF27D /* CoreDataService.swift in Sources */,
 				574D3BBE2278C51F001C6B00 /* HandlerFactory.swift in Sources */,
 				OBJ_806 /* main.swift in Sources */,
 				570B6795228AE3A000CA814F /* RemoveFromBasketHandler.swift in Sources */,
@@ -2453,6 +2468,7 @@
 				574D3BBD2278C51C001C6B00 /* GetGoodByIdHandler.swift in Sources */,
 				574D3BBB2278C50E001C6B00 /* ChangeUserDataHandler.swift in Sources */,
 				570B678B228ADDF500CA814F /* AddToBasketHandler.swift in Sources */,
+				57F688F023F6CA4D00ECF27D /* DataModel.xcdatamodeld in Sources */,
 				574D3BC72278C7DD001C6B00 /* GetReviewHandler.swift in Sources */,
 				574D3BC02278C525001C6B00 /* LogoutHandler.swift in Sources */,
 			);
@@ -3573,6 +3589,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		57F688EE23F6CA4D00ECF27D /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57F688EF23F6CA4D00ECF27D /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 57F688EF23F6CA4D00ECF27D /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }
