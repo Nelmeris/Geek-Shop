@@ -10,5 +10,8 @@ target 'GeekShop' do
 end
 
 target 'GeekShopUnitTests' do
-  inherit! :search_paths
+  use_frameworks!
+
+  pod 'Alamofire'
+  pod 'RxSwift'
 end
