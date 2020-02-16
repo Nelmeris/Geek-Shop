@@ -49,8 +49,7 @@ extension ChangeUserDataHandler {
     
     private func validate() -> ValidateResult {
         guard let userId = request.param(name: "user_id"),
-            let username = request.param(name: "username"),
-            let password = request.param(name: "password") else {
+            let username = request.param(name: "username") else {
                 return .badData
         }
         guard let user = try! db.load(id: userId) else {
@@ -59,6 +58,12 @@ extension ChangeUserDataHandler {
         if let userWithUsername = try! db.load(username: username),
             userWithUsername.id != user.id {
             return .usernameBusy
+        }
+        var password: String!
+        if let newPassword = request.param(name: "password"), !newPassword.isEmpty {
+            password = newPassword
+        } else {
+            password = user.password
         }
         let data = UserData(username: username, password: password,
                             name: request.param(name: "name"),

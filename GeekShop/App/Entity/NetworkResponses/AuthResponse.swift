@@ -1,5 +1,5 @@
 //
-//  RegisterResponse.swift
+//  AuthResponse.swift
 //  GeekShop
 //
 //  Created by Artem Kufaev on 23/04/2019.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct RegisterResponse: Codable {
+struct AuthResponse: Codable {
     let result: Int
-    let message: String
+    let message: String?
     let user: User
 }

@@ -50,9 +50,10 @@ class LoginViewController: UIViewController, AlertDelegate {
         
         auth.login(username: username, password: password) { response in
             switch response.result {
-            case .success(let response):
-                self.showAlert(title: "Успешно! ID: \(response.user.id)") { _ in
-                    self.router.toProfile(response.user)
+            case .success(let result):
+                self.showAlert(title: "Успешно! ID: \(result.user.id)") { _ in
+                    User.authUser = result.user
+                    self.router.toProfile()
                 }
             case .failure(let error):
                 self.showAlert(title: error.localizedDescription)

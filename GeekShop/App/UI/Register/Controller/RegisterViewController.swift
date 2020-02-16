@@ -40,7 +40,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         addTapGestureToHideKeyboard()
-        registerForKeyboardNotifications(with: self.registerView.scrollView)
+        registerForKeyboardNotifications(with: self.registerView.registerFormView.scrollView)
         self.registerView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
     }
     
@@ -51,15 +51,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelega
     // MARK: - Actions
     
     @objc func register() {
-        guard let username = self.registerView.usernameField.text,
-            let name = self.registerView.nameField.text,
-            let surname = self.registerView.surnameField.text,
-            let password = self.registerView.passwordField.text,
-            let repeatPassword = self.registerView.repeatPasswordField.text,
-            let email = self.registerView.emailField.text,
-            let gender = self.registerView.genderField.text,
-            let creditCard = self.registerView.creditCardField.text,
-            let bio = self.registerView.bioTextView.text
+        guard let username = self.registerView.registerFormView.usernameField.text,
+            let name = self.registerView.registerFormView.nameField.text,
+            let surname = self.registerView.registerFormView.surnameField.text,
+            let password = self.registerView.registerFormView.passwordField.text,
+            let repeatPassword = self.registerView.registerFormView.repeatPasswordField.text,
+            let email = self.registerView.registerFormView.emailField.text,
+            let gender = self.registerView.registerFormView.genderField.text,
+            let creditCard = self.registerView.registerFormView.creditCardField.text,
+            let bio = self.registerView.registerFormView.bioTextView.text
             else { fatalError("Ошибка введения данных") }
         
         let model = RegisterInputModel(username: username, name: name, surname: surname, password: password, repeatPassword: repeatPassword, email: email, gender: gender, creditCard: creditCard, bio: bio)

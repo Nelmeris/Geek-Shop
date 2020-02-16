@@ -11,29 +11,32 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    let user: User
-    
-    init(user: User) {
-        self.user = user
-        super.init(nibName: nil, bundle: nil) 
-    }
+    private lazy var router: ProfileRouter = {
+        return ProfileRouter(controller: self)
+    }()
     
     var profileView: ProfileView {
         return self.view as! ProfileView
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func loadView() {
         super.loadView()
         self.view = ProfileView()
-        self.profileView.configure(with: user)
+        self.profileView.configure(with: User.authUser!)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
+    }
+    
+    private func configureUI() {
+        let editingButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(startEditing))
+        self.navigationItem.setRightBarButton(editingButton, animated: true)
+    }
+    
+    @objc private func startEditing() {
+        router.toEditor()
     }
     
 }

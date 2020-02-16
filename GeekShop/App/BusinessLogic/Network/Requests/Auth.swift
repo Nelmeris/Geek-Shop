@@ -9,10 +9,10 @@
 import Alamofire
 
 protocol AuthRequestFactory {
-    func login(username: String, password: String, completion: @escaping (DataResponse<LoginResponse>) -> ())
+    func login(username: String, password: String, completion: @escaping (DataResponse<AuthResponse>) -> ())
     func logout(id: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void)
-    func register(username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<RegisterResponse>) -> ())
-    func changeUserData(id: Int, username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<ResultResponse>) -> ())
+    func register(username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<AuthResponse>) -> ())
+    func changeUserData(id: Int, username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<AuthResponse>) -> ())
 }
 
 class Auth: AbstractRequestFactory {
@@ -33,7 +33,7 @@ class Auth: AbstractRequestFactory {
 
 extension Auth: AuthRequestFactory {
     
-    func login(username: String, password: String, completion: @escaping (DataResponse<LoginResponse>) -> ()) {
+    func login(username: String, password: String, completion: @escaping (DataResponse<AuthResponse>) -> ()) {
         let requestModel = Login(baseUrl: baseUrl, login: username, password: password)
         self.request(request: requestModel, completionHandler: completion)
     }
@@ -43,12 +43,12 @@ extension Auth: AuthRequestFactory {
         self.request(request: requestModel, completionHandler: completion)
     }
 
-    func register(username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<RegisterResponse>) -> Void) {
+    func register(username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<AuthResponse>) -> Void) {
         let requestModel = Register(baseUrl: baseUrl, username: username, password: password, name: name, surname: surname, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completion)
     }
 
-    func changeUserData(id: Int, username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<ResultResponse>) -> Void) {
+    func changeUserData(id: Int, username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<AuthResponse>) -> Void) {
         let requestModel = ChangeUserData(baseUrl: baseUrl, id: id, username: username, password: password, name: name, surname: surname, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completion)
     }

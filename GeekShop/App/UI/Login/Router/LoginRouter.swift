@@ -10,8 +10,8 @@ import Foundation
 
 final class LoginRouter: BaseRouter {
     
-    func toProfile(_ user: User) {
-        let vc = ProfileViewController(user: user)
+    func toProfile() {
+        let vc = TabBarController()
         vc.modalPresentationStyle = .fullScreen
         self.controller.present(vc, animated: true)
     }

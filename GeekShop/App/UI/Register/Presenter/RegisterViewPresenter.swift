@@ -36,8 +36,9 @@ class RegisterViewPresenter: RegisterPresenter {
                       bio: model.bio) { response in
             switch response.result {
             case .success(let result):
-                self.controller.showResult(result.message) {
-                    self.router.toProfile(result.user)
+                self.controller.showResult(result.message!) {
+                    User.authUser = result.user
+                    self.router.toProfile()
                 }
             case .failure(let error):
                 self.controller.showError(error)
@@ -50,28 +51,12 @@ class RegisterViewPresenter: RegisterPresenter {
             self.controller.showResult("Напишите username") {}
             return false
         }
-        if model.name.isEmpty {
-            self.controller.showResult("Напишите имя") {}
-            return false
-        }
-        if model.surname.isEmpty {
-            self.controller.showResult("Напишите фамилию") {}
-            return false
-        }
         if model.password.isEmpty {
             self.controller.showResult("Напишите пароль") {}
             return false
         }
         if model.password != model.repeatPassword {
             self.controller.showResult("Пароли не совпадают") {}
-            return false
-        }
-        if model.email.isEmpty {
-            self.controller.showResult("Напишите почту") {}
-            return false
-        }
-        if model.creditCard.isEmpty {
-            self.controller.showResult("Напишите кредитную карту") {}
             return false
         }
         return true
