@@ -32,7 +32,7 @@
 		579247E623F7F68C004C03CC /* RegisterFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247E523F7F68C004C03CC /* RegisterFormView.swift */; };
 		579247E923F7FDC8004C03CC /* ProfileEditorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247E823F7FDC8004C03CC /* ProfileEditorRouter.swift */; };
 		579247EB23F7FEE4004C03CC /* ProfileEditorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247EA23F7FEE4004C03CC /* ProfileEditorPresenter.swift */; };
-		579247ED23F800F6004C03CC /* ProfileEditorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247EC23F800F6004C03CC /* ProfileEditorBuilder.swift */; };
+		579247ED23F800F6004C03CC /* ProfileEditorModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247EC23F800F6004C03CC /* ProfileEditorModuleBuilder.swift */; };
 		57C6294B2273853200C6080F /* GeekShopAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6294A2273853200C6080F /* GeekShopAuthTests.swift */; };
 		57C6294D2273890800C6080F /* GeekShopCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6294C2273890800C6080F /* GeekShopCatalogTests.swift */; };
 		57C6295122738A4400C6080F /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6295022738A4400C6080F /* Shop.swift */; };
@@ -60,6 +60,13 @@
 		57F6893923F7374200ECF27D /* ProfileEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6893823F7374200ECF27D /* ProfileEditorViewController.swift */; };
 		57F6893B23F7379500ECF27D /* ProfileEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6893A23F7379500ECF27D /* ProfileEditorView.swift */; };
 		57F6893E23F7382000ECF27D /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6893D23F7382000ECF27D /* ProfileRouter.swift */; };
+		57FD693223FC61E20055FC45 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD693123FC61E20055FC45 /* CatalogViewController.swift */; };
+		57FD693423FC62040055FC45 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD693323FC62040055FC45 /* CatalogView.swift */; };
+		57FD693623FC62FC0055FC45 /* CatalogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD693523FC62FC0055FC45 /* CatalogTableViewCell.swift */; };
+		57FD693823FC63CD0055FC45 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD693723FC63CD0055FC45 /* ProductViewModel.swift */; };
+		57FD693A23FC6A7F0055FC45 /* CatalogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD693923FC6A7F0055FC45 /* CatalogResponse.swift */; };
+		57FD694023FC6C8F0055FC45 /* CatalogViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD693F23FC6C8F0055FC45 /* CatalogViewPresenter.swift */; };
+		57FD694323FC6D400055FC45 /* CatalogModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD694223FC6D400055FC45 /* CatalogModelBuilder.swift */; };
 		E7ED8FF7CE9469F95464CE64 /* Pods_GeekShopUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FF651F12386D03EF7AA000 /* Pods_GeekShopUnitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,7 +125,7 @@
 		579247E523F7F68C004C03CC /* RegisterFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormView.swift; sourceTree = "<group>"; };
 		579247E823F7FDC8004C03CC /* ProfileEditorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorRouter.swift; sourceTree = "<group>"; };
 		579247EA23F7FEE4004C03CC /* ProfileEditorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorPresenter.swift; sourceTree = "<group>"; };
-		579247EC23F800F6004C03CC /* ProfileEditorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorBuilder.swift; sourceTree = "<group>"; };
+		579247EC23F800F6004C03CC /* ProfileEditorModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorModuleBuilder.swift; sourceTree = "<group>"; };
 		57C629402273850100C6080F /* GeekShopUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeekShopUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C629442273850100C6080F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57C6294A2273853200C6080F /* GeekShopAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekShopAuthTests.swift; sourceTree = "<group>"; };
@@ -149,6 +156,13 @@
 		57F6893823F7374200ECF27D /* ProfileEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorViewController.swift; sourceTree = "<group>"; };
 		57F6893A23F7379500ECF27D /* ProfileEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorView.swift; sourceTree = "<group>"; };
 		57F6893D23F7382000ECF27D /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		57FD693123FC61E20055FC45 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		57FD693323FC62040055FC45 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		57FD693523FC62FC0055FC45 /* CatalogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewCell.swift; sourceTree = "<group>"; };
+		57FD693723FC63CD0055FC45 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		57FD693923FC6A7F0055FC45 /* CatalogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResponse.swift; sourceTree = "<group>"; };
+		57FD693F23FC6C8F0055FC45 /* CatalogViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewPresenter.swift; sourceTree = "<group>"; };
+		57FD694223FC6D400055FC45 /* CatalogModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModelBuilder.swift; sourceTree = "<group>"; };
 		93FF651F12386D03EF7AA000 /* Pods_GeekShopUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShopUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F0CAF63A76FF94E885E2F3 /* Pods-GeekShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.release.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.release.xcconfig"; sourceTree = "<group>"; };
 		C439EDB991B797D21461EB04 /* Pods-GeekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.debug.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +193,7 @@
 			children = (
 				570B6798228AE69A00CA814F /* ResultResponse.swift */,
 				57DB49E8226F41C5000FCA53 /* AuthResponse.swift */,
+				57FD693923FC6A7F0055FC45 /* CatalogResponse.swift */,
 				570B679B228AE7A200CA814F /* GetBasketResponse.swift */,
 				57F6891E23F6E9D700ECF27D /* ErrorResponse.swift */,
 			);
@@ -234,6 +249,7 @@
 				578C339223F4658300897182 /* Authorization */,
 				578C338D23F462E400897182 /* Login */,
 				578C338623F4543400897182 /* Register */,
+				57FD693023FC61D20055FC45 /* Catalog */,
 				57F688D623F6883E00ECF27D /* Profile */,
 				57F6893723F7372F00ECF27D /* ProfileEditor */,
 				579247E523F7F68C004C03CC /* RegisterFormView.swift */,
@@ -532,11 +548,11 @@
 		57F6893723F7372F00ECF27D /* ProfileEditor */ = {
 			isa = PBXGroup;
 			children = (
-				57F6893823F7374200ECF27D /* ProfileEditorViewController.swift */,
-				579247EA23F7FEE4004C03CC /* ProfileEditorPresenter.swift */,
-				57F6893A23F7379500ECF27D /* ProfileEditorView.swift */,
-				579247E823F7FDC8004C03CC /* ProfileEditorRouter.swift */,
-				579247EC23F800F6004C03CC /* ProfileEditorBuilder.swift */,
+				57FD694823FC70160055FC45 /* Builder */,
+				57FD694423FC6FF70055FC45 /* Controller */,
+				57FD694523FC6FFE0055FC45 /* Presenter */,
+				57FD694623FC70050055FC45 /* View */,
+				57FD694723FC700D0055FC45 /* Router */,
 			);
 			path = ProfileEditor;
 			sourceTree = "<group>";
@@ -547,6 +563,91 @@
 				57F6893D23F7382000ECF27D /* ProfileRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		57FD693023FC61D20055FC45 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				57FD694123FC6D300055FC45 /* Builder */,
+				57FD693B23FC6C620055FC45 /* Controller */,
+				57FD693C23FC6C670055FC45 /* Presenter */,
+				57FD693D23FC6C6D0055FC45 /* View */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		57FD693B23FC6C620055FC45 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				57FD693123FC61E20055FC45 /* CatalogViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		57FD693C23FC6C670055FC45 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				57FD693F23FC6C8F0055FC45 /* CatalogViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		57FD693D23FC6C6D0055FC45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57FD693323FC62040055FC45 /* CatalogView.swift */,
+				57FD693523FC62FC0055FC45 /* CatalogTableViewCell.swift */,
+				57FD693723FC63CD0055FC45 /* ProductViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		57FD694123FC6D300055FC45 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				57FD694223FC6D400055FC45 /* CatalogModelBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		57FD694423FC6FF70055FC45 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				57F6893823F7374200ECF27D /* ProfileEditorViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		57FD694523FC6FFE0055FC45 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				579247EA23F7FEE4004C03CC /* ProfileEditorPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		57FD694623FC70050055FC45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57F6893A23F7379500ECF27D /* ProfileEditorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		57FD694723FC700D0055FC45 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				579247E823F7FDC8004C03CC /* ProfileEditorRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		57FD694823FC70160055FC45 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				579247EC23F800F6004C03CC /* ProfileEditorModuleBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		72AC838FAD3526BDFCEF0290 /* Frameworks */ = {
@@ -764,7 +865,7 @@
 				57DB49E3226F37AD000FCA53 /* RequestFactory.swift in Sources */,
 				578C339423F4659000897182 /* AuthorizationViewController.swift in Sources */,
 				57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */,
-				579247ED23F800F6004C03CC /* ProfileEditorBuilder.swift in Sources */,
+				579247ED23F800F6004C03CC /* ProfileEditorModuleBuilder.swift in Sources */,
 				57C629572273936600C6080F /* CatalogProduct.swift in Sources */,
 				578C338F23F462F000897182 /* LoginViewController.swift in Sources */,
 				578C339F23F4683900897182 /* AppStartManager.swift in Sources */,
@@ -774,13 +875,16 @@
 				57F688DC23F6889900ECF27D /* RegisterRouter.swift in Sources */,
 				570B6791228ADF6C00CA814F /* Basket.swift in Sources */,
 				578C338023F42E6F00897182 /* RegisterView.swift in Sources */,
+				57FD693623FC62FC0055FC45 /* CatalogTableViewCell.swift in Sources */,
 				57F688DA23F6888F00ECF27D /* LoginRouter.swift in Sources */,
 				570B6799228AE69A00CA814F /* ResultResponse.swift in Sources */,
 				57DB49DA226F310B000FCA53 /* RequestRouter.swift in Sources */,
 				57DB49D6226F2FF5000FCA53 /* ErrorParser.swift in Sources */,
 				57DB49E9226F41C5000FCA53 /* AuthResponse.swift in Sources */,
+				57FD694323FC6D400055FC45 /* CatalogModelBuilder.swift in Sources */,
 				576F037022D9C704004015F9 /* RegisterViewController.swift in Sources */,
 				578C338423F44F0900897182 /* ScrollableKeyboard.swift in Sources */,
+				57FD693823FC63CD0055FC45 /* ProductViewModel.swift in Sources */,
 				578C339123F4634600897182 /* LoginView.swift in Sources */,
 				57DB49D4226F2FCA000FCA53 /* AbstractErrorParser.swift in Sources */,
 				57F6893623F730D400ECF27D /* TabBarController.swift in Sources */,
@@ -791,11 +895,14 @@
 				579247E923F7FDC8004C03CC /* ProfileEditorRouter.swift in Sources */,
 				57DB49D8226F3065000FCA53 /* DataRequest.swift in Sources */,
 				578C339D23F4682900897182 /* AuthorizationRouter.swift in Sources */,
+				57FD693A23FC6A7F0055FC45 /* CatalogResponse.swift in Sources */,
 				57F6893E23F7382000ECF27D /* ProfileRouter.swift in Sources */,
+				57FD693423FC62040055FC45 /* CatalogView.swift in Sources */,
 				57DB49E1226F379B000FCA53 /* Auth.swift in Sources */,
 				57F688DE23F68D2600ECF27D /* ProfileView.swift in Sources */,
 				578C338C23F4561000897182 /* TapGestureToHideKeyboard.swift in Sources */,
 				57DB49E7226F37ED000FCA53 /* User.swift in Sources */,
+				57FD693223FC61E20055FC45 /* CatalogViewController.swift in Sources */,
 				578C338A23F4545C00897182 /* GenderPicker.swift in Sources */,
 				57F688D823F6884D00ECF27D /* ProfileViewController.swift in Sources */,
 				578C339723F4663D00897182 /* AuthorizationView.swift in Sources */,
@@ -804,6 +911,7 @@
 				579247EB23F7FEE4004C03CC /* ProfileEditorPresenter.swift in Sources */,
 				57F6893B23F7379500ECF27D /* ProfileEditorView.swift in Sources */,
 				57F688E723F6938900ECF27D /* RegisterViewPresenter.swift in Sources */,
+				57FD694023FC6C8F0055FC45 /* CatalogViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

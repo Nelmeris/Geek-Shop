@@ -12,9 +12,15 @@ import UIKit
 class TabBarController: UITabBarController {
     
     private lazy var controllers: [UIViewController] = {
+        let catalogVC = CatalogModelBuilder.build()
+        catalogVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        let catalogNVC = UINavigationController(rootViewController: catalogVC)
+        
         let profileVC = ProfileViewController()
-        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
-        return [UINavigationController(rootViewController: profileVC)]
+        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        let profileNVC = UINavigationController(rootViewController: profileVC)
+        
+        return [catalogNVC, profileNVC]
     }()
     
     override func viewDidLoad() {

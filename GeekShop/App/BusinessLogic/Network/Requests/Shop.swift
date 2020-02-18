@@ -11,6 +11,7 @@ import Alamofire
 protocol ShopRequestFactory {
     func getCatalog(pageNumber: Int, categoryId: Int, completion: @escaping (DataResponse<[CatalogProduct]>) -> ())
     func getGood(by id: Int, completion: @escaping (DataResponse<Product>) -> ())
+    func getGoods(completion: @escaping (DataResponse<CatalogResponse>) -> ())
 }
 
 class Shop: AbstractRequestFactory {
@@ -37,7 +38,12 @@ extension Shop: ShopRequestFactory {
     }
 
     func getGood(by id: Int, completion: @escaping (DataResponse<Product>) -> ()) {
-        let requestModel = ProductRequest(baseUrl: baseUrl, id: id)
+        let requestModel = GetProductRequest(baseUrl: baseUrl, id: id)
+        self.request(request: requestModel, completionHandler: completion)
+    }
+    
+    func getGoods(completion: @escaping (DataResponse<CatalogResponse>) -> ()) {
+        let requestModel = GetProductsRequest(baseUrl: baseUrl)
         self.request(request: requestModel, completionHandler: completion)
     }
     
@@ -60,7 +66,7 @@ extension Shop {
         }
     }
 
-    struct ProductRequest: RequestRouter {
+    struct GetProductRequest: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "catalog.getGood"
@@ -72,6 +78,14 @@ extension Shop {
                 "product_id": id
             ]
         }
+    }
+    
+    struct GetProductsRequest: RequestRouter {
+        var baseUrl: URL
+        var method: HTTPMethod = .get
+        var path: String = "product.get"
+        
+        var parameters: Parameters? { return [:] }
     }
 
 }
