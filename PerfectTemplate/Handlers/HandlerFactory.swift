@@ -19,6 +19,10 @@ class HandlerFactory {
             return ChangeUserDataHandler(request: request, response: response)
         case "/auth.logout":
             return LogoutHandler(request: request, response: response)
+        case "/product.add":
+            return CreateGoodHandler(request: request, response: response)
+        case "/product.get":
+            return GetGoodsHandler(request: request, response: response)
         case "/catalog.get":
             return GetCatalogDataHandler(request: request, response: response)
         case "/catalog.getGood":
