@@ -34,7 +34,8 @@ class ProfileEditorViewController: UIViewController {
         self.profileEditorView.changeButton.addTarget(self, action: #selector(changeData), for: .touchUpInside)
     }
     
-    @objc private func changeData() {
+    @objc
+    private func changeData() {
         guard let username = self.profileEditorView.registerFormView.usernameField.text,
             let name = self.profileEditorView.registerFormView.nameField.text,
             let surname = self.profileEditorView.registerFormView.surnameField.text,
@@ -50,7 +51,8 @@ class ProfileEditorViewController: UIViewController {
         presenter.changeDataProcess(with: model)
     }
     
-    @objc private func logout() {
+    @objc
+    private func logout() {
         presenter.logoutProcess()
     }
     

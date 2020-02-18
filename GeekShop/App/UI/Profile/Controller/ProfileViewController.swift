@@ -35,7 +35,8 @@ class ProfileViewController: UIViewController {
         self.navigationItem.setRightBarButton(editingButton, animated: true)
     }
     
-    @objc private func startEditing() {
+    @objc
+    private func startEditing() {
         router.toEditor()
     }
     

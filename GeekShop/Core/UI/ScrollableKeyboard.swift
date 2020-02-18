@@ -21,7 +21,8 @@ extension UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @objc private func adjustForKeyboard(_ notification: Notification) {
+    @objc
+    private func adjustForKeyboard(_ notification: Notification) {
         guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
             let scrollView = notification.object as? UIScrollView else { return }
 
