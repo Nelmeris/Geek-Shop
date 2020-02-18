@@ -14,6 +14,8 @@
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES">
         <attribute name="content" attributeType="String"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="product" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="reviews" inverseEntity="Product"/>
         <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="reviews" inverseEntity="User"/>
     </entity>
@@ -34,7 +36,7 @@
     <elements>
         <element name="Basket" positionX="-36" positionY="72" width="128" height="73"/>
         <element name="Product" positionX="-54" positionY="63" width="128" height="133"/>
-        <element name="Review" positionX="-18" positionY="90" width="128" height="88"/>
+        <element name="Review" positionX="-18" positionY="90" width="128" height="118"/>
         <element name="User" positionX="-63" positionY="-18" width="128" height="223"/>
     </elements>
 </model>
