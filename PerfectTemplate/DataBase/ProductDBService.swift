@@ -15,17 +15,17 @@ final class ProductDBService: BaseDBService {
     func load() throws -> [Product] {
         let request: NSFetchRequest<Product> = NSFetchRequest(entityName: entityName)
         request.sortDescriptors = [ NSSortDescriptor(key: "id", ascending: true) ]
-        return try BaseDBService.context.fetch(request)
+        return try context.fetch(request)
     }
     
     func load(id: String) throws -> Product? {
         let request: NSFetchRequest<Product> = NSFetchRequest(entityName: entityName)
         request.predicate = NSPredicate(format: "id == %@", id)
-        return try BaseDBService.context.fetch(request).first
+        return try context.fetch(request).first
     }
     
     func save(with data: ProductData) throws -> Product {
-        let product = Product(context: BaseDBService.context)
+        let product = Product(context: context)
         let products = try self.load()
         product.id = (products.last?.id ?? -1) + 1
         fillProduct(product, with: data)

@@ -15,19 +15,19 @@ final class UserDBService: BaseDBService {
     func load() throws -> [User] {
         let request: NSFetchRequest<User> = NSFetchRequest(entityName: entityName)
         request.sortDescriptors = [ NSSortDescriptor(key: "id", ascending: true) ]
-        return try BaseDBService.context.fetch(request)
+        return try context.fetch(request)
     }
     
     func load(id: String) throws -> User? {
         let request: NSFetchRequest<User> = NSFetchRequest(entityName: entityName)
         request.predicate = NSPredicate(format: "id == %@", id)
-        return try BaseDBService.context.fetch(request).first
+        return try context.fetch(request).first
     }
     
     func load(username: String) throws -> User? {
         let request: NSFetchRequest<User> = NSFetchRequest(entityName: entityName)
         request.predicate = NSPredicate(format: "username CONTAINS[cd] %@", username)
-        return try BaseDBService.context.fetch(request).first
+        return try context.fetch(request).first
     }
     
     func save(with data: UserData) throws -> User {
@@ -37,7 +37,7 @@ final class UserDBService: BaseDBService {
         } else {
             let users = try load()
             let id = (users.last?.id ?? -1) + 1
-            user = User(context: BaseDBService.context)
+            user = User(context: context)
             user.id = id
             user.creationDate = Date()
         }
