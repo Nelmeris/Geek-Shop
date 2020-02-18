@@ -26,7 +26,7 @@ class CatalogTableViewCell: UITableViewCell {
     private(set) lazy var priceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.boldSystemFont(ofSize: 21)
         return label
     }()
     
@@ -81,11 +81,10 @@ class CatalogTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             self.titleLabel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
             self.titleLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: 20),
-            self.titleLabel.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: -20),
             
-            self.priceLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 20),
-            self.priceLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: 20),
+            self.priceLabel.leftAnchor.constraint(greaterThanOrEqualTo: self.titleLabel.rightAnchor, constant: 20),
             self.priceLabel.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: -20),
+            self.priceLabel.topAnchor.constraint(equalTo: self.titleLabel.topAnchor),
             
             self.descriptionLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 20),
             self.descriptionLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: 20),

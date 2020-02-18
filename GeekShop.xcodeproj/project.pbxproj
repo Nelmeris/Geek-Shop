@@ -252,7 +252,7 @@
 				57FD693023FC61D20055FC45 /* Catalog */,
 				57F688D623F6883E00ECF27D /* Profile */,
 				57F6893723F7372F00ECF27D /* ProfileEditor */,
-				579247E523F7F68C004C03CC /* RegisterFormView.swift */,
+				57FD694923FC72C40055FC45 /* CustomViews */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -648,6 +648,14 @@
 				579247EC23F800F6004C03CC /* ProfileEditorModuleBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		57FD694923FC72C40055FC45 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				579247E523F7F68C004C03CC /* RegisterFormView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		72AC838FAD3526BDFCEF0290 /* Frameworks */ = {
