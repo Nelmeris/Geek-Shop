@@ -55,6 +55,7 @@
 		57DC9BCA23FD7FC5004CE8C7 /* CatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9BC923FD7FC5004CE8C7 /* CatalogRouter.swift */; };
 		57DC9BCE23FD815C004CE8C7 /* ProductViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9BCD23FD815C004CE8C7 /* ProductViewPresenter.swift */; };
 		57DC9BD023FD816C004CE8C7 /* ProductModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9BCF23FD816C004CE8C7 /* ProductModuleBuilder.swift */; };
+		57DC9BED23FDD26D004CE8C7 /* GeekShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9BEC23FDD26C004CE8C7 /* GeekShopUITests.swift */; };
 		57F688D123F524DD00ECF27D /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57F688D423F5283400ECF27D /* AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F688D323F5283400ECF27D /* AlertDelegate.swift */; };
 		57F688D823F6884D00ECF27D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F688D723F6884D00ECF27D /* ProfileViewController.swift */; };
@@ -80,6 +81,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		57C629452273850100C6080F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57871F9D22675B090052E0A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57871FA422675B090052E0A4;
+			remoteInfo = GeekShop;
+		};
+		57DC9BEF23FDD26D004CE8C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 57871F9D22675B090052E0A4 /* Project object */;
 			proxyType = 1;
@@ -158,6 +166,9 @@
 		57DC9BC923FD7FC5004CE8C7 /* CatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRouter.swift; sourceTree = "<group>"; };
 		57DC9BCD23FD815C004CE8C7 /* ProductViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewPresenter.swift; sourceTree = "<group>"; };
 		57DC9BCF23FD816C004CE8C7 /* ProductModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModuleBuilder.swift; sourceTree = "<group>"; };
+		57DC9BEA23FDD26C004CE8C7 /* GeekShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeekShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DC9BEC23FDD26C004CE8C7 /* GeekShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekShopUITests.swift; sourceTree = "<group>"; };
+		57DC9BEE23FDD26D004CE8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57F688C923F524C300ECF27D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F688CD23F524C700ECF27D /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F688D323F5283400ECF27D /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +212,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57DC9BE723FDD26C004CE8C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -222,6 +240,7 @@
 			children = (
 				57871FA722675B090052E0A4 /* GeekShop */,
 				57C629412273850100C6080F /* GeekShopUnitTests */,
+				57DC9BEB23FDD26C004CE8C7 /* GeekShopUITests */,
 				57871FA622675B090052E0A4 /* Products */,
 				AAE1AEB4C45A0453DBB0173C /* Pods */,
 				72AC838FAD3526BDFCEF0290 /* Frameworks */,
@@ -233,6 +252,7 @@
 			children = (
 				57871FA522675B090052E0A4 /* GeekShop.app */,
 				57C629402273850100C6080F /* GeekShopUnitTests.xctest */,
+				57DC9BEA23FDD26C004CE8C7 /* GeekShopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -480,6 +500,15 @@
 				57DC9BCD23FD815C004CE8C7 /* ProductViewPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		57DC9BEB23FDD26C004CE8C7 /* GeekShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57DC9BEC23FDD26C004CE8C7 /* GeekShopUITests.swift */,
+				57DC9BEE23FDD26D004CE8C7 /* Info.plist */,
+			);
+			path = GeekShopUITests;
 			sourceTree = "<group>";
 		};
 		57F688D523F5298600ECF27D /* AppDelegate */ = {
@@ -796,13 +825,31 @@
 			productReference = 57C629402273850100C6080F /* GeekShopUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		57DC9BE923FDD26C004CE8C7 /* GeekShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57DC9BF123FDD26D004CE8C7 /* Build configuration list for PBXNativeTarget "GeekShopUITests" */;
+			buildPhases = (
+				57DC9BE623FDD26C004CE8C7 /* Sources */,
+				57DC9BE723FDD26C004CE8C7 /* Frameworks */,
+				57DC9BE823FDD26C004CE8C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57DC9BF023FDD26D004CE8C7 /* PBXTargetDependency */,
+			);
+			name = GeekShopUITests;
+			productName = GeekShopUITests;
+			productReference = 57DC9BEA23FDD26C004CE8C7 /* GeekShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		57871F9D22675B090052E0A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Artem Kufaev";
 				TargetAttributes = {
@@ -811,6 +858,10 @@
 					};
 					57C6293F2273850100C6080F = {
 						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 57871FA422675B090052E0A4;
+					};
+					57DC9BE923FDD26C004CE8C7 = {
+						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 57871FA422675B090052E0A4;
 					};
 				};
@@ -830,6 +881,7 @@
 			targets = (
 				57871FA422675B090052E0A4 /* GeekShop */,
 				57C6293F2273850100C6080F /* GeekShopUnitTests */,
+				57DC9BE923FDD26C004CE8C7 /* GeekShopUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -845,6 +897,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		57C6293E2273850100C6080F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DC9BE823FDD26C004CE8C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1013,6 +1072,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57DC9BE623FDD26C004CE8C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DC9BED23FDD26D004CE8C7 /* GeekShopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1020,6 +1087,11 @@
 			isa = PBXTargetDependency;
 			target = 57871FA422675B090052E0A4 /* GeekShop */;
 			targetProxy = 57C629452273850100C6080F /* PBXContainerItemProxy */;
+		};
+		57DC9BF023FDD26D004CE8C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57871FA422675B090052E0A4 /* GeekShop */;
+			targetProxy = 57DC9BEF23FDD26D004CE8C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1236,6 +1308,44 @@
 			};
 			name = Release;
 		};
+		57DC9BF223FDD26D004CE8C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YX6VKW92JQ;
+				INFOPLIST_FILE = GeekShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artemkufaev.GeekShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeekShop;
+			};
+			name = Debug;
+		};
+		57DC9BF323FDD26D004CE8C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YX6VKW92JQ;
+				INFOPLIST_FILE = GeekShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artemkufaev.GeekShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeekShop;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1262,6 +1372,15 @@
 			buildConfigurations = (
 				57C629482273850100C6080F /* Debug */,
 				57C629492273850100C6080F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57DC9BF123FDD26D004CE8C7 /* Build configuration list for PBXNativeTarget "GeekShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DC9BF223FDD26D004CE8C7 /* Debug */,
+				57DC9BF323FDD26D004CE8C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
