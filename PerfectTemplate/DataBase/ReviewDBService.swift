@@ -41,10 +41,6 @@ final class ReviewDBService: BaseDBService {
     }
     
     func remove(with id: Int) throws -> Bool {
-        let reviews = try load()
-        for review in reviews {
-            print(review.id)
-        }
         guard let review = try load(for: id) else {
             return false
         }
@@ -53,7 +49,7 @@ final class ReviewDBService: BaseDBService {
     }
     
     private func fillReview(_ review: Review, with data: ReviewData) {
-        review.user = data.user
+        review.author = data.user
         review.product = data.product
         review.content = data.content
         review.creationDate = Date()

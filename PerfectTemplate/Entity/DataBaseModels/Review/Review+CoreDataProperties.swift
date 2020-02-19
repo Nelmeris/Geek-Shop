@@ -20,6 +20,6 @@ extension Review {
     @NSManaged public var creationDate: Date?
     @NSManaged public var id: Int64
     @NSManaged public var product: Product?
-    @NSManaged public var user: User?
+    @NSManaged public var author: User?
 
 }
