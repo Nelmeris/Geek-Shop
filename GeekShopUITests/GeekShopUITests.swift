@@ -9,30 +9,89 @@
 import XCTest
 
 class GeekShopUITests: XCTestCase {
+    
+    var app: XCUIApplication!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        self.app = XCUIApplication()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        self.app.launch()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
 
-    func testExample() {
-
+    func testLogin() {
+        login()
+        
+        let alert = app.alerts.firstMatch
+        assert(alert.label.contains("Успешно"))
+        
+        alert.otherElements.buttons.firstMatch.tap()
+    }
+    
+    private func login() {
+        app.buttons["Войти"].tap()
+        
+        let usernameField = app.textFields["Username"]
+        usernameField.tap()
+        usernameField.typeText("admin")
+        
+        let passwordField = app.secureTextFields["Password"]
+        passwordField.tap()
+        passwordField.typeText("admin")
+        
+        app.tap()
+        
+        app.buttons["Далее"].tap()
+    }
+    
+    func testLogout() {
+        login()
+        
+        let alert = app.alerts.firstMatch
+        assert(alert.label.contains("Успешно"))
+        
+        alert.otherElements.buttons.firstMatch.tap()
+        sleep(1)
+        app.tabBars.firstMatch.buttons["Contacts"].tap()
+        app.navigationBars.buttons.firstMatch.tap()
+        app.navigationBars.buttons["Выйти"].tap()
+        
+        assert(app.alerts.firstMatch.label.contains("Успешно"))
     }
 
-    func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
+    func testRegister() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.buttons["Регистрация"].tap()
+        
+        let usernameField = app.textFields["Username"]
+        let passwordField = app.secureTextFields["Password"]
+        let repeatPasswordField = app.secureTextFields["Repeat password"]
+        
+        usernameField.tap()
+        usernameField.typeText(randomString(length: 10))
+        
+        let password = randomString(length: 10)
+        passwordField.tap()
+        passwordField.typeText(password)
+        
+        repeatPasswordField.tap()
+        repeatPasswordField.typeText(password)
+        
+        app.staticTexts.firstMatch.tap()
+        
+        app.buttons["Далее"].tap()
+        
+        assert(app.alerts.firstMatch.label.contains("успешно"))
     }
+    
+    func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    
 }
