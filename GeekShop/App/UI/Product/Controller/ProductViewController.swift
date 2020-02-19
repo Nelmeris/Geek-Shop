@@ -41,6 +41,7 @@ class ProductViewController: UIViewController {
 extension ProductViewController: ProductController, AlertDelegate {
     
     func showProduct(with product: Product) {
+        self.title = product.title
         self.productView.configure(with: product)
     }
     

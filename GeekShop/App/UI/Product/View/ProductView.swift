@@ -11,7 +11,11 @@ import UIKit
 
 class ProductView: UIView {
     
+    // MARK: - Properties
+    
     private let reuseId = "reuse"
+    
+    // MARK: - Subviews
     
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -38,6 +42,7 @@ class ProductView: UIView {
         return tableView
     }()
     
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,15 +55,21 @@ class ProductView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public methods
+    
     public func dequeueReusableCell(for indexPath: IndexPath) -> ProductReviewTableViewCell {
         return self.reviewTableView.dequeueReusableCell(withIdentifier: self.reuseId, for: indexPath) as! ProductReviewTableViewCell
     }
+    
+    // MARK: - Configure
     
     public func configure(with product: Product) {
         self.titleLabel.text = product.title
         self.descriptionLabel.text = product.description
         self.priceLabel.text = NSDecimalNumber(decimal: product.price).stringValue
     }
+    
+    // MARK: - Configure UI & Layout
     
     private func configureUI() {
         self.backgroundColor = .white

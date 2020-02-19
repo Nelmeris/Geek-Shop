@@ -11,6 +11,8 @@ import UIKit
 
 class ProductReviewTableViewCell: UITableViewCell {
     
+    // MARK: - Subviews
+    
     private(set) lazy var authorNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -23,6 +25,7 @@ class ProductReviewTableViewCell: UITableViewCell {
         return label
     }()
     
+    // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -35,11 +38,14 @@ class ProductReviewTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Configure
     
     public func configure(with viewModel: ProductReviewViewModel) {
         self.authorNameLabel.text = viewModel.autherName
         self.contentLabel.text = viewModel.content
     }
+    
+    // MARK: - Init setup
     
     private func configureUI() {
         self.selectionStyle = .none
