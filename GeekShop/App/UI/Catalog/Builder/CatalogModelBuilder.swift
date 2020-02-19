@@ -15,6 +15,9 @@ class CatalogModelBuilder {
         let presenter = CatalogViewPresenter()
         vc.presenter = presenter
         presenter.controller = vc
+        presenter.requestFactory = RequestFactory().makeShopRequestFactory()
+        presenter.viewModelFactory = ProductViewModelFactory()
+        presenter.router = CatalogRouter(controller: vc)
         return vc
     }
     

@@ -9,6 +9,7 @@
 import Foundation
 
 struct Product: Codable {
+    let id: Int
     let title: String
     let price: Decimal
     let description: String?

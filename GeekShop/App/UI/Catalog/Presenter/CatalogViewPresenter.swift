@@ -15,25 +15,35 @@ protocol CatalogController: class {
 
 protocol CatalogPresenter: class {
     func loadProducts()
+    func productDidSelect(for indexPath: IndexPath)
 }
 
 class CatalogViewPresenter: CatalogPresenter {
     
-    private let shop = RequestFactory().makeShopRequestFactory()
-    private let viewModelFactory = ProductViewModelFactory()
+    public var requestFactory: ShopRequestFactory!
+    public var viewModelFactory: ProductViewModelFactory!
+    public var router: CatalogRouter!
+    
+    private var products: [Product] = []
     
     weak var controller: CatalogController!
     
     func loadProducts() {
-        shop.getGoods { response in
+        requestFactory.getGoods { response in
             switch response.result {
             case .success(let result):
+                self.products = result.products
                 let viewModels = self.viewModelFactory.make(from: result.products)
                 self.controller.showProducts(viewModels)
             case .failure(let error):
                 self.controller.showError(error)
             }
         }
+    }
+    
+    func productDidSelect(for indexPath: IndexPath) {
+        let product = self.products[indexPath.row]
+        self.router.toProduct(with: product)
     }
     
 }
