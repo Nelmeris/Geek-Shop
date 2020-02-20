@@ -37,14 +37,14 @@ extension GetBasketHandler {
             "count_goods": 2,
             "contents": [
                 [
-                    "id_product": 123,
-                    "product_name": "Ноутбук",
+                    "id": 123,
+                    "title": "Ноутбук",
                     "price": 45600,
                     "quantity": 1
                 ],
                 [
-                    "id_product": 456,
-                    "product_name": "Мышка",
+                    "id": 456,
+                    "title": "Мышка",
                     "price": 1000,
                     "quantity": 1
                 ]

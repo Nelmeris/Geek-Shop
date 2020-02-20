@@ -10,7 +10,7 @@ import Alamofire
 
 protocol BasketRequestFactory {
     func add(productId: Int, quantity: Int, completion: @escaping (DataResponse<ResultResponse>) -> ())
-    func remove(productId: Int, completion: @escaping (DataResponse<ResultResponse>) -> ())
+    func remove(productId: Int, userId: Int, completion: @escaping (DataResponse<ResultResponse>) -> ())
     func get(userId: Int, completion: @escaping (DataResponse<GetBasketResponse>) -> ())
 }
 
@@ -37,8 +37,8 @@ extension Basket: BasketRequestFactory {
         self.request(request: requestModel, completionHandler: completion)
     }
     
-    func remove(productId: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void) {
-        let requestModel = RemoveFromBasketRequest(baseUrl: baseUrl, productId: productId)
+    func remove(productId: Int, userId: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void) {
+        let requestModel = RemoveFromBasketRequest(baseUrl: baseUrl, productId: productId, userId: userId)
         self.request(request: requestModel, completionHandler: completion)
     }
     
@@ -72,9 +72,11 @@ extension Basket {
         let path: String = "basket.remove"
         
         let productId: Int
+        let userId: Int
         var parameters: Parameters? {
             return [
-                "product_id": productId
+                "product_id": productId,
+                "user_id": userId
             ]
         }
     }
