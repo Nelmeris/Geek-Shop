@@ -51,6 +51,8 @@ class BasketTableViewCell: UITableViewCell {
             guard newValue >= 1 else { return }
             self.decreaseButton.isEnabled = newValue != 1
             self.quantityField.text = String(newValue)
+            let price = Decimal(string: self.viewModel!.price)!
+            self.priceLabel.text = NSDecimalNumber(decimal: price * Decimal(integerLiteral: newValue)).stringValue
             guard let model = viewModel else { return }
             self.delegate?.quantityDidChange(for: model, with: newValue)
         }
@@ -150,10 +152,9 @@ class BasketTableViewCell: UITableViewCell {
             self.increaseButton.centerYAnchor.constraint(equalTo: self.quantityField.centerYAnchor),
             self.increaseButton.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: -20),
             
-            self.removeButton.topAnchor.constraint(equalTo: self.quantityField.bottomAnchor, constant: 20),
-            self.removeButton.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: 20),
-            self.removeButton.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: -20),
-            self.removeButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20)
+            self.removeButton.topAnchor.constraint(equalTo: self.quantityField.bottomAnchor, constant: 10),
+            self.removeButton.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            self.removeButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -10)
         ])
     }
     
@@ -165,7 +166,7 @@ extension BasketTableViewCell {
         self.viewModel = viewModel
         self.titleLabel.text = viewModel.title
         self.priceLabel.text = viewModel.price
-        self.quantityField.text = viewModel.quantity
+        self.quantity = Int(viewModel.quantity)!
     }
     
 }
