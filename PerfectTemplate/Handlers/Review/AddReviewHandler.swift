@@ -53,8 +53,10 @@ extension AddReviewHandler {
     
     private func validate() -> ValidateResult {
         guard let content = request.param(name: "content"),
-            let userId = request.param(name: "user_id"),
-            let productId = request.param(name: "product_id") else {
+            let userIdStr = request.param(name: "user_id"),
+            let userId = Int(userIdStr),
+            let productIdStr = request.param(name: "product_id"),
+            let productId = Int(productIdStr) else {
                 return .badData
         }
         guard let user = try! userDB.load(id: userId) else {

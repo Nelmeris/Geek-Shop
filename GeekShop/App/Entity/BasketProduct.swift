@@ -9,8 +9,6 @@
 import Foundation
 
 struct BasketProduct: Codable {
-    let id: Int
-    let title: String
-    let price: Decimal
+    let product: Product
     let quantity: Int
 }

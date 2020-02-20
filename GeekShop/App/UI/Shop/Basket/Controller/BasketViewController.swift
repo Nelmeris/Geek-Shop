@@ -30,8 +30,8 @@ class BasketViewController: UIViewController {
         self.basketView.productTableView.dataSource = self
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presenter.loadProducts()
     }
     
@@ -75,9 +75,14 @@ extension BasketViewController: UITableViewDelegate {
 
 extension BasketViewController: BasketTableViewCellDelegate {
     
-    func cellDidRemove(for viewModel: BasketProductViewModel) {
+    func didRemove(for viewModel: BasketProductViewModel) {
         guard let index = self.viewModels.firstIndex(where: { $0 == viewModel }) else { return }
         self.presenter.productDidRemove(with: index)
+    }
+    
+    func quantityDidChange(for viewModel: BasketProductViewModel, with quantity: Int) {
+        guard let index = self.viewModels.firstIndex(where: { $0 == viewModel }) else { return }
+        self.presenter.productDidChangeQuantity(for: index, with: quantity)
     }
     
 }

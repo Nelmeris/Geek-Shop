@@ -18,9 +18,9 @@ final class ProductDBService: BaseDBService {
         return try context.fetch(request)
     }
     
-    func load(id: String) throws -> Product? {
+    func load(id: Int) throws -> Product? {
         let request: NSFetchRequest<Product> = NSFetchRequest(entityName: entityName)
-        request.predicate = NSPredicate(format: "id == %@", id)
+        request.predicate = NSPredicate(format: "id == %d", id)
         return try context.fetch(request).first
     }
     

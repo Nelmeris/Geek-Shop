@@ -21,8 +21,8 @@ class BasketProductViewModelFactory {
     }
     
     private func model(with product: BasketProduct) -> BasketProductViewModel {
-        let price = NSDecimalNumber(decimal: product.price).stringValue
-        let title = product.title
+        let price = NSDecimalNumber(decimal: product.product.price).stringValue
+        let title = product.product.title
         let quantity = String(product.quantity)
         return BasketProductViewModel(title: title, price: price, quantity: quantity)
     }

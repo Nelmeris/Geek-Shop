@@ -16,6 +16,7 @@ protocol BasketController: UIViewController {
 
 protocol BasketPresenter: class {
     func loadProducts()
+    func productDidChangeQuantity(for index: Int, with quantity: Int)
     func productDidRemove(with index: Int)
 }
 
@@ -34,7 +35,7 @@ extension BasketViewPresenter: BasketPresenter {
         requestFactory.get(userId: User.authUser!.id) { response in
             switch response.result {
             case .success(let result):
-                self.products = result.contents
+                self.products = result.basket.products
                 let viewModels = self.viewModelFactory.make(with: self.products)
                 self.controller.showProducts(with: viewModels)
             case .failure(let error):
@@ -45,7 +46,19 @@ extension BasketViewPresenter: BasketPresenter {
     
     func productDidRemove(with index: Int) {
         let product = products[index]
-        requestFactory.remove(productId: product.id, userId: User.authUser!.id) { response in
+        requestFactory.remove(productId: product.product.id, userId: User.authUser!.id) { response in
+            switch response.result {
+            case .success:
+                self.loadProducts()
+            case .failure(let error):
+                self.controller.showError(error)
+            }
+        }
+    }
+    
+    func productDidChangeQuantity(for index: Int, with quantity: Int) {
+        let product = products[index]
+        requestFactory.add(productId: product.product.id, userId: User.authUser!.id, quantity: quantity) { response in
             switch response.result {
             case .success:
                 self.loadProducts()

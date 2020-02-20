@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 protocol BasketTableViewCellDelegate {
-    func cellDidRemove(for viewModel: BasketProductViewModel)
+    func didRemove(for viewModel: BasketProductViewModel)
+    func quantityDidChange(for viewModel: BasketProductViewModel, with quantity: Int)
 }
 
 class BasketTableViewCell: UITableViewCell {
@@ -50,6 +51,8 @@ class BasketTableViewCell: UITableViewCell {
             guard newValue >= 1 else { return }
             self.decreaseButton.isEnabled = newValue != 1
             self.quantityField.text = String(newValue)
+            guard let model = viewModel else { return }
+            self.delegate?.quantityDidChange(for: model, with: newValue)
         }
     }
     
@@ -80,12 +83,6 @@ class BasketTableViewCell: UITableViewCell {
         return button
     }()
     
-    @objc
-    private func removeButtonDidClick() {
-        guard let model = viewModel else { return }
-        self.delegate?.cellDidRemove(for: model)
-    }
-    
     // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -109,6 +106,12 @@ class BasketTableViewCell: UITableViewCell {
     @objc
     private func decreaseQuantity() {
         self.quantity -= 1
+    }
+    
+    @objc
+    private func removeButtonDidClick() {
+        guard let model = viewModel else { return }
+        self.delegate?.didRemove(for: model)
     }
     
     // MARK: - Configure view
