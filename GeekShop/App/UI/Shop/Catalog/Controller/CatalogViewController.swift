@@ -34,18 +34,35 @@ class CatalogViewController: UIViewController {
         self.view = CatalogView()
         self.catalogView.tableView.dataSource = self
         self.catalogView.tableView.delegate = self
+        setRefreshControl()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.loadProducts()
         self.configureUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.loadProducts()
     }
     
     // MARK: - Configure
     
     private func configureUI() {
         self.title = "Каталог"
+    }
+    
+    private func setRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        self.catalogView.tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(reloadProducts), for: .valueChanged)
+        
+    }
+    
+    @objc
+    private func reloadProducts() {
+        presenter.loadProducts()
     }
     
 }
@@ -55,6 +72,9 @@ extension CatalogViewController: CatalogController, AlertDelegate {
     
     func showProducts(_ viewModels: [ProductViewModel]) {
         self.viewModels = viewModels
+        DispatchQueue.main.async {
+            self.catalogView.tableView.refreshControl?.endRefreshing()
+        }
     }
     
     func showError(_ error: Error) {
