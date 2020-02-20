@@ -9,11 +9,16 @@
 import Foundation
 import UIKit
 
+protocol BasketViewDelegate {
+    func buyButtonDidClicked()
+}
+
 class BasketView: UIView {
     
     // MARK: - Properties
     
     private let reuseId = "reuse"
+    public var delegate: BasketViewDelegate?
     
     // MARK: - Subviews
     
@@ -23,6 +28,21 @@ class BasketView: UIView {
         tableView.register(BasketTableViewCell.self, forCellReuseIdentifier: reuseId)
         return tableView
     }()
+    
+    private(set) lazy var buyButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Заказать", for: .normal)
+        button.addTarget(self, action: #selector(buyButtonDidClicked), for: .touchUpInside)
+        return button
+    }()
+    
+    // MARK: - Actions
+    
+    @objc
+    private func buyButtonDidClicked() {
+        self.delegate?.buyButtonDidClicked()
+    }
     
     // MARK: - Init
     
@@ -45,6 +65,7 @@ class BasketView: UIView {
     
     private func setupLayout() {
         self.addSubview(productTableView)
+        self.addSubview(buyButton)
     }
     
     private func setupConstraints() {
@@ -54,7 +75,11 @@ class BasketView: UIView {
             self.productTableView.topAnchor.constraint(equalTo: safeArea.topAnchor),
             self.productTableView.leftAnchor.constraint(equalTo: safeArea.leftAnchor),
             self.productTableView.rightAnchor.constraint(equalTo: safeArea.rightAnchor),
-            self.productTableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
+            
+            self.buyButton.topAnchor.constraint(equalTo: self.productTableView.bottomAnchor, constant: 20),
+            self.buyButton.leftAnchor.constraint(equalTo: safeArea.leftAnchor),
+            self.buyButton.rightAnchor.constraint(equalTo: safeArea.rightAnchor),
+            self.buyButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20)
         ])
     }
     

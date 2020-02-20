@@ -11,6 +11,7 @@ import UIKit
 
 protocol BasketController: UIViewController {
     func showProducts(with products: [BasketProductViewModel])
+    func showMessage(_ message: String)
     func showError(_ error: Error)
 }
 
@@ -18,6 +19,7 @@ protocol BasketPresenter: class {
     func loadProducts()
     func productDidChangeQuantity(for index: Int, with quantity: Int)
     func productDidRemove(with index: Int)
+    func makePurchase()
 }
 
 class BasketViewPresenter {
@@ -66,6 +68,10 @@ extension BasketViewPresenter: BasketPresenter {
                 self.controller.showError(error)
             }
         }
+    }
+    
+    func makePurchase() {
+        self.controller.showMessage("Заказ оформлен!")
     }
     
 }

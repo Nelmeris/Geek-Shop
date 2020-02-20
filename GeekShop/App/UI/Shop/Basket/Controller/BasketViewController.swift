@@ -11,6 +11,8 @@ import UIKit
 
 class BasketViewController: UIViewController {
     
+    // MARK: - Properties
+    
     var presenter: BasketPresenter!
     var viewModels: [BasketProductViewModel] = [] {
         didSet {
@@ -24,10 +26,18 @@ class BasketViewController: UIViewController {
         return self.view as! BasketView
     }
     
+    // MARK: - Lifecycle
+    
     override func loadView() {
         super.loadView()
         self.view = BasketView()
         self.basketView.productTableView.dataSource = self
+        self.basketView.delegate = self
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,20 +45,30 @@ class BasketViewController: UIViewController {
         presenter.loadProducts()
     }
     
+    private func configureUI() {
+        self.title = "Корзина"
+    }
+    
 }
 
+// MARK: - Presenter implementation
 extension BasketViewController: BasketController, AlertDelegate {
+    
+    func showMessage(_ message: String) {
+        self.showAlert(title: message)
+    }
     
     func showProducts(with products: [BasketProductViewModel]) {
         self.viewModels = products
     }
     
     func showError(_ error: Error) {
-        self.showAlert(title: error.localizedDescription)
+        self.showAlert(title: "Ошибка", message: error.localizedDescription)
     }
     
 }
 
+// MARK: - Table View Data Source
 extension BasketViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,6 +85,7 @@ extension BasketViewController: UITableViewDataSource {
     
 }
 
+// MARK: - Table View Delegate
 extension BasketViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -73,6 +94,7 @@ extension BasketViewController: UITableViewDelegate {
     
 }
 
+// MARK: - Table View Cell Delegate
 extension BasketViewController: BasketTableViewCellDelegate {
     
     func didRemove(for viewModel: BasketProductViewModel) {
@@ -83,6 +105,14 @@ extension BasketViewController: BasketTableViewCellDelegate {
     func quantityDidChange(for viewModel: BasketProductViewModel, with quantity: Int) {
         guard let index = self.viewModels.firstIndex(where: { $0 == viewModel }) else { return }
         self.presenter.productDidChangeQuantity(for: index, with: quantity)
+    }
+    
+}
+
+extension BasketViewController: BasketViewDelegate {
+    
+    func buyButtonDidClicked() {
+        self.presenter.makePurchase()
     }
     
 }
