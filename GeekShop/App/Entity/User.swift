@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Crashlytics
 
 struct User: Codable {
     let id: Int
@@ -19,5 +20,10 @@ struct User: Codable {
     let creditCard: String?
     let gender: String?
     
-    static var authUser: User?
+    static var authUser: User? {
+        willSet {
+            guard let user = newValue else { return }
+            Crashlytics.sharedInstance().setUserIdentifier(String(user.id))
+        }
+    }
 }

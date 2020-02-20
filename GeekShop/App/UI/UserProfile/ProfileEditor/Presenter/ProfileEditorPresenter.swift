@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Crashlytics
 
 protocol ProfileEditorController: class {
     func showResult(_ msg: String, completion: @escaping () -> ())
@@ -35,9 +36,10 @@ class ProfileEditorViewPresenter: ProfileEditorPresenter {
         auth.changeUserData(id: self.user.id, username: model.username, password: model.password, name: model.name, surname: model.surname, email: model.email, gender: model.gender, creditCard: model.creditCard, bio: model.bio) { response in
             switch response.result {
             case .success(let result):
-                print(result.result)
+                self.controller.showResult(result.message!) {}
             case .failure(let error):
-                print(error.localizedDescription)
+                Crashlytics.sharedInstance().recordError(error)
+                self.controller.showError(error)
             }
         }
     }
@@ -46,6 +48,7 @@ class ProfileEditorViewPresenter: ProfileEditorPresenter {
         auth.logout(id: self.user.id) { response in
             switch response.result {
             case .success:
+                Answers.logCustomEvent(withName: "logout", customAttributes: nil)
                 self.controller.showResult("Успешно!") {
                     User.authUser = nil
                     DispatchQueue.main.async {
@@ -53,6 +56,7 @@ class ProfileEditorViewPresenter: ProfileEditorPresenter {
                     }
                 }
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Crashlytics
 
 class ProductViewController: UIViewController {
     
@@ -35,6 +36,11 @@ class ProductViewController: UIViewController {
         super.viewDidLoad()
         presenter.loadProduct()
         presenter.loadReviews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Answers.logCustomEvent(withName: "productOpene", customAttributes: nil)
     }
     
 }

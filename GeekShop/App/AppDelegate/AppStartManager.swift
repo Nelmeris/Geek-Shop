@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Crashlytics
+import Firebase
 
 final class AppStartManager {
     
@@ -22,6 +24,8 @@ final class AppStartManager {
     }
     
     func start() {
+        FirebaseApp.configure()
+        
         let rootVC = AuthorizationViewController()
         let navVC = UINavigationController()
         navVC.viewControllers = [rootVC]

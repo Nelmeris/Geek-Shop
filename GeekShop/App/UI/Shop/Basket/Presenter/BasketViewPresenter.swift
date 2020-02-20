@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Crashlytics
 
 protocol BasketController: UIViewController {
     func showProducts(with products: [BasketProductViewModel])
@@ -41,6 +42,7 @@ extension BasketViewPresenter: BasketPresenter {
                 let viewModels = self.viewModelFactory.make(with: self.products)
                 self.controller.showProducts(with: viewModels)
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }
@@ -51,8 +53,13 @@ extension BasketViewPresenter: BasketPresenter {
         requestFactory.remove(productId: product.product.id, userId: User.authUser!.id) { response in
             switch response.result {
             case .success:
+                Answers.logCustomEvent(withName: "removeFromCart", customAttributes: [
+                    "itemId": product.product.id,
+                    "itemName": product.product.title
+                ])
                 self.loadProducts()
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }
@@ -63,14 +70,19 @@ extension BasketViewPresenter: BasketPresenter {
         requestFactory.add(productId: product.product.id, userId: User.authUser!.id, quantity: quantity) { response in
             switch response.result {
             case .success:
+                Answers.logAddToCart(withPrice: NSDecimalNumber(decimal: product.product.price), currency: "RUB", itemName: product.product.title, itemType: nil, itemId: String(product.product.id), customAttributes: [
+                    "quantity": quantity
+                ])
                 self.loadProducts()
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }
     }
     
     func makePurchase() {
+        Answers.logPurchase(withPrice: NSDecimalNumber(decimal: 12.0), currency: "RUB", success: true, itemName: nil, itemType: nil, itemId: nil, customAttributes: nil)
         self.controller.showMessage("Заказ оформлен!")
     }
     

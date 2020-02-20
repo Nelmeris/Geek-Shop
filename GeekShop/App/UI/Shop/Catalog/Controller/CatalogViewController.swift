@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Crashlytics
 
 class CatalogViewController: UIViewController {
     
@@ -45,6 +46,7 @@ class CatalogViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.loadProducts()
+        Answers.logCustomEvent(withName: "catalogOpened", customAttributes: nil)
     }
     
     // MARK: - Configure

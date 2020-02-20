@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Crashlytics
 
 class LoginViewController: UIViewController, AlertDelegate {
     
@@ -56,7 +57,10 @@ class LoginViewController: UIViewController, AlertDelegate {
                     User.authUser = result.user
                     self.router.toProfile()
                 }
+                Answers.logLogin(withMethod: "default", success: true, customAttributes: nil)
             case .failure(let error):
+                Answers.logLogin(withMethod: "default", success: false, customAttributes: nil)
+                Crashlytics.sharedInstance().recordError(error)
                 self.showAlert(title: error.localizedDescription)
             }
         }

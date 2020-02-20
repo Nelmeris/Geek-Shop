@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Crashlytics
 
 protocol ProductController: class {
     func showProduct(with product: Product)
@@ -46,6 +47,7 @@ extension ProductViewPresenter: ProductPresenter {
                 let viewModels = self.viewModelFactory.make(from: self.reviews)
                 self.controller.showReviews(with: viewModels)
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }
@@ -55,8 +57,10 @@ extension ProductViewPresenter: ProductPresenter {
         basketRequestFactory.add(productId: self.product.id, userId: User.authUser!.id, quantity: 1) { response in
             switch response.result {
             case .success:
+                Answers.logAddToCart(withPrice: NSDecimalNumber(decimal: self.product.price), currency: "RUB", itemName: self.product.title, itemType: nil, itemId: String(self.product.id), customAttributes: nil)
                 self.controller.showMessage("Товар успешно добавлен в корзину")
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }

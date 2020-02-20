@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Crashlytics
 
 protocol RegisterController: class {
     func showResult(_ msg: String, completion: @escaping () -> ())
@@ -40,7 +41,10 @@ class RegisterViewPresenter: RegisterPresenter {
                     User.authUser = result.user
                     self.router.toProfile()
                 }
+                Answers.logSignUp(withMethod: "default", success: true, customAttributes: nil)
             case .failure(let error):
+                Answers.logSignUp(withMethod: "default", success: false, customAttributes: nil)
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }
