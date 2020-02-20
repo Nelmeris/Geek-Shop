@@ -15,7 +15,9 @@ class ProductModuleBuilder {
         let presenter = ProductViewPresenter()
         vc.presenter = presenter
         presenter.viewModelFactory = ProductReviewViewModelFactory()
-        presenter.requestFactory = RequestFactory().makeShopRequestFactory()
+        let requestFactory = RequestFactory()
+        presenter.shopRequestFactory = requestFactory.makeShopRequestFactory()
+        presenter.basketRequestFactory = requestFactory.makeBasketRequestFactory()
         presenter.controller = vc
         presenter.product = product
         return vc
