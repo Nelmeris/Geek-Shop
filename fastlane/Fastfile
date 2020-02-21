@@ -40,8 +40,31 @@ platform :ios do
   end
 
   lane :deploy do
+
     # Increment build number
     increment_build_number
+
+    gym(
+      scheme: "GeekShop",
+      configuration: "Release",
+      export_method: "development",
+      include_symbols: true,
+      include_bitcode: true,
+      silent: false
+    )
+
+    # commit changes to git
+    versionNumber = get_version_number
+    buildNumber = get_build_number
+    tag = "#{versionNumber}.#{buildNumber}"
+
+    # git_add
+    git_add(path: ["./Podfile.lock", "./GeekShop.xcodeproj/project.pbxproj", "./GeekShopUnitTests/Info.plist", "./GeekShop/Environments/Info.plist", "./GeekShopUITests/Info.plist"])
+    git_commit(path: ["./Podfile.lock", "./GeekShop.xcodeproj/project.pbxproj", "./GeekShopUnitTests/Info.plist", "./GeekShop/Environments/Info.plist", "./GeekShopUITests/Info.plist"], message: "verson up")
+    add_git_tag(
+      tag: tag
+    )
+
   end
 
 end
