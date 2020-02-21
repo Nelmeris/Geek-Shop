@@ -38,7 +38,7 @@ extension ProductViewPresenter: ProductPresenter {
     
     func loadProduct() {
         self.controller.showProduct(with: self.product)
-        Analytics.logEvent("Open product page", parameters: [
+        Analytics.logEvent("OpenProductPage", parameters: [
             "Product ID": product.id,
             "Product name": product.title
         ])
@@ -62,7 +62,7 @@ extension ProductViewPresenter: ProductPresenter {
         basketRequestFactory.add(productId: self.product.id, userId: User.authUser!.id, quantity: 1) { response in
             switch response.result {
             case .success:
-                Analytics.logEvent("Add to cart", parameters: [
+                Analytics.logEvent("AddToCart", parameters: [
                     "Product ID": self.product.id,
                     "Product name": self.product.title,
                     "Price": self.product.price,

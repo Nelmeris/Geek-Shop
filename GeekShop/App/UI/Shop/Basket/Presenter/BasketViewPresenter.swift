@@ -54,7 +54,7 @@ extension BasketViewPresenter: BasketPresenter {
         requestFactory.remove(productId: product.product.id, userId: User.authUser!.id) { response in
             switch response.result {
             case .success:
-                Analytics.logEvent("Remove from cart", parameters: [
+                Analytics.logEvent("RemoveFromCart", parameters: [
                     "Product ID": product.product.id,
                     "Product name": product.product.title,
                     "Price": product.product.price,
@@ -74,7 +74,7 @@ extension BasketViewPresenter: BasketPresenter {
         requestFactory.add(productId: product.product.id, userId: User.authUser!.id, quantity: quantity) { response in
             switch response.result {
             case .success:
-                Analytics.logEvent("Add to cart", parameters: [
+                Analytics.logEvent("AddToCart", parameters: [
                     "Product ID": product.product,
                     "Product name": product.product.title,
                     "Price": product.product.price,
@@ -93,7 +93,7 @@ extension BasketViewPresenter: BasketPresenter {
     }
     
     func makePurchase() {
-        Analytics.logEvent("purchase", parameters: [
+        Analytics.logEvent("Purchase", parameters: [
             "currency": "RUB",
             "success": true,
             "totalPrice": Decimal(0.0)

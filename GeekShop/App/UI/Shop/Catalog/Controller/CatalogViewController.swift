@@ -47,7 +47,7 @@ class CatalogViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.loadProducts()
-        Analytics.logEvent("Open catalog", parameters: nil)
+        Analytics.logEvent("OpenCatalog", parameters: nil)
     }
     
     // MARK: - Configure
