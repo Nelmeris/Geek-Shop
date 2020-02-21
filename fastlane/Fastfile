@@ -38,4 +38,10 @@ platform :ios do
     run_tests
 
   end
+
+  lane :deploy do
+    # Increment build number
+    increment_build_number
+  end
+
 end
