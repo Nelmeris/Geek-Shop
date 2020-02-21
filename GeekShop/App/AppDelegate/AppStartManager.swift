@@ -24,7 +24,9 @@ final class AppStartManager {
     }
     
     func start() {
-        FirebaseApp.configure()
+        if !isRunningUnitTests() {
+            FirebaseApp.configure()
+        }
         
         let rootVC = AuthorizationViewController()
         let navVC = UINavigationController()
@@ -33,6 +35,14 @@ final class AppStartManager {
         window?.rootViewController = navVC
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
+    }
+    
+    private func isRunningUnitTests() -> Bool {
+        let env = ProcessInfo.processInfo.environment
+        if let _ = env["XCInjectBundleInto"] {
+            return true
+        }
+        return false
     }
     
 }
