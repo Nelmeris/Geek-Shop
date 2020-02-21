@@ -8,7 +8,8 @@
 
 import XCTest
 
-  
+class GeekShopUITests: XCTestCase {
+    
     var app: XCUIApplication!
 
     override func setUp() {
