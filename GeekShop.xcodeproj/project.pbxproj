@@ -63,7 +63,6 @@
 		57DC9C0223FE9042004CE8C7 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9C0123FE9042004CE8C7 /* BasketViewController.swift */; };
 		57DC9C0523FE9095004CE8C7 /* BasketModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9C0423FE9095004CE8C7 /* BasketModuleBuilder.swift */; };
 		57DC9C0723FE912E004CE8C7 /* BasketProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9C0623FE912E004CE8C7 /* BasketProductViewModel.swift */; };
-		57DC9C0923FEC207004CE8C7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DC9C0823FEC207004CE8C7 /* Storyboard.storyboard */; };
 		57DC9C1923FEDA1A004CE8C7 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9C1823FEDA1A004CE8C7 /* Basket.swift */; };
 		57F688D123F524DD00ECF27D /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57F688D423F5283400ECF27D /* AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F688D323F5283400ECF27D /* AlertDelegate.swift */; };
@@ -185,7 +184,6 @@
 		57DC9C0123FE9042004CE8C7 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		57DC9C0423FE9095004CE8C7 /* BasketModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketModuleBuilder.swift; sourceTree = "<group>"; };
 		57DC9C0623FE912E004CE8C7 /* BasketProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductViewModel.swift; sourceTree = "<group>"; };
-		57DC9C0823FEC207004CE8C7 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		57DC9C1823FEDA1A004CE8C7 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		57F688C923F524C300ECF27D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F688CD23F524C700ECF27D /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -543,7 +541,6 @@
 				57FD693023FC61D20055FC45 /* Catalog */,
 				57DC9BB923FD3216004CE8C7 /* Product */,
 				57DC9BF723FE8DB0004CE8C7 /* Basket */,
-				57DC9C0823FEC207004CE8C7 /* Storyboard.storyboard */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -987,7 +984,6 @@
 				57871FB322675B0B0052E0A4 /* LaunchScreen.storyboard in Resources */,
 				5763B5F023FF3AFE00C41287 /* GoogleService-Info.plist in Resources */,
 				57871FB022675B0B0052E0A4 /* Assets.xcassets in Resources */,
-				57DC9C0923FEC207004CE8C7 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

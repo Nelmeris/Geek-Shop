@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Crashlytics
+import FirebaseAnalytics
 
 class CatalogViewController: UIViewController {
     
@@ -46,7 +47,7 @@ class CatalogViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.loadProducts()
-        Answers.logCustomEvent(withName: "catalogOpened", customAttributes: nil)
+        Analytics.logEvent("Open catalog", parameters: nil)
     }
     
     // MARK: - Configure

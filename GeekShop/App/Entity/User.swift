@@ -8,6 +8,7 @@
 
 import Foundation
 import Crashlytics
+import FirebaseAnalytics
 
 struct User: Codable {
     let id: Int
@@ -22,8 +23,17 @@ struct User: Codable {
     
     static var authUser: User? {
         willSet {
-            guard let user = newValue else { return }
+            guard let user = newValue else {
+                Crashlytics.sharedInstance().setUserIdentifier(nil)
+                Crashlytics.sharedInstance().setUserName(nil)
+                Analytics.setUserID(nil)
+                Analytics.setUserProperty(nil, forName: "Username")
+                return
+            }
             Crashlytics.sharedInstance().setUserIdentifier(String(user.id))
+            Crashlytics.sharedInstance().setUserName(user.username)
+            Analytics.setUserID(String(user.id))
+            Analytics.setUserProperty(user.username, forName: "Username")
         }
     }
 }

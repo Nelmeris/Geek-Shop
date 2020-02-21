@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Crashlytics
+import FirebaseAnalytics
 
 protocol RegisterController: class {
     func showResult(_ msg: String, completion: @escaping () -> ())
@@ -39,11 +40,17 @@ class RegisterViewPresenter: RegisterPresenter {
             case .success(let result):
                 self.controller.showResult(result.message!) {
                     User.authUser = result.user
+                    Analytics.logEvent("Sign up", parameters: [
+                        "Success": true,
+                        "User ID": result.user.id,
+                        "Username": result.user.username
+                    ])
                     self.router.toProfile()
                 }
-                Answers.logSignUp(withMethod: "default", success: true, customAttributes: nil)
             case .failure(let error):
-                Answers.logSignUp(withMethod: "default", success: false, customAttributes: nil)
+                Analytics.logEvent("Sign up", parameters: [
+                    "success": false
+                ])
                 Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }

@@ -8,6 +8,7 @@
 
 import Foundation
 import Crashlytics
+import FirebaseAnalytics
 
 protocol ProductController: class {
     func showProduct(with product: Product)
@@ -37,6 +38,10 @@ extension ProductViewPresenter: ProductPresenter {
     
     func loadProduct() {
         self.controller.showProduct(with: self.product)
+        Analytics.logEvent("Open product page", parameters: [
+            "Product ID": product.id,
+            "Product name": product.title
+        ])
     }
     
     func loadReviews() {
@@ -57,7 +62,13 @@ extension ProductViewPresenter: ProductPresenter {
         basketRequestFactory.add(productId: self.product.id, userId: User.authUser!.id, quantity: 1) { response in
             switch response.result {
             case .success:
-                Answers.logAddToCart(withPrice: NSDecimalNumber(decimal: self.product.price), currency: "RUB", itemName: self.product.title, itemType: nil, itemId: String(self.product.id), customAttributes: nil)
+                Analytics.logEvent("Add to cart", parameters: [
+                    "Product ID": self.product.id,
+                    "Product name": self.product.title,
+                    "Price": self.product.price,
+                    "Quantity": 1,
+                    "Currency": "RUB"
+                ])
                 self.controller.showMessage("Товар успешно добавлен в корзину")
             case .failure(let error):
                 Crashlytics.sharedInstance().recordError(error)

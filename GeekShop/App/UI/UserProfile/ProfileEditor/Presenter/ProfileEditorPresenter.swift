@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Crashlytics
+import FirebaseAnalytics
 
 protocol ProfileEditorController: class {
     func showResult(_ msg: String, completion: @escaping () -> ())
@@ -48,7 +49,10 @@ class ProfileEditorViewPresenter: ProfileEditorPresenter {
         auth.logout(id: self.user.id) { response in
             switch response.result {
             case .success:
-                Answers.logCustomEvent(withName: "logout", customAttributes: nil)
+                Analytics.logEvent("Logout", parameters: [
+                    "User ID": self.user.id,
+                    "Username": self.user.username
+                ])
                 self.controller.showResult("Успешно!") {
                     User.authUser = nil
                     DispatchQueue.main.async {

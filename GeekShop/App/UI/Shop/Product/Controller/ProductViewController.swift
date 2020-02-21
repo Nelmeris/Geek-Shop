@@ -38,11 +38,6 @@ class ProductViewController: UIViewController {
         presenter.loadReviews()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        Answers.logCustomEvent(withName: "productOpene", customAttributes: nil)
-    }
-    
 }
 
 extension ProductViewController: ProductController, AlertDelegate {
