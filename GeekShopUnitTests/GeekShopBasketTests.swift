@@ -27,7 +27,7 @@ class GeekShopBasketTests: XCTestCase {
     
     func testGetBasket() {
         let expectation = XCTestExpectation(description: "Get basket")
-        basket.get(userId: 1) { response in
+        basket.get(userId: 8) { response in
             switch response.result {
             case .success: break
             case .failure (let error):
@@ -41,7 +41,7 @@ class GeekShopBasketTests: XCTestCase {
     
     func testAddToBasket() {
         let expectation = XCTestExpectation(description: "Add to basket")
-        basket.add(productId: 123, quantity: 1) { response in
+        basket.add(productId: 1, userId: 8, quantity: 1) { response in
             switch response.result {
             case .success: break
             case .failure (let error):
@@ -55,7 +55,7 @@ class GeekShopBasketTests: XCTestCase {
     
     func testRemoveFromBasket() {
         let expectation = XCTestExpectation(description: "Remove from basket")
-        basket.remove(productId: 123) { response in
+        basket.remove(productId: 1, userId: 8) { response in
             switch response.result {
             case .success: break
             case .failure (let error):

@@ -54,8 +54,10 @@ class GeekShopAuthTests: XCTestCase {
     }
 
     func testRegister() {
+        let username = randomString(length: 10)
+        let password = randomString(length: 20)
         let expectation = XCTestExpectation(description: "Registration")
-        auth.register(username: "new_user4", password: "mypassword", name: "Artem", surname: "Kufaev", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
+        auth.register(username: username, password: password, name: "Artem", surname: "Kufaev", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success: break
             case .failure (let error):
@@ -68,8 +70,10 @@ class GeekShopAuthTests: XCTestCase {
     }
 
     func testChangeUserData() {
+        let username = randomString(length: 10)
+        let password = randomString(length: 20)
         let expectation = XCTestExpectation(description: "Change user data")
-        auth.changeUserData(id: 0, username: "new_username", password: "mypassword", name: "Artem", surname: "Kufaev", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
+        auth.changeUserData(id: 10, username: username, password: password, name: "Artem", surname: "Kufaev", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success: break
             case .failure (let error):
@@ -79,6 +83,11 @@ class GeekShopAuthTests: XCTestCase {
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
     }
 
 }

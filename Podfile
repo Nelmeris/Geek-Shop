@@ -5,7 +5,6 @@ use_frameworks!
 
 def shared_pods
   pod 'Alamofire'
-  pod 'RxSwift'
   pod 'Firebase/Analytics'
   pod 'Fabric'
   pod 'Crashlytics'
@@ -16,5 +15,6 @@ target 'GeekShop' do
 end
 
 target 'GeekShopUnitTests' do
+  inherit! :search_paths
   shared_pods
 end
