@@ -1116,6 +1116,15 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
+		5793D1892401A92A00301C19 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				57F688EB23F6CA0900ECF27D /* DataBase */,
+				574D3BA62278C48B001C6B00 /* Handlers */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
 		57F688EB23F6CA0900ECF27D /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -1464,9 +1473,8 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5793D1892401A92A00301C19 /* BusinessLogic */,
 				57F6893123F71FD100ECF27D /* Entity */,
-				57F688EB23F6CA0900ECF27D /* DataBase */,
-				574D3BA62278C48B001C6B00 /* Handlers */,
 				57F6892B23F71A3500ECF27D /* Core */,
 				OBJ_8 /* PerfectTemplate */,
 			);
