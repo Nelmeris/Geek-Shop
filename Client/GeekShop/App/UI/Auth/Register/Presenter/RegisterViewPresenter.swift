@@ -12,12 +12,12 @@ import Crashlytics
 import FirebaseAnalytics
 
 protocol RegisterController: class {
-    func showResult(_ msg: String, completion: @escaping () -> ())
+    func showResult(_ msg: String, completion: @escaping () -> Void)
     func showError(_ error: Error)
 }
 
 protocol RegisterPresenter: class {
-    func registerProcess(with model: RegisterInputModel)
+    func registerProcess(with model: UserData)
 }
 
 class RegisterViewPresenter: RegisterPresenter {
@@ -26,16 +26,9 @@ class RegisterViewPresenter: RegisterPresenter {
     var auth: AuthRequestFactory!
     var router: RegisterRouter!
     
-    func registerProcess(with model: RegisterInputModel) {
+    func registerProcess(with model: UserData) {
         guard validate(with: model) else { return }
-        auth.register(username: model.username,
-                      password: model.password,
-                      name: model.name,
-                      surname: model.surname,
-                      email: model.email,
-                      gender: model.gender,
-                      creditCard: model.creditCard,
-                      bio: model.bio) { response in
+        auth.register(with: model) { response in
             switch response.result {
             case .success(let result):
                 self.controller.showResult(result.message!) {
@@ -57,7 +50,7 @@ class RegisterViewPresenter: RegisterPresenter {
         }
     }
     
-    private func validate(with model: RegisterInputModel) -> Bool {
+    private func validate(with model: UserData) -> Bool {
         if model.username.isEmpty {
             let message = R.string.localizable.missingUsernameErrorMessage()
             self.controller.showResult(message) {}

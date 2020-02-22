@@ -9,6 +9,7 @@
 import Foundation
 
 struct ProductReview: Codable {
+    // swiftlint:disable identifier_name
     let id: Int
     let author: User
     let product: Product

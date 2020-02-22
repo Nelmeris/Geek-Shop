@@ -9,9 +9,9 @@
 import Alamofire
 
 protocol BasketRequestFactory {
-    func add(productId: Int, userId: Int, quantity: Int, completion: @escaping (DataResponse<ResultResponse>) -> ())
-    func remove(productId: Int, userId: Int, completion: @escaping (DataResponse<ResultResponse>) -> ())
-    func get(userId: Int, completion: @escaping (DataResponse<GetBasketResponse>) -> ())
+    func add(productId: Int, userId: Int, quantity: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void)
+    func remove(productId: Int, userId: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void)
+    func get(userId: Int, completion: @escaping (DataResponse<GetBasketResponse>) -> Void)
 }
 
 class BasketService: AbstractRequestFactory {

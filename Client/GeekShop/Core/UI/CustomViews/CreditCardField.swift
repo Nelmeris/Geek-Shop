@@ -28,7 +28,9 @@ class CreditCardField: UITextField, UITextFieldDelegate {
         self.addTarget(self, action: #selector(reformatAsCardNumber), for: .editingChanged)
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
         previousTextFieldContent = textField.text
         previousSelection = textField.selectedTextRange
         return true
@@ -43,7 +45,8 @@ class CreditCardField: UITextField, UITextFieldDelegate {
         
         var cardNumberWithoutSpaces = ""
         if let text = textField.text {
-            cardNumberWithoutSpaces = self.removeNonDigits(string: text, andPreserveCursorPosition: &targetCursorPosition)
+            cardNumberWithoutSpaces = self.removeNonDigits(string: text,
+                                                           andPreserveCursorPosition: &targetCursorPosition)
         }
         
         if cardNumberWithoutSpaces.count > 19 {
@@ -52,7 +55,8 @@ class CreditCardField: UITextField, UITextFieldDelegate {
             return
         }
         
-        let cardNumberWithSpaces = self.insertCreditCardSpaces(cardNumberWithoutSpaces, preserveCursorPosition: &targetCursorPosition)
+        let cardNumberWithSpaces = self.insertCreditCardSpaces(cardNumberWithoutSpaces,
+                                                               preserveCursorPosition: &targetCursorPosition)
         textField.text = cardNumberWithSpaces
         
         if let targetPosition = textField.position(from: textField.beginningOfDocument, offset: targetCursorPosition) {
@@ -64,12 +68,11 @@ class CreditCardField: UITextField, UITextFieldDelegate {
         var digitsOnlyString = ""
         let originalCursorPosition = cursorPosition
         
-        for i in Swift.stride(from: 0, to: string.count, by: 1) {
-            let characterToAdd = string[string.index(string.startIndex, offsetBy: i)]
+        for charIndex in Swift.stride(from: 0, to: string.count, by: 1) {
+            let characterToAdd = string[string.index(string.startIndex, offsetBy: charIndex)]
             if characterToAdd >= "0" && characterToAdd <= "9" {
                 digitsOnlyString.append(characterToAdd)
-            }
-            else if i < originalCursorPosition {
+            } else if charIndex < originalCursorPosition {
                 cursorPosition -= 1
             }
         }
@@ -103,20 +106,20 @@ class CreditCardField: UITextField, UITextFieldDelegate {
         var stringWithAddedSpaces = ""
         let cursorPositionInSpacelessString = cursorPosition
         
-        for i in 0..<string.count {
-            let needs465Spacing = (is465 && (i == 4 || i == 10 || i == 15))
-            let needs456Spacing = (is456 && (i == 4 || i == 9 || i == 15))
-            let needs4444Spacing = (is4444 && i > 0 && (i % 4) == 0)
+        for charIndex in 0..<string.count {
+            let needs465Spacing = (is465 && (charIndex == 4 || charIndex == 10 || charIndex == 15))
+            let needs456Spacing = (is456 && (charIndex == 4 || charIndex == 9 || charIndex == 15))
+            let needs4444Spacing = (is4444 && charIndex > 0 && (charIndex % 4) == 0)
             
             if needs465Spacing || needs456Spacing || needs4444Spacing {
                 stringWithAddedSpaces.append(" ")
                 
-                if i < cursorPositionInSpacelessString {
+                if charIndex < cursorPositionInSpacelessString {
                     cursorPosition += 1
                 }
             }
             
-            let characterToAdd = string[string.index(string.startIndex, offsetBy:i)]
+            let characterToAdd = string[string.index(string.startIndex, offsetBy: charIndex)]
             stringWithAddedSpaces.append(characterToAdd)
         }
         

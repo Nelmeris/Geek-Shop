@@ -11,9 +11,9 @@ import Foundation
 final class LoginRouter: BaseRouter {
     
     func toProfile() {
-        let vc = TabBarController()
-        vc.modalPresentationStyle = .fullScreen
-        self.controller.present(vc, animated: true)
+        let controller = TabBarController()
+        controller.modalPresentationStyle = .fullScreen
+        self.controller.present(controller, animated: true)
     }
     
 }

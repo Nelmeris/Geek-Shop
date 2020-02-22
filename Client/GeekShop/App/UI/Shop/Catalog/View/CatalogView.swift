@@ -56,7 +56,9 @@ class CatalogView: UIView {
     // MARK: - Additional
     
     public func dequeueReusableCell() -> CatalogTableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! CatalogTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)
+            as? CatalogTableViewCell else { fatalError() }
+        return cell
     }
     
 }

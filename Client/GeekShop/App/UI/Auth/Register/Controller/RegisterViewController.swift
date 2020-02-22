@@ -8,26 +8,15 @@
 
 import UIKit
 
-struct RegisterInputModel {
-    let username: String
-    let name: String
-    let surname: String
-    let password: String
-    let repeatPassword: String
-    let email: String
-    let gender: String
-    let creditCard: String
-    let bio: String
-}
-
-class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelegate {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Properties
     
     var presenter: RegisterPresenter!
     
     private var registerView: RegisterView {
-        return self.view as! RegisterView
+        guard let view = self.view as? RegisterView else { fatalError() }
+        return view
     }
     
     // MARK: - Lifecycle
@@ -63,7 +52,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelega
             let bio = self.registerView.registerFormView.bioTextView.text
             else { fatalError("Ошибка введения данных") }
         
-        let model = RegisterInputModel(username: username, name: name, surname: surname, password: password, repeatPassword: repeatPassword, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        let model = UserData(id: nil,
+                             username: username,
+                             password: name,
+                             repeatPassword: surname,
+                             email: password,
+                             name: repeatPassword,
+                             surname: email,
+                             bio: gender,
+                             creditCard: creditCard,
+                             gender: bio)
         
         presenter.registerProcess(with: model)
     }
@@ -72,7 +70,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelega
 
 extension RegisterViewController: RegisterController {
     
-    func showResult(_ msg: String, completion: @escaping () -> () = {}) {
+    func showResult(_ msg: String, completion: @escaping () -> Void = {}) {
         self.showAlert(title: msg) { _ in
             completion()
         }

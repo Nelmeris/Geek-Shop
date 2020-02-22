@@ -16,7 +16,8 @@ class ProfileViewController: UIViewController {
     }()
     
     var profileView: ProfileView {
-        return self.view as! ProfileView
+        guard let view = self.view as? ProfileView else { fatalError() }
+        return view
     }
     
     override func loadView() {

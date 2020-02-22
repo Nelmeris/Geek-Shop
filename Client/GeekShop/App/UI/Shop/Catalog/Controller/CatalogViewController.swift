@@ -24,7 +24,8 @@ class CatalogViewController: UIViewController {
     }
     
     private var catalogView: CatalogView {
-        return self.view as! CatalogView
+        guard let view = self.view as? CatalogView else { fatalError() }
+        return view
     }
     
     var presenter: CatalogPresenter!
@@ -71,7 +72,7 @@ class CatalogViewController: UIViewController {
 }
 
 // MARK: - Presenter
-extension CatalogViewController: CatalogController, AlertDelegate {
+extension CatalogViewController: CatalogController {
     
     func showProducts(_ viewModels: [ProductViewModel]) {
         self.viewModels = viewModels

@@ -81,9 +81,6 @@ extension BasketViewPresenter: BasketPresenter {
                     "Quantity": quantity,
                     "Currency": "RUB"
                 ])
-                Answers.logAddToCart(withPrice: NSDecimalNumber(decimal: product.product.price), currency: "RUB", itemName: product.product.title, itemType: nil, itemId: String(product.product.id), customAttributes: [
-                    "quantity": quantity
-                ])
                 self.loadProducts()
             case .failure(let error):
                 Crashlytics.sharedInstance().recordError(error)

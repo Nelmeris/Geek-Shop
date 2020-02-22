@@ -11,14 +11,14 @@ import Foundation
 class CatalogModelBuilder {
     
     static public func build() -> CatalogViewController {
-        let vc = CatalogViewController()
+        let controller = CatalogViewController()
         let presenter = CatalogViewPresenter()
-        vc.presenter = presenter
-        presenter.controller = vc
+        controller.presenter = presenter
+        presenter.controller = controller
         presenter.requestFactory = RequestFactory().makeShopRequestFactory()
         presenter.viewModelFactory = ProductViewModelFactory()
-        presenter.router = CatalogRouter(controller: vc)
-        return vc
+        presenter.router = CatalogRouter(controller: controller)
+        return controller
     }
     
 }

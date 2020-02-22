@@ -9,10 +9,10 @@
 import Alamofire
 
 protocol AuthRequestFactory {
-    func login(username: String, password: String, completion: @escaping (DataResponse<AuthResponse>) -> ())
-    func logout(id: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void)
-    func register(username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<AuthResponse>) -> ())
-    func changeUserData(id: Int, username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<AuthResponse>) -> ())
+    func login(with data: UserData, completion: @escaping (DataResponse<AuthResponse>) -> Void)
+    func logout(with userId: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void)
+    func register(with data: UserData, completion: @escaping (DataResponse<AuthResponse>) -> Void)
+    func changeUserData(with data: UserData, completion: @escaping (DataResponse<AuthResponse>) -> Void)
 }
 
 class Auth: AbstractRequestFactory {
@@ -33,23 +33,23 @@ class Auth: AbstractRequestFactory {
 
 extension Auth: AuthRequestFactory {
     
-    func login(username: String, password: String, completion: @escaping (DataResponse<AuthResponse>) -> ()) {
-        let requestModel = Login(baseUrl: baseUrl, login: username, password: password)
+    func login(with data: UserData, completion: @escaping (DataResponse<AuthResponse>) -> Void) {
+        let requestModel = Login(baseUrl: baseUrl, data: data)
         self.request(request: requestModel, completionHandler: completion)
     }
 
-    func logout(id: Int, completion: @escaping (DataResponse<ResultResponse>) -> ()) {
-        let requestModel = Logout(baseUrl: baseUrl, id: id)
+    func logout(with userId: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void) {
+        let requestModel = Logout(baseUrl: baseUrl, userId: userId)
         self.request(request: requestModel, completionHandler: completion)
     }
 
-    func register(username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<AuthResponse>) -> Void) {
-        let requestModel = Register(baseUrl: baseUrl, username: username, password: password, name: name, surname: surname, email: email, gender: gender, creditCard: creditCard, bio: bio)
+    func register(with data: UserData, completion: @escaping (DataResponse<AuthResponse>) -> Void) {
+        let requestModel = Register(baseUrl: baseUrl, data: data)
         self.request(request: requestModel, completionHandler: completion)
     }
 
-    func changeUserData(id: Int, username: String, password: String, name: String, surname: String, email: String, gender: String, creditCard: String, bio: String, completion: @escaping (DataResponse<AuthResponse>) -> Void) {
-        let requestModel = ChangeUserData(baseUrl: baseUrl, id: id, username: username, password: password, name: name, surname: surname, email: email, gender: gender, creditCard: creditCard, bio: bio)
+    func changeUserData(with data: UserData, completion: @escaping (DataResponse<AuthResponse>) -> Void) {
+        let requestModel = ChangeUserData(baseUrl: baseUrl, data: data)
         self.request(request: requestModel, completionHandler: completion)
     }
     
@@ -62,12 +62,11 @@ extension Auth {
         let method: HTTPMethod = .get
         let path: String = "auth.login"
 
-        let login: String
-        let password: String
+        let data: UserData
         var parameters: Parameters? {
             return [
-                "username": login,
-                "password": password
+                "username": data.username,
+                "password": data.password
             ]
         }
     }
@@ -77,25 +76,18 @@ extension Auth {
         let method: HTTPMethod = .get
         let path: String = "auth.register"
 
-        let username: String
-        let password: String
-        let name: String
-        let surname: String
-        let email: String
-        let gender: String
-        let creditCard: String
-        let bio: String
+        let data: UserData
 
         var parameters: Parameters? {
             return [
-                "username": username,
-                "password": password,
-                "name": name,
-                "surname": surname,
-                "email": email,
-                "gender": gender,
-                "credit_card": creditCard,
-                "bio": bio
+                "username": data.username,
+                "password": data.password,
+                "name": data.name as Any,
+                "surname": data.surname as Any,
+                "email": data.email as Any,
+                "gender": data.gender as Any,
+                "credit_card": data.creditCard as Any,
+                "bio": data.bio as Any
             ]
         }
     }
@@ -105,27 +97,19 @@ extension Auth {
         let method: HTTPMethod = .get
         let path: String = "user.changeData"
 
-        let id: Int
-        let username: String
-        let password: String
-        let name: String
-        let surname: String
-        let email: String
-        let gender: String
-        let creditCard: String
-        let bio: String
+        let data: UserData
 
         var parameters: Parameters? {
             return [
-                "user_id": id,
-                "username": username,
-                "password": password,
-                "name": name,
-                "surname": surname,
-                "email": email,
-                "gender": gender,
-                "credit_card": creditCard,
-                "bio": bio
+                "user_id": data.id as Any,
+                "username": data.username,
+                "password": data.password,
+                "name": data.name as Any,
+                "surname": data.surname as Any,
+                "email": data.email as Any,
+                "gender": data.gender as Any,
+                "credit_card": data.creditCard as Any,
+                "bio": data.bio as Any
             ]
         }
     }
@@ -135,11 +119,11 @@ extension Auth {
         let method: HTTPMethod = .get
         let path: String = "auth.logout"
 
-        let id: Int
+        let userId: Int
 
         var parameters: Parameters? {
             return [
-                "user_id": id
+                "user_id": userId
             ]
         }
     }

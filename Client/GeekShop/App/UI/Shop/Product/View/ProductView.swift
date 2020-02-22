@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ProductViewDelegate {
+protocol ProductViewDelegate: class {
     func addToBasketButtonDidClicked()
 }
 
@@ -18,7 +18,7 @@ class ProductView: UIView {
     // MARK: - Properties
     
     private let reuseId = "reuse"
-    public var delegate: ProductViewDelegate?
+    public weak var delegate: ProductViewDelegate?
     
     // MARK: - Subviews
     
@@ -80,7 +80,9 @@ class ProductView: UIView {
     // MARK: - Public methods
     
     public func dequeueReusableCell(for indexPath: IndexPath) -> ProductReviewTableViewCell {
-        return self.reviewTableView.dequeueReusableCell(withIdentifier: self.reuseId, for: indexPath) as! ProductReviewTableViewCell
+        guard let cell = self.reviewTableView.dequeueReusableCell(withIdentifier: self.reuseId, for: indexPath)
+            as? ProductReviewTableViewCell else { fatalError() }
+        return cell
     }
     
     // MARK: - Configure
@@ -131,6 +133,5 @@ class ProductView: UIView {
             self.addToBasketButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20)
         ])
     }
-    
     
 }

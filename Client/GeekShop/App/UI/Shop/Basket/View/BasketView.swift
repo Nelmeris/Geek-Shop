@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol BasketViewDelegate {
+protocol BasketViewDelegate: class {
     func buyButtonDidClicked()
 }
 
@@ -18,7 +18,7 @@ class BasketView: UIView {
     // MARK: - Properties
     
     private let reuseId = "reuse"
-    public var delegate: BasketViewDelegate?
+    public weak var delegate: BasketViewDelegate?
     
     // MARK: - Subviews
     
@@ -90,7 +90,9 @@ class BasketView: UIView {
 extension BasketView {
     
     public func dequeueReusableCell(for indexPath: IndexPath) -> BasketTableViewCell {
-        return self.productTableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! BasketTableViewCell
+        guard let cell = self.productTableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)
+            as? BasketTableViewCell else { fatalError() }
+        return cell
     }
     
 }

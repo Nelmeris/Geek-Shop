@@ -9,8 +9,8 @@
 import Alamofire
 
 protocol ShopRequestFactory {
-    func getGoods(completion: @escaping (DataResponse<CatalogResponse>) -> ())
-    func getReviews(for productId: Int, completion: @escaping (DataResponse<GetReviewsResponse>) -> ())
+    func getGoods(completion: @escaping (DataResponse<CatalogResponse>) -> Void)
+    func getReviews(for productId: Int, completion: @escaping (DataResponse<GetReviewsResponse>) -> Void)
 }
 
 class Shop: AbstractRequestFactory {
@@ -31,12 +31,12 @@ class Shop: AbstractRequestFactory {
 
 extension Shop: ShopRequestFactory {
     
-    func getGoods(completion: @escaping (DataResponse<CatalogResponse>) -> ()) {
+    func getGoods(completion: @escaping (DataResponse<CatalogResponse>) -> Void) {
         let requestModel = GetProductsRequest(baseUrl: baseUrl)
         self.request(request: requestModel, completionHandler: completion)
     }
     
-    func getReviews(for productId: Int, completion: @escaping (DataResponse<GetReviewsResponse>) -> ()) {
+    func getReviews(for productId: Int, completion: @escaping (DataResponse<GetReviewsResponse>) -> Void) {
         let requestModel = GetProductReviewsRequest(baseUrl: baseUrl, productId: productId)
         self.request(request: requestModel, completionHandler: completion)
     }

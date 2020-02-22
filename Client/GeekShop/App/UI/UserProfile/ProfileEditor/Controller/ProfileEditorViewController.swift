@@ -12,7 +12,8 @@ import UIKit
 class ProfileEditorViewController: UIViewController {
     
     var profileEditorView: ProfileEditorView {
-        return self.view as! ProfileEditorView
+        guard let view = self.view as? ProfileEditorView else { fatalError() }
+        return view
     }
     
     var presenter: ProfileEditorPresenter!
@@ -48,7 +49,16 @@ class ProfileEditorViewController: UIViewController {
             let bio = self.profileEditorView.registerFormView.bioTextView.text
             else { fatalError("Fields text error") }
         
-        let model = RegisterInputModel(username: username, name: name, surname: surname, password: password, repeatPassword: repeatPassword, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        let model = UserData(id: nil,
+                             username: username,
+                             password: name,
+                             repeatPassword: surname,
+                             email: password,
+                             name: repeatPassword,
+                             surname: email,
+                             bio: gender,
+                             creditCard: creditCard,
+                             gender: bio)
         presenter.changeDataProcess(with: model)
     }
     
@@ -59,9 +69,9 @@ class ProfileEditorViewController: UIViewController {
     
 }
 
-extension ProfileEditorViewController: ProfileEditorController, AlertDelegate {
+extension ProfileEditorViewController: ProfileEditorController {
     
-    func showResult(_ msg: String, completion: @escaping () -> ()) {
+    func showResult(_ msg: String, completion: @escaping () -> Void) {
         showAlert(title: msg, message: nil) { _ in
             completion()
         }

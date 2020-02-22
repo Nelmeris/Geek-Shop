@@ -11,16 +11,16 @@ import Foundation
 class ProductModuleBuilder {
     
     public static func build(with product: Product) -> ProductViewController {
-        let vc = ProductViewController()
+        let controller = ProductViewController()
         let presenter = ProductViewPresenter()
-        vc.presenter = presenter
+        controller.presenter = presenter
         presenter.viewModelFactory = ProductReviewViewModelFactory()
         let requestFactory = RequestFactory()
         presenter.shopRequestFactory = requestFactory.makeShopRequestFactory()
         presenter.basketRequestFactory = requestFactory.makeBasketRequestFactory()
-        presenter.controller = vc
+        presenter.controller = controller
         presenter.product = product
-        return vc
+        return controller
     }
     
 }

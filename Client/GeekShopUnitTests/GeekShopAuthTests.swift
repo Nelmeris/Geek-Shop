@@ -27,12 +27,13 @@ class GeekShopAuthTests: XCTestCase {
 
     func testLogin() {
         let expectation = XCTestExpectation(description: "Login")
-        auth.login(username: "admin", password: "admin") { response in
+        let data = UserData(id: nil, username: "admin", password: "admin",
+                            repeatPassword: nil, email: nil, name: nil, surname: nil, bio: nil, creditCard: nil, gender: nil)
+        auth.login(with: data) { response in
             switch response.result {
             case .success: break
             case .failure (let error):
-                print(error)
-                XCTFail()
+                XCTFail(error.localizedDescription)
             }
             expectation.fulfill()
         }
@@ -41,12 +42,11 @@ class GeekShopAuthTests: XCTestCase {
 
     func testLogout() {
         let expectation = XCTestExpectation(description: "Logout")
-        auth.logout(id: 123) { response in
+        auth.logout(with: 1) { response in
             switch response.result {
             case .success: break
             case .failure (let error):
-                print(error)
-                XCTFail()
+                XCTFail(error.localizedDescription)
             }
             expectation.fulfill()
         }
@@ -57,12 +57,21 @@ class GeekShopAuthTests: XCTestCase {
         let username = randomString(length: 10)
         let password = randomString(length: 20)
         let expectation = XCTestExpectation(description: "Registration")
-        auth.register(username: username, password: password, name: "Artem", surname: "Kufaev", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
+        let data = UserData(id: nil,
+                            username: username,
+                            password: password,
+                            repeatPassword: nil,
+                            email: "some@some.ru",
+                            name: "Artem",
+                            surname: "Kufaev",
+                            bio: "This is good! I think I will switch to another language",
+                            creditCard: "9872389-2424-234224-234",
+                            gender: "Male")
+        auth.register(with: data) { response in
             switch response.result {
             case .success: break
             case .failure (let error):
-                print(error)
-                XCTFail()
+                XCTFail(error.localizedDescription)
             }
             expectation.fulfill()
         }
@@ -73,12 +82,19 @@ class GeekShopAuthTests: XCTestCase {
         let username = randomString(length: 10)
         let password = randomString(length: 20)
         let expectation = XCTestExpectation(description: "Change user data")
-        auth.changeUserData(id: 10, username: username, password: password, name: "Artem", surname: "Kufaev", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
+        let data = UserData(id: 10, username: username, password: password,
+                            repeatPassword: nil,
+                            email: "some@some.ru",
+                            name: "Artem",
+                            surname: "Kufaev",
+                            bio: "This is good! I think I will switch to another language",
+                            creditCard: "9872389-2424-234224-234",
+                            gender: "Male")
+        auth.changeUserData(with: data) { response in
             switch response.result {
             case .success: break
             case .failure (let error):
-                print(error)
-                XCTFail()
+                XCTFail(error.localizedDescription)
             }
             expectation.fulfill()
         }
@@ -87,7 +103,7 @@ class GeekShopAuthTests: XCTestCase {
     
     func randomString(length: Int) -> String {
       let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-      return String((0..<length).map{ _ in letters.randomElement()! })
+      return String((0..<length).map { _ in letters.randomElement()! })
     }
 
 }

@@ -39,7 +39,7 @@ final class AppStartManager {
     
     private func isRunningUnitTests() -> Bool {
         let env = ProcessInfo.processInfo.environment
-        if let _ = env["XCInjectBundleInto"] {
+        if env["XCInjectBundleInto"] != nil {
             return true
         }
         return false

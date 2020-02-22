@@ -11,13 +11,13 @@ import Foundation
 class ProfileEditorModuleBuilder {
     
     static func build() -> ProfileEditorViewController {
-        let vc = ProfileEditorViewController()
+        let controller = ProfileEditorViewController()
         guard let presenter = ProfileEditorViewPresenter() else { fatalError("Missing user data") }
-        vc.presenter = presenter
-        presenter.controller = vc
-        presenter.router = ProfileEditorRouter(controller: vc)
+        controller.presenter = presenter
+        presenter.controller = controller
+        presenter.router = ProfileEditorRouter(controller: controller)
         presenter.auth = RequestFactory().makeAuthRequestFatory()
-        return vc
+        return controller
     }
     
 }

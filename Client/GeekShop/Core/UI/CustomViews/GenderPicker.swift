@@ -33,8 +33,13 @@ class GenderPicker: UITextField {
         self.text = genders[0].string
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneGenderPicker))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(doneGenderPicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                          target: self,
+                                          action: nil)
         toolbar.setItems([spaceButton, doneButton], animated: false)
         self.inputAccessoryView = toolbar
         self.inputView = genderPicker

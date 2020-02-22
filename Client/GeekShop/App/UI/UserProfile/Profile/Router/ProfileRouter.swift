@@ -11,8 +11,8 @@ import Foundation
 final class ProfileRouter: BaseRouter {
     
     func toEditor() {
-        let vc = ProfileEditorModuleBuilder.build()
-        self.push(vc, animated: true)
+        let controller = ProfileEditorModuleBuilder.build()
+        self.push(controller, animated: true)
     }
     
 }

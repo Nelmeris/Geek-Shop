@@ -22,7 +22,8 @@ class ProductViewController: UIViewController {
     public var presenter: ProductPresenter!
     
     private var productView: ProductView {
-        return self.view as! ProductView
+        guard let view = self.view as? ProductView else { fatalError() }
+        return view
     }
     
     override func loadView() {
@@ -40,7 +41,7 @@ class ProductViewController: UIViewController {
     
 }
 
-extension ProductViewController: ProductController, AlertDelegate {
+extension ProductViewController: ProductController {
     
     func showProduct(with product: Product) {
         self.title = product.title

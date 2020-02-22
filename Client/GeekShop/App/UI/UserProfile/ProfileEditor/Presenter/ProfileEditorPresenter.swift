@@ -12,12 +12,12 @@ import Crashlytics
 import FirebaseAnalytics
 
 protocol ProfileEditorController: class {
-    func showResult(_ msg: String, completion: @escaping () -> ())
+    func showResult(_ msg: String, completion: @escaping () -> Void)
     func showError(_ error: Error)
 }
 
 protocol ProfileEditorPresenter: class {
-    func changeDataProcess(with model: RegisterInputModel)
+    func changeDataProcess(with model: UserData)
     func logoutProcess()
 }
 
@@ -32,9 +32,9 @@ class ProfileEditorViewPresenter: ProfileEditorPresenter {
         self.user = User.authUser
     }
     
-    func changeDataProcess(with model: RegisterInputModel) {
+    func changeDataProcess(with model: UserData) {
         guard validate(with: model) else { return }
-        auth.changeUserData(id: self.user.id, username: model.username, password: model.password, name: model.name, surname: model.surname, email: model.email, gender: model.gender, creditCard: model.creditCard, bio: model.bio) { response in
+        auth.changeUserData(with: model) { response in
             switch response.result {
             case .success(let result):
                 self.controller.showResult(result.message!) {}
@@ -46,7 +46,7 @@ class ProfileEditorViewPresenter: ProfileEditorPresenter {
     }
     
     func logoutProcess() {
-        auth.logout(id: self.user.id) { response in
+        auth.logout(with: self.user.id) { response in
             switch response.result {
             case .success:
                 Analytics.logEvent("Logout", parameters: [
@@ -67,7 +67,7 @@ class ProfileEditorViewPresenter: ProfileEditorPresenter {
         }
     }
     
-    private func validate(with model: RegisterInputModel) -> Bool {
+    private func validate(with model: UserData) -> Bool {
         if model.username.isEmpty {
             let message = R.string.localizable.missingUsernameErrorMessage()
             self.controller.showResult(message) {}

@@ -11,15 +11,16 @@ import Crashlytics
 import FirebaseAnalytics
 
 struct User: Codable {
+    // swiftlint:disable identifier_name
     let id: Int
     let username: String
     let email: String?
-    let creationDate: Date
     let name: String?
     let surname: String?
     let bio: String?
     let creditCard: String?
     let gender: String?
+    let creationDate: Date
     
     static var authUser: User? {
         willSet {
@@ -36,4 +37,18 @@ struct User: Codable {
             Analytics.setUserProperty(user.username, forName: "Username")
         }
     }
+}
+
+struct UserData {
+    // swiftlint:disable identifier_name
+    let id: Int?
+    let username: String
+    let password: String
+    let repeatPassword: String?
+    let email: String?
+    let name: String?
+    let surname: String?
+    let bio: String?
+    let creditCard: String?
+    let gender: String?
 }

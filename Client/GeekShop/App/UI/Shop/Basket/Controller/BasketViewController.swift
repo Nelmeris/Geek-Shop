@@ -23,7 +23,8 @@ class BasketViewController: UIViewController {
     }
     
     private var basketView: BasketView {
-        return self.view as! BasketView
+        guard let view = self.view as? BasketView else { fatalError() }
+        return view
     }
     
     // MARK: - Lifecycle
@@ -52,7 +53,7 @@ class BasketViewController: UIViewController {
 }
 
 // MARK: - Presenter implementation
-extension BasketViewController: BasketController, AlertDelegate {
+extension BasketViewController: BasketController {
     
     func showMessage(_ message: String) {
         self.showAlert(title: message)

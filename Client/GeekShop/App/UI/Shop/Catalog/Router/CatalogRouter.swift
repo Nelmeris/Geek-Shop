@@ -11,8 +11,8 @@ import Foundation
 final class CatalogRouter: BaseRouter {
     
     public func toProduct(with product: Product) {
-        let vc = ProductModuleBuilder.build(with: product)
-        self.push(vc, animated: true)
+        let controller = ProductModuleBuilder.build(with: product)
+        self.push(controller, animated: true)
     }
     
 }

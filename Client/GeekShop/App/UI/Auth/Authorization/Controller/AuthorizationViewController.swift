@@ -18,7 +18,8 @@ class AuthorizationViewController: UIViewController {
     private lazy var router: AuthorizationRouter = { return AuthorizationRouter(controller: self) }()
     
     private var authView: AuthorizationView {
-        return self.view as! AuthorizationView
+        guard let view = self.view as? AuthorizationView else { fatalError() }
+        return view
     }
     
     // MARK: - Lifecycle
@@ -52,13 +53,12 @@ class AuthorizationViewController: UIViewController {
     
 }
 
-extension AuthorizationViewController: AlertDelegate {
+extension AuthorizationViewController {
     
     private func askPermissionSendReports() {
         let title = R.string.localizable.sendReportsPermissionQuestionTitle()
         let message = R.string.localizable.sendReportsPermissionQuestionContent()
-        self.showQuestion(title: title, message: message, actions: (
-            { actionOk in
+        self.showQuestion(title: title, message: message, actions: ({ actionOk in
                 UserDefaults.standard.set(true, forKey: self.sendReportKey)
             }, { actionCancel in
                 UserDefaults.standard.set(false, forKey: self.sendReportKey)

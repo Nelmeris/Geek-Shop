@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol BasketTableViewCellDelegate {
+protocol BasketTableViewCellDelegate: class {
     func didRemove(for viewModel: BasketProductViewModel)
     func quantityDidChange(for viewModel: BasketProductViewModel, with quantity: Int)
 }
@@ -17,7 +17,7 @@ protocol BasketTableViewCellDelegate {
 class BasketTableViewCell: UITableViewCell {
     
     var viewModel: BasketProductViewModel?
-    var delegate: BasketTableViewCellDelegate?
+    weak var delegate: BasketTableViewCellDelegate?
     
     // MARK: - Subviews
     
@@ -52,7 +52,7 @@ class BasketTableViewCell: UITableViewCell {
             self.decreaseButton.isEnabled = newValue != 1
             self.quantityField.text = String(newValue)
             let price = Decimal(string: self.viewModel!.price)!
-            self.priceLabel.text = NSDecimalNumber(decimal: price * Decimal(integerLiteral: newValue)).stringValue
+            self.priceLabel.text = NSDecimalNumber(decimal: price * Decimal(newValue)).stringValue
             guard let model = viewModel else { return }
             self.delegate?.quantityDidChange(for: model, with: newValue)
         }

@@ -9,6 +9,7 @@
 import Foundation
 
 struct Product: Codable {
+    // swiftlint:disable identifier_name
     let id: Int
     let title: String
     let price: Decimal

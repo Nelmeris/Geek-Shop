@@ -9,13 +9,9 @@
 import Foundation
 import UIKit
 
-protocol AlertDelegate: UIViewController {
-    func showAlert(title: String, message: String?, action: ((UIAlertAction) -> Void)?)
-}
-
-extension AlertDelegate {
+extension UIViewController {
     
-    func showAlert(title: String, message: String? = nil, action: ((UIAlertAction) -> ())? = nil) {
+    func showAlert(title: String, message: String? = nil, action: ((UIAlertAction) -> Void)? = nil) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let okTitle = R.string.localizable.standartOKButton()
@@ -26,7 +22,7 @@ extension AlertDelegate {
     }
     
     func showQuestion(title: String, message: String? = nil,
-                      actions: (((UIAlertAction) -> ())?, ((UIAlertAction) -> ())?)? = nil) {
+                      actions: (((UIAlertAction) -> Void)?, ((UIAlertAction) -> Void)?)? = nil) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let okTitle = R.string.localizable.standartOKButton()

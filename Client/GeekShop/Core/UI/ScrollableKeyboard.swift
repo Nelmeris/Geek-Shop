@@ -12,8 +12,14 @@ import UIKit
 extension UIViewController {
     
     internal func registerForKeyboardNotifications(with scrollView: UIScrollView) {
-        NotificationCenter.default.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillShowNotification, object: scrollView)
-        NotificationCenter.default.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: scrollView)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(adjustForKeyboard),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: scrollView)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(adjustForKeyboard),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: scrollView)
     }
     
     internal func removeKeyboardNotifications() {

@@ -11,7 +11,7 @@ import UIKit
 import Crashlytics
 import FirebaseAnalytics
 
-class LoginViewController: UIViewController, AlertDelegate {
+class LoginViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -23,7 +23,8 @@ class LoginViewController: UIViewController, AlertDelegate {
     }()
     
     private var loginView: LoginView {
-        return self.view as! LoginView
+        guard let view = self.view as? LoginView else { fatalError() }
+        return view
     }
     
     // MARK: - Lifecycle
@@ -51,7 +52,9 @@ class LoginViewController: UIViewController, AlertDelegate {
             let password = self.loginView.passwordField.text, !password.isEmpty
             else { return }
         
-        auth.login(username: username, password: password) { response in
+        let data = UserData(id: nil, username: username, password: password,
+                            repeatPassword: nil, email: nil, name: nil, surname: nil, bio: nil, creditCard: nil, gender: nil)
+        auth.login(with: data) { response in
             switch response.result {
             case .success(let result):
                 let title = R.string.localizable.successfulMessage()

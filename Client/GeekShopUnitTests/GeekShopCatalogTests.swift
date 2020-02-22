@@ -31,8 +31,7 @@ class GeekShopCatalogTests: XCTestCase {
             switch response.result {
             case .success: break
             case .failure (let error):
-                print(error)
-                XCTFail()
+                XCTFail(error.localizedDescription)
             }
             expectation.fulfill()
         }
