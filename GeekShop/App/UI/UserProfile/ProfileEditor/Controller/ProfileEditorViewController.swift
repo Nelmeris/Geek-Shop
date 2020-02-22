@@ -29,8 +29,9 @@ class ProfileEditorViewController: UIViewController {
     }
     
     private func configureUI() {
-        let editingButton = UIBarButtonItem(title: "Выйти", style: .plain, target: self, action: #selector(logout))
-        self.navigationItem.setRightBarButton(editingButton, animated: true)
+        let logoutIcon = R.image.logoutIcon()
+        let logoutButton = UIBarButtonItem(image: logoutIcon, style: .plain, target: self, action: #selector(logout))
+        self.navigationItem.setRightBarButton(logoutButton, animated: true)
         self.profileEditorView.changeButton.addTarget(self, action: #selector(changeData), for: .touchUpInside)
     }
     
