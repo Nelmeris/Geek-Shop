@@ -954,6 +954,7 @@
 				57F688D223F524DD00ECF27D /* Embed Frameworks */,
 				576A3FC723FF0DB1003B5238 /* Crashlytics */,
 				D81055E780B733E5FC3E5EFE /* [CP] Embed Pods Frameworks */,
+				5791E20124017E7D00CDA03E /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -1143,6 +1144,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		5791E20124017E7D00CDA03E /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n";
 		};
 		60F4CBD35A32A20B897DA3F9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
