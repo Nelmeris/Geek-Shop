@@ -32,7 +32,8 @@ class BasketView: UIView {
     private(set) lazy var buyButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Заказать", for: .normal)
+        let title = R.string.localizable.addToCartButton()
+        button.setTitle(title, for: .normal)
         button.addTarget(self, action: #selector(buyButtonDidClicked), for: .touchUpInside)
         return button
     }()

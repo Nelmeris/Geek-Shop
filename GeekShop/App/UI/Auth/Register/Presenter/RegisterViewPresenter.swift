@@ -59,15 +59,18 @@ class RegisterViewPresenter: RegisterPresenter {
     
     private func validate(with model: RegisterInputModel) -> Bool {
         if model.username.isEmpty {
-            self.controller.showResult("Напишите username") {}
+            let message = R.string.localizable.missingUsernameErrorMessage()
+            self.controller.showResult(message) {}
             return false
         }
         if model.password.isEmpty {
-            self.controller.showResult("Напишите пароль") {}
+            let message = R.string.localizable.missingPasswordErrorMessage()
+            self.controller.showResult(message) {}
             return false
         }
         if model.password != model.repeatPassword {
-            self.controller.showResult("Пароли не совпадают") {}
+            let message = R.string.localizable.passwordsDontMatch()
+            self.controller.showResult(message) {}
             return false
         }
         return true

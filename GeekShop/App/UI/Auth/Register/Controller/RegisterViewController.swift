@@ -79,7 +79,8 @@ extension RegisterViewController: RegisterController {
     }
     
     func showError(_ error: Error) {
-        self.showAlert(title: "Ошибка", message: error.localizedDescription)
+        let title = R.string.localizable.standartErrorTitle()
+        self.showAlert(title: title, message: error.localizedDescription)
     }
     
 }

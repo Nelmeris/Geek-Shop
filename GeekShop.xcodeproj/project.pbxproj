@@ -32,6 +32,8 @@
 		578C339D23F4682900897182 /* AuthorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339C23F4682900897182 /* AuthorizationRouter.swift */; };
 		578C339F23F4683900897182 /* AppStartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339E23F4683900897182 /* AppStartManager.swift */; };
 		5791E1F4240159A800CDA03E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791E1F3240159A700CDA03E /* R.generated.swift */; };
+		5791E1FA24015DE100CDA03E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5791E1FC24015DE100CDA03E /* Localizable.strings */; };
+		5791E2002401642900CDA03E /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791E1FF2401642900CDA03E /* Gender.swift */; };
 		579247E623F7F68C004C03CC /* RegisterFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247E523F7F68C004C03CC /* RegisterFormView.swift */; };
 		579247E923F7FDC8004C03CC /* ProfileEditorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247E823F7FDC8004C03CC /* ProfileEditorRouter.swift */; };
 		579247EB23F7FEE4004C03CC /* ProfileEditorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247EA23F7FEE4004C03CC /* ProfileEditorPresenter.swift */; };
@@ -161,6 +163,10 @@
 		578C339E23F4683900897182 /* AppStartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartManager.swift; sourceTree = "<group>"; };
 		578C33A023F46DDA00897182 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5791E1F3240159A700CDA03E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		5791E1F524015D7E00CDA03E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5791E1FB24015DE100CDA03E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5791E1FD24015DE500CDA03E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5791E1FF2401642900CDA03E /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		579247E523F7F68C004C03CC /* RegisterFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormView.swift; sourceTree = "<group>"; };
 		579247E823F7FDC8004C03CC /* ProfileEditorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorRouter.swift; sourceTree = "<group>"; };
 		579247EA23F7FEE4004C03CC /* ProfileEditorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorPresenter.swift; sourceTree = "<group>"; };
@@ -365,6 +371,7 @@
 		57871FBF22675EA40052E0A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5791E1FE2401641F00CDA03E /* Enums */,
 				578C339923F4680300897182 /* Router */,
 				578C339823F467FD00897182 /* UI */,
 				57DB49D2226F2F9E000FCA53 /* Network */,
@@ -378,6 +385,7 @@
 				57871FAF22675B0B0052E0A4 /* Assets.xcassets */,
 				57871FB122675B0B0052E0A4 /* LaunchScreen.storyboard */,
 				5791E1F3240159A700CDA03E /* R.generated.swift */,
+				5791E1FC24015DE100CDA03E /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -465,6 +473,14 @@
 				578C339A23F4680F00897182 /* BaseRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		5791E1FE2401641F00CDA03E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				5791E1FF2401642900CDA03E /* Gender.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		57C629412273850100C6080F /* GeekShopUnitTests */ = {
@@ -1020,6 +1036,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 57871F9C22675B090052E0A4;
 			productRefGroup = 57871FA622675B090052E0A4 /* Products */;
@@ -1047,6 +1064,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57871FB322675B0B0052E0A4 /* LaunchScreen.storyboard in Resources */,
+				5791E1FA24015DE100CDA03E /* Localizable.strings in Resources */,
 				5763B5F023FF3AFE00C41287 /* GoogleService-Info.plist in Resources */,
 				57871FB022675B0B0052E0A4 /* Assets.xcassets in Resources */,
 			);
@@ -1209,6 +1227,7 @@
 				579247E623F7F68C004C03CC /* RegisterFormView.swift in Sources */,
 				57DB49E3226F37AD000FCA53 /* RequestFactory.swift in Sources */,
 				578C339423F4659000897182 /* AuthorizationViewController.swift in Sources */,
+				5791E2002401642900CDA03E /* Gender.swift in Sources */,
 				57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */,
 				579247ED23F800F6004C03CC /* ProfileEditorModuleBuilder.swift in Sources */,
 				57DC9BC523FD79EF004CE8C7 /* GetReviewsResponse.swift in Sources */,
@@ -1318,8 +1337,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				57871FB222675B0B0052E0A4 /* Base */,
+				5791E1F524015D7E00CDA03E /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5791E1FC24015DE100CDA03E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5791E1FB24015DE100CDA03E /* en */,
+				5791E1FD24015DE500CDA03E /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1368,6 +1397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1429,6 +1459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

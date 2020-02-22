@@ -46,7 +46,7 @@ class ProfileEditorViewController: UIViewController {
             let gender = self.profileEditorView.registerFormView.genderField.text,
             let creditCard = self.profileEditorView.registerFormView.creditCardField.text,
             let bio = self.profileEditorView.registerFormView.bioTextView.text
-            else { fatalError("Ошибка введения данных") }
+            else { fatalError("Fields text error") }
         
         let model = RegisterInputModel(username: username, name: name, surname: surname, password: password, repeatPassword: repeatPassword, email: email, gender: gender, creditCard: creditCard, bio: bio)
         presenter.changeDataProcess(with: model)
@@ -68,7 +68,8 @@ extension ProfileEditorViewController: ProfileEditorController, AlertDelegate {
     }
     
     func showError(_ error: Error) {
-        showAlert(title: "Ошибка", message: error.localizedDescription)
+        let title = R.string.localizable.standartErrorTitle()
+        showAlert(title: title, message: error.localizedDescription)
     }
     
 }

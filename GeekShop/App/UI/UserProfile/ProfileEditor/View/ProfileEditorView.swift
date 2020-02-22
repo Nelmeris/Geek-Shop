@@ -15,7 +15,7 @@ class ProfileEditorView: UIView {
     
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Редактирование"
+        label.text = R.string.localizable.profileEditorTitle()
         label.font = UIFont.boldSystemFont(ofSize: 23)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,8 @@ class ProfileEditorView: UIView {
     private(set) lazy var changeButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Изменить", for: .normal)
+        let title = R.string.localizable.profileEditButton()
+        button.setTitle(title, for: .normal)
         return button
     }()
     

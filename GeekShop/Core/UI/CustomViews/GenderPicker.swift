@@ -13,7 +13,7 @@ class GenderPicker: UITextField {
         
     var genderPicker: UIPickerView!
     
-    let genders = ["Male", "Female"]
+    let genders: [Gender] = [.male, .female]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +30,7 @@ class GenderPicker: UITextField {
         genderPicker.dataSource = self
         genderPicker.delegate = self
 
-        self.text = genders[0]
+        self.text = genders[0].string
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneGenderPicker))
@@ -58,11 +58,11 @@ extension GenderPicker: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genders[row]
+        return genders[row].string
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.text = genders[row]
+        self.text = genders[row].string
     }
     
 }

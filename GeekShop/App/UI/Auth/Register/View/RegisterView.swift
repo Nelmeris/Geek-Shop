@@ -16,7 +16,7 @@ class RegisterView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 23, weight: .bold)
-        label.text = "Регистрация"
+        label.text = R.string.localizable.registrationTitle()
         return label
     }()
     
@@ -29,7 +29,8 @@ class RegisterView: UIView {
     private(set) lazy var registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Далее", for: .normal)
+        let title = R.string.localizable.signUpButton()
+        button.setTitle(title, for: .normal)
         return button
     }()
     

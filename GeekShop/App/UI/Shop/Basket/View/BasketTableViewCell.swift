@@ -79,7 +79,8 @@ class BasketTableViewCell: UITableViewCell {
     private (set) lazy var removeButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Удалить", for: .normal)
+        let title = R.string.localizable.removeButton()
+        button.setTitle(title, for: .normal)
         button.setTitleColor(.red, for: .normal)
         button.addTarget(self, action: #selector(removeButtonDidClick), for: .touchUpInside)
         return button

@@ -54,7 +54,8 @@ class LoginViewController: UIViewController, AlertDelegate {
         auth.login(username: username, password: password) { response in
             switch response.result {
             case .success(let result):
-                self.showAlert(title: "Успешно! ID: \(result.user.id)") { _ in
+                let title = R.string.localizable.successfulMessage()
+                self.showAlert(title: "\(title) ID: \(result.user.id)") { _ in
                     User.authUser = result.user
                     Analytics.logEvent("Login", parameters: [
                         "Success": true,

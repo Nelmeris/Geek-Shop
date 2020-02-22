@@ -52,7 +52,8 @@ extension ProductViewController: ProductController, AlertDelegate {
     }
     
     func showError(_ error: Error) {
-        self.showAlert(title: "Ошибка", message: error.localizedDescription)
+        let title = R.string.localizable.standartErrorTitle()
+        self.showAlert(title: title, message: error.localizedDescription)
     }
     
     func showMessage(_ message: String) {

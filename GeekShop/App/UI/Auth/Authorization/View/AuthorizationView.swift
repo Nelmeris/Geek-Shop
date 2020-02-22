@@ -16,7 +16,7 @@ class AuthorizationView: UIView {
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Geek Shop"
+        label.text = R.string.localizable.appTitle()
         label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         return label
     }()
@@ -24,14 +24,16 @@ class AuthorizationView: UIView {
     private(set) lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Войти", for: .normal)
+        let title = R.string.localizable.authorizationTitle()
+        button.setTitle(title, for: .normal)
         return button
     }()
     
     private(set) lazy var registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Регистрация", for: .normal)
+        let title = R.string.localizable.registrationTitle()
+        button.setTitle(title, for: .normal)
         return button
     }()
     

@@ -55,8 +55,8 @@ class AuthorizationViewController: UIViewController {
 extension AuthorizationViewController: AlertDelegate {
     
     private func askPermissionSendReports() {
-        let title = "Отправка отчетов об ошибках"
-        let message = "Вы разрешите нам отправлять анонимные отчеты об ошибках разработчикам?"
+        let title = R.string.localizable.sendReportsPermissionQuestionTitle()
+        let message = R.string.localizable.sendReportsPermissionQuestionContent()
         self.showQuestion(title: title, message: message, actions: (
             { actionOk in
                 UserDefaults.standard.set(true, forKey: self.sendReportKey)

@@ -14,7 +14,7 @@ class LoginView: UIView {
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Авторизация"
+        label.text = R.string.localizable.authorizationTitle()
         label.font = UIFont.systemFont(ofSize: 23, weight: .bold)
         return label
     }()
@@ -22,7 +22,7 @@ class LoginView: UIView {
     private(set) lazy var usernameField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.placeholder = "Username"
+        field.placeholder = R.string.localizable.usernameField()
         field.borderStyle = .roundedRect
         field.textContentType = .username
         return field
@@ -31,7 +31,7 @@ class LoginView: UIView {
     private(set) lazy var passwordField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.placeholder = "Password"
+        field.placeholder = R.string.localizable.passwordField()
         field.borderStyle = .roundedRect
         field.textContentType = .password
         field.isSecureTextEntry = true
@@ -41,7 +41,8 @@ class LoginView: UIView {
     private(set) lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Далее", for: .normal)
+        let title = R.string.localizable.loginButton()
+        button.setTitle(title, for: .normal)
         return button
     }()
     

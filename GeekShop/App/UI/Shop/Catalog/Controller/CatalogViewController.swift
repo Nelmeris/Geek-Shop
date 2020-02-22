@@ -53,7 +53,7 @@ class CatalogViewController: UIViewController {
     // MARK: - Configure
     
     private func configureUI() {
-        self.title = "Каталог"
+        self.title = R.string.localizable.catalogTitle()
     }
     
     private func setRefreshControl() {

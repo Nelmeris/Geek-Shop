@@ -12,7 +12,7 @@ class ProfileEditorModuleBuilder {
     
     static func build() -> ProfileEditorViewController {
         let vc = ProfileEditorViewController()
-        guard let presenter = ProfileEditorViewPresenter() else { fatalError("Пользователь не найден") }
+        guard let presenter = ProfileEditorViewPresenter() else { fatalError("Missing user data") }
         vc.presenter = presenter
         presenter.controller = vc
         presenter.router = ProfileEditorRouter(controller: vc)

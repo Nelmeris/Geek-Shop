@@ -69,7 +69,8 @@ extension ProductViewPresenter: ProductPresenter {
                     "Quantity": 1,
                     "Currency": "RUB"
                 ])
-                self.controller.showMessage("Товар успешно добавлен в корзину")
+                let message = R.string.localizable.successfulAddToCartMessage()
+                self.controller.showMessage(message)
             case .failure(let error):
                 Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)

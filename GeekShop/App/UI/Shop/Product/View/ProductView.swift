@@ -52,7 +52,8 @@ class ProductView: UIView {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(addToBasket), for: .touchUpInside)
-        button.setTitle("Добавить в корзину", for: .normal)
+        let title = R.string.localizable.addToCartButton()
+        button.setTitle(title, for: .normal)
         return button
     }()
     

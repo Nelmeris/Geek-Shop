@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
     }
     
     private func configureUI() {
-        self.title = "Профиль"
+        self.title = R.string.localizable.profileTitle()
         let editingButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(startEditing))
         self.navigationItem.setRightBarButton(editingButton, animated: true)
     }

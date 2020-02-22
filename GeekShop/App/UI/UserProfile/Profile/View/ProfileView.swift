@@ -50,9 +50,12 @@ class ProfileView: UIView {
     // MARK: - Configure
     
     func configure(with user: User) {
-        self.usernameLabel.text = "Username: \(user.username)"
-        self.nameLabel.text = "Имя: \(user.name ?? "")"
-        self.surnameLabel.text = "Фамилия: \(user.surname ?? "")"
+        let usernameTitle = R.string.localizable.usernameLabel()
+        self.usernameLabel.text = "\(usernameTitle): \(user.username)"
+        let nameTitle = R.string.localizable.nameLabel()
+        self.nameLabel.text = "\(nameTitle): \(user.name ?? "N/A")"
+        let surnameTitle = R.string.localizable.surnameLabel()
+        self.surnameLabel.text = "\(surnameTitle): \(user.surname ?? "N/A")"
     }
     
     private func configureUI() {

@@ -98,7 +98,8 @@ extension BasketViewPresenter: BasketPresenter {
             "success": true,
             "totalPrice": Decimal(0.0)
         ])
-        self.controller.showMessage("Заказ оформлен!")
+        let message = R.string.localizable.purchaseIsMadeMessage()
+        self.controller.showMessage(message)
     }
     
 }

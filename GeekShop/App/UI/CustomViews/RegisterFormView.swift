@@ -14,7 +14,7 @@ class RegisterFormView: UIView {
     private(set) lazy var usernameField: UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Username"
+        view.placeholder = R.string.localizable.usernameField()
         view.borderStyle = .roundedRect
         view.textContentType = .username
         return view
@@ -23,7 +23,7 @@ class RegisterFormView: UIView {
     private(set) lazy var nameField: UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Имя"
+        view.placeholder = R.string.localizable.nameField()
         view.borderStyle = .roundedRect
         view.textContentType = .givenName
         return view
@@ -32,7 +32,7 @@ class RegisterFormView: UIView {
     private(set) lazy var surnameField: UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Фамилия"
+        view.placeholder = R.string.localizable.surnameField()
         view.borderStyle = .roundedRect
         view.textContentType = .familyName
         return view
@@ -41,7 +41,7 @@ class RegisterFormView: UIView {
     private(set) lazy var passwordField: UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Password"
+        view.placeholder = R.string.localizable.passwordField()
         view.borderStyle = .roundedRect
         view.textContentType = .newPassword
         view.isSecureTextEntry = true
@@ -51,7 +51,7 @@ class RegisterFormView: UIView {
     private(set) lazy var repeatPasswordField: UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Repeat password"
+        view.placeholder = R.string.localizable.repeatPasswordField()
         view.borderStyle = .roundedRect
         view.textContentType = .newPassword
         view.isSecureTextEntry = true
@@ -61,7 +61,7 @@ class RegisterFormView: UIView {
     private(set) lazy var emailField: UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "example@mail.ru"
+        view.placeholder = R.string.localizable.emailField()
         view.borderStyle = .roundedRect
         view.textContentType = .emailAddress
         view.keyboardType = .emailAddress
@@ -71,7 +71,7 @@ class RegisterFormView: UIView {
     private(set) lazy var genderField: GenderPicker = {
         let view = GenderPicker()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Male"
+        view.placeholder = Gender.male.string
         view.borderStyle = .roundedRect
         return view
     }()
@@ -79,7 +79,7 @@ class RegisterFormView: UIView {
     private(set) lazy var creditCardField: CreditCardField = {
         let view = CreditCardField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "1234 1234 1234 1234"
+        view.placeholder = R.string.localizable.creditCardField()
         view.borderStyle = .roundedRect
         return view
     }()
