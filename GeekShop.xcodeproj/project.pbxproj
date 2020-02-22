@@ -31,6 +31,7 @@
 		578C339B23F4680F00897182 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339A23F4680F00897182 /* BaseRouter.swift */; };
 		578C339D23F4682900897182 /* AuthorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339C23F4682900897182 /* AuthorizationRouter.swift */; };
 		578C339F23F4683900897182 /* AppStartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C339E23F4683900897182 /* AppStartManager.swift */; };
+		5791E1F4240159A800CDA03E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791E1F3240159A700CDA03E /* R.generated.swift */; };
 		579247E623F7F68C004C03CC /* RegisterFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247E523F7F68C004C03CC /* RegisterFormView.swift */; };
 		579247E923F7FDC8004C03CC /* ProfileEditorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247E823F7FDC8004C03CC /* ProfileEditorRouter.swift */; };
 		579247EB23F7FEE4004C03CC /* ProfileEditorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579247EA23F7FEE4004C03CC /* ProfileEditorPresenter.swift */; };
@@ -159,6 +160,7 @@
 		578C339C23F4682900897182 /* AuthorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouter.swift; sourceTree = "<group>"; };
 		578C339E23F4683900897182 /* AppStartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartManager.swift; sourceTree = "<group>"; };
 		578C33A023F46DDA00897182 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5791E1F3240159A700CDA03E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		579247E523F7F68C004C03CC /* RegisterFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormView.swift; sourceTree = "<group>"; };
 		579247E823F7FDC8004C03CC /* ProfileEditorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorRouter.swift; sourceTree = "<group>"; };
 		579247EA23F7FEE4004C03CC /* ProfileEditorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorPresenter.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			children = (
 				57871FAF22675B0B0052E0A4 /* Assets.xcassets */,
 				57871FB122675B0B0052E0A4 /* LaunchScreen.storyboard */,
+				5791E1F3240159A700CDA03E /* R.generated.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -928,6 +931,7 @@
 			buildConfigurationList = 57871FB722675B0B0052E0A4 /* Build configuration list for PBXNativeTarget "GeekShop" */;
 			buildPhases = (
 				9634D7BDEF3809952784C9E8 /* [CP] Check Pods Manifest.lock */,
+				5791E1F02401549000CDA03E /* R.swift */,
 				57871FA122675B090052E0A4 /* Sources */,
 				57871FA222675B090052E0A4 /* Frameworks */,
 				57871FA322675B090052E0A4 /* Resources */,
@@ -1101,6 +1105,27 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
 		};
+		5791E1F02401549000CDA03E /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"",
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		60F4CBD35A32A20B897DA3F9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1213,6 +1238,7 @@
 				57DC9BBD23FD374E004CE8C7 /* ProductViewController.swift in Sources */,
 				578C338423F44F0900897182 /* ScrollableKeyboard.swift in Sources */,
 				57FD693823FC63CD0055FC45 /* ProductViewModel.swift in Sources */,
+				5791E1F4240159A800CDA03E /* R.generated.swift in Sources */,
 				578C339123F4634600897182 /* LoginView.swift in Sources */,
 				57DB49D4226F2FCA000FCA53 /* AbstractErrorParser.swift in Sources */,
 				57F6893623F730D400ECF27D /* TabBarController.swift in Sources */,

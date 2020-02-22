@@ -74,12 +74,16 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Crashlytics
   - Fabric
   - Firebase/Analytics
+  - R.swift
 
 SPEC REPOS:
   trunk:
@@ -99,6 +103,8 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
+    - R.swift
+    - R.swift.Library
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -117,7 +123,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
 
-PODFILE CHECKSUM: 5c732f9011c89ced25cc85e67921236809177354
+PODFILE CHECKSUM: 95807a9f6f6f78888c8f443bd2fbdd8ec332f843
 
 COCOAPODS: 1.9.0.beta.3

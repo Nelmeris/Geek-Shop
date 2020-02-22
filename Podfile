@@ -8,6 +8,7 @@ def shared_pods
   pod 'Firebase/Analytics'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'R.swift'
 end
 
 target 'GeekShop' do
