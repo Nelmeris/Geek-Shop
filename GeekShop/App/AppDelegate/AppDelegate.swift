@@ -20,32 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appStartManager = AppStartManager(with: window)
         appStartManager?.start()
         
-//        BGTaskScheduler.shared.register(forTaskWithIdentifier: "crashlytics-send-reports", using: DispatchQueue.global()) { task in
-//            self.sendReports(task: task)
-//        }
-        
         return true
     }
-    
-//    private func sendReports(task: BGTask) {
-//        Crashlytics.crashlytics().checkForUnsentReports { isUnsentReports in
-//            guard isUnsentReports else { return }
-//            self.sendReports2(task: task)
-//        }
-//    }
-    
-//    private func sendReports2(task: BGTask? = nil) {
-//        if UserDefaults.standard.bool(forKey: "isSendReports") {
-//            Crashlytics.crashlytics().log("Test")
-//            Crashlytics.crashlytics().sendUnsentReports()
-//        } else {
-//            Crashlytics.crashlytics().deleteUnsentReports()
-//        }
-//        task?.setTaskCompleted(success: true)
-//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
-//        sendReports2()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
