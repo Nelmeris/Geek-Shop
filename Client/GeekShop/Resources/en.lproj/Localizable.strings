@@ -19,6 +19,7 @@
 "UsernameLabel" = "Username";
 "NameLabel" = "Name";
 "SurnameLabel" = "Surname";
+"TotalPriceLabel" = "Total";
 
 // Buttons
 "LoginButton" = "Login";
@@ -26,6 +27,7 @@
 "ProfileEditButton" = "Edit";
 "RemoveButton" = "Remove";
 "AddToCartButton" = "Add to cart";
+"MakePurchaseButton" = "Purchase";
 
 // Fields
 "UsernameField" = "Username";

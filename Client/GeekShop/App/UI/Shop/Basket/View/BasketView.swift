@@ -29,10 +29,17 @@ class BasketView: UIView {
         return tableView
     }()
     
+    private(set) lazy var totalPriceLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        return label
+    }()
+    
     private(set) lazy var buyButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        let title = R.string.localizable.addToCartButton()
+        let title = R.string.localizable.makePurchaseButton()
         button.setTitle(title, for: .normal)
         button.addTarget(self, action: #selector(buyButtonDidClicked), for: .touchUpInside)
         return button
@@ -67,6 +74,7 @@ class BasketView: UIView {
     private func setupLayout() {
         self.addSubview(productTableView)
         self.addSubview(buyButton)
+        self.addSubview(totalPriceLabel)
     }
     
     private func setupConstraints() {
@@ -77,9 +85,12 @@ class BasketView: UIView {
             self.productTableView.leftAnchor.constraint(equalTo: safeArea.leftAnchor),
             self.productTableView.rightAnchor.constraint(equalTo: safeArea.rightAnchor),
             
-            self.buyButton.topAnchor.constraint(equalTo: self.productTableView.bottomAnchor, constant: 20),
-            self.buyButton.leftAnchor.constraint(equalTo: safeArea.leftAnchor),
-            self.buyButton.rightAnchor.constraint(equalTo: safeArea.rightAnchor),
+            self.totalPriceLabel.topAnchor.constraint(equalTo: self.productTableView.bottomAnchor, constant: 20),
+            self.totalPriceLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: 20),
+            self.totalPriceLabel.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: 20),
+            
+            self.buyButton.topAnchor.constraint(equalTo: self.totalPriceLabel.bottomAnchor, constant: 20),
+            self.buyButton.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
             self.buyButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20)
         ])
     }
@@ -88,6 +99,11 @@ class BasketView: UIView {
 
 // MARK: - Public methods
 extension BasketView {
+    
+    public func setTotalPrice(with price: Decimal) {
+        let title = R.string.localizable.totalPriceLabel()
+        self.totalPriceLabel.text = "\(title): \(NSDecimalNumber(decimal: price).stringValue)"
+    }
     
     public func dequeueReusableCell(for indexPath: IndexPath) -> BasketTableViewCell {
         guard let cell = self.productTableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)

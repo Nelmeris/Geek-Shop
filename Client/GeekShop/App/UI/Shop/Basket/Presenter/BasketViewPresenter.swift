@@ -15,6 +15,7 @@ protocol BasketController: UIViewController {
     func showProducts(with products: [BasketProductViewModel])
     func showMessage(_ message: String)
     func showError(_ error: Error)
+    func showTotalPrice(_ price: Decimal)
 }
 
 protocol BasketPresenter: class {
@@ -29,7 +30,17 @@ class BasketViewPresenter {
     weak var controller: BasketController!
     var requestFactory: BasketRequestFactory!
     var viewModelFactory: BasketProductViewModelFactory!
-    var products: [BasketProduct] = []
+    var products: [BasketProduct] = [] {
+        didSet {
+            self.controller.showTotalPrice(totalPrice)
+        }
+    }
+    
+    private var totalPrice: Decimal {
+        return self.products.reduce(Decimal()) { (result, product) in
+            return result + product.product.price * Decimal(product.quantity)
+        }
+    }
     
 }
 
@@ -78,8 +89,7 @@ extension BasketViewPresenter: BasketPresenter {
     }
     
     func makePurchase() {
-        // TODO
-        AnalyticInvoker.shared.add(.purchase(totalPrice: 0.0, currency: .rubles))
+        AnalyticInvoker.shared.add(.purchase(totalPrice: self.totalPrice, currency: .rubles))
         let message = R.string.localizable.purchaseIsMadeMessage()
         self.controller.showMessage(message)
     }

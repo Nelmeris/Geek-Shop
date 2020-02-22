@@ -19,6 +19,7 @@
 "UsernameLabel" = "Username";
 "NameLabel" = "Имя";
 "SurnameLabel" = "Фамилия";
+"TotalPriceLabel" = "Итого";
 
 // Buttons
 "LoginButton" = "Войти";
@@ -26,6 +27,7 @@
 "ProfileEditButton" = "Изменить";
 "RemoveButton" = "Удалить";
 "AddToCartButton" = "Добавить в корзину";
+"MakePurchaseButton" = "Купить";
 
 // Fields
 "UsernameField" = "Username";

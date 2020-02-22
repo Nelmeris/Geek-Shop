@@ -68,6 +68,10 @@ extension BasketViewController: BasketController {
         self.showAlert(title: title, message: error.localizedDescription)
     }
     
+    func showTotalPrice(_ price: Decimal) {
+        self.basketView.setTotalPrice(with: price)
+    }
+    
 }
 
 // MARK: - Table View Data Source
