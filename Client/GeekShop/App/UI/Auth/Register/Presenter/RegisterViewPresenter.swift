@@ -33,17 +33,11 @@ class RegisterViewPresenter: RegisterPresenter {
             case .success(let result):
                 self.controller.showResult(result.message!) {
                     User.authUser = result.user
-                    Analytics.logEvent("SignUp", parameters: [
-                        "Success": true,
-                        "User ID": result.user.id,
-                        "Username": result.user.username
-                    ])
+                    AnalyticInvoker.shared.add(.signUp(isSuccess: true))
                     self.router.toProfile()
                 }
             case .failure(let error):
-                Analytics.logEvent("SignUp", parameters: [
-                    "success": false
-                ])
+                AnalyticInvoker.shared.add(.signUp(isSuccess: false))
                 Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }

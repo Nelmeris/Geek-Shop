@@ -54,13 +54,7 @@ extension BasketViewPresenter: BasketPresenter {
         requestFactory.remove(productId: product.product.id, userId: User.authUser!.id) { response in
             switch response.result {
             case .success:
-                Analytics.logEvent("RemoveFromCart", parameters: [
-                    "Product ID": product.product.id,
-                    "Product name": product.product.title,
-                    "Price": product.product.price,
-                    "Quantity": product.quantity,
-                    "Currency": "RUB"
-                ])
+                AnalyticInvoker.shared.add(.removeFromCart(product: product.product))
                 self.loadProducts()
             case .failure(let error):
                 Crashlytics.sharedInstance().recordError(error)
@@ -74,13 +68,7 @@ extension BasketViewPresenter: BasketPresenter {
         requestFactory.add(productId: product.product.id, userId: User.authUser!.id, quantity: quantity) { response in
             switch response.result {
             case .success:
-                Analytics.logEvent("AddToCart", parameters: [
-                    "Product ID": product.product,
-                    "Product name": product.product.title,
-                    "Price": product.product.price,
-                    "Quantity": quantity,
-                    "Currency": "RUB"
-                ])
+                AnalyticInvoker.shared.add(.addToCart(product: product.product, quantity: quantity, currency: .rubles))
                 self.loadProducts()
             case .failure(let error):
                 Crashlytics.sharedInstance().recordError(error)
@@ -90,11 +78,8 @@ extension BasketViewPresenter: BasketPresenter {
     }
     
     func makePurchase() {
-        Analytics.logEvent("Purchase", parameters: [
-            "currency": "RUB",
-            "success": true,
-            "totalPrice": Decimal(0.0)
-        ])
+        // TODO
+        AnalyticInvoker.shared.add(.purchase(totalPrice: 0.0, currency: .rubles))
         let message = R.string.localizable.purchaseIsMadeMessage()
         self.controller.showMessage(message)
     }

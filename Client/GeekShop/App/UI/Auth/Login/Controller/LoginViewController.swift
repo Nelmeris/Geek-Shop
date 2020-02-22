@@ -60,17 +60,11 @@ class LoginViewController: UIViewController {
                 let title = R.string.localizable.successfulMessage()
                 self.showAlert(title: "\(title) ID: \(result.user.id)") { _ in
                     User.authUser = result.user
-                    Analytics.logEvent("Login", parameters: [
-                        "Success": true,
-                        "User ID": result.user.id,
-                        "Username": result.user.username
-                    ])
+                    AnalyticInvoker.shared.add(.login(isSuccess: true))
                     self.router.toProfile()
                 }
             case .failure(let error):
-                Analytics.logEvent("Login", parameters: [
-                    "Success": false
-                ])
+                AnalyticInvoker.shared.add(.login(isSuccess: false))
                 Crashlytics.sharedInstance().recordError(error)
                 self.showAlert(title: error.localizedDescription)
             }

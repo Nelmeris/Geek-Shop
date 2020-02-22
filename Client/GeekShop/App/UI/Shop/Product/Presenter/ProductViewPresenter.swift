@@ -38,10 +38,7 @@ extension ProductViewPresenter: ProductPresenter {
     
     func loadProduct() {
         self.controller.showProduct(with: self.product)
-        Analytics.logEvent("OpenProductPage", parameters: [
-            "Product ID": product.id,
-            "Product name": product.title
-        ])
+        AnalyticInvoker.shared.add(.openProductPage(product: product))
     }
     
     func loadReviews() {
@@ -62,13 +59,7 @@ extension ProductViewPresenter: ProductPresenter {
         basketRequestFactory.add(productId: self.product.id, userId: User.authUser!.id, quantity: 1) { response in
             switch response.result {
             case .success:
-                Analytics.logEvent("AddToCart", parameters: [
-                    "Product ID": self.product.id,
-                    "Product name": self.product.title,
-                    "Price": self.product.price,
-                    "Quantity": 1,
-                    "Currency": "RUB"
-                ])
+                AnalyticInvoker.shared.add(.addToCart(product: self.product, quantity: 1, currency: .rubles))
                 let message = R.string.localizable.successfulAddToCartMessage()
                 self.controller.showMessage(message)
             case .failure(let error):

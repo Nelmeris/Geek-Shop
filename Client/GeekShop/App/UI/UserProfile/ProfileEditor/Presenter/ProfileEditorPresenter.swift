@@ -49,10 +49,7 @@ class ProfileEditorViewPresenter: ProfileEditorPresenter {
         auth.logout(with: self.user.id) { response in
             switch response.result {
             case .success:
-                Analytics.logEvent("Logout", parameters: [
-                    "User ID": self.user.id,
-                    "Username": self.user.username
-                ])
+                AnalyticInvoker.shared.add(.logout)
                 let message = R.string.localizable.successfulMessage()
                 self.controller.showResult(message) {
                     User.authUser = nil
