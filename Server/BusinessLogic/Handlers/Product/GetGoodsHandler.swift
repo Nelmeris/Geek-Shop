@@ -11,12 +11,10 @@ import PerfectHTTP
 class GetGoodsHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    let productDB: ProductDBService
 
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.productDB = ProductDBService()
     }
 }
 
@@ -24,7 +22,8 @@ extension GetGoodsHandler {
 
     func process() {
         do {
-            let products = try productDB.load()
+            let context = CoreDataStack.shared.mainContext
+            let products = Product.fetchAll(in: context)
             try sendingResponse(with: products)
         } catch {
             ErrorHandler(request: request, response: response).process(with: error.localizedDescription)

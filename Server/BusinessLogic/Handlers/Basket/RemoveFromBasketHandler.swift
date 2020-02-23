@@ -12,18 +12,9 @@ class RemoveFromBasketHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
     
-    let userDB: UserDBService
-    let productDB: ProductDBService
-    let basketProductDB: BasketProductDBService
-    let basketDB: BasketDBService
-    
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.userDB = UserDBService()
-        self.productDB = ProductDBService()
-        self.basketProductDB = BasketProductDBService()
-        self.basketDB = BasketDBService()
     }
 }
 
@@ -33,8 +24,15 @@ extension RemoveFromBasketHandler {
         switch validate() {
         case .success(let data):
             do {
-                let basket = try basketDB.remove(for: data.user, with: data.product)
+                let context = CoreDataStack.shared.mainContext
+                var basket: Basket! = Basket.fetchByUserId(Int(data.user.id), in: context)
+                if basket != nil {
+                    basket.removeProduct(data.product, in: context)
+                } else {
+                    basket = Basket.make(for: data.user, in: context)
+                }
                 try sendingResponse(with: basket)
+                CoreDataStack.shared.saveContext(context)
             } catch {
                 ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
             }
@@ -48,7 +46,7 @@ extension RemoveFromBasketHandler {
     }
     
     enum ValidateResult {
-        case success(user: User, product: BasketProduct)
+        case success(user: User, product: Product)
         case badData
         case userNotFound
         case productNotFound
@@ -61,16 +59,14 @@ extension RemoveFromBasketHandler {
             let productId = Int(productIdStr) else {
                 return .badData
         }
-        guard let user = try! userDB.load(id: userId) else {
+        let context = CoreDataStack.shared.mainContext
+        guard let user = User.fetchById(userId, in: context) else {
             return .userNotFound
         }
-        guard let product = try! productDB.load(id: productId) else {
+        guard let product = Product.fetchById(productId, in: context) else {
             return .productNotFound
         }
-        guard let basketProduct = try! basketProductDB.load(with: product) else {
-            return .productNotFound
-        }
-        return .success(user: user, product: basketProduct)
+        return .success(user: user, product: product)
     }
     
     private func sendingResponse(with basket: Basket) throws {

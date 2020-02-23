@@ -11,12 +11,10 @@ import PerfectHTTP
 class RemoveReviewHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    let db: ReviewDBService
     
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.db = ReviewDBService()
     }
 }
 
@@ -25,12 +23,14 @@ extension RemoveReviewHandler {
     func process() {
         switch validate() {
         case .success(let data):
+            let context = CoreDataStack.shared.mainContext
+            guard let review = Review.fetchById(data, in: context) else {
+                ErrorHandler(request: request, response: response).process(with: "Отзыв не найден")
+                return
+            }
+            context.delete(review)
             do {
-                if try db.remove(with: data) {
-                    try sendingResponse()
-                } else {
-                    ErrorHandler(request: request, response: response).process(with: "Отзыв не найден")
-                }
+                try sendingResponse()
             } catch {
                 ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
             }

@@ -32,7 +32,9 @@ class BasketViewPresenter {
     var viewModelFactory: BasketProductViewModelFactory!
     var products: [BasketProduct] = [] {
         didSet {
-            self.controller.showTotalPrice(totalPrice)
+            DispatchQueue.main.async {
+                self.controller.showTotalPrice(self.totalPrice)
+            }
         }
     }
     

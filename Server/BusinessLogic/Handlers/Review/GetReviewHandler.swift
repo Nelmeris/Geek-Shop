@@ -11,12 +11,10 @@ import PerfectHTTP
 class GetReviewHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    let db: ReviewDBService
     
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.db = ReviewDBService()
     }
 }
 
@@ -26,8 +24,9 @@ extension GetReviewHandler {
         switch validate() {
         case .success(let data):
             do {
-                let reviews: [Review] = try db.load(for: data)
-                try sendingResponse(with: reviews)
+                let context = CoreDataStack.shared.mainContext
+                let reviews = Review.fetchByProductId(data, in: context)
+                try sendingResponse(with: reviews ?? [])
             } catch {
                 ErrorHandler(request: request, response: response).process()
             }

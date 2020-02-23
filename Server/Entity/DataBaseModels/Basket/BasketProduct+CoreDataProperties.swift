@@ -2,7 +2,7 @@
 //  BasketProduct+CoreDataProperties.swift
 //  PerfectTemplate
 //
-//  Created by Artem Kufaev on 20.02.2020.
+//  Created by Artem Kufaev on 23.02.2020.
 //
 //
 
@@ -16,7 +16,7 @@ extension BasketProduct {
         return NSFetchRequest<BasketProduct>(entityName: "BasketProduct")
     }
 
-    @NSManaged public var quantity: Int64
+    @NSManaged public var quantity: Int16
     @NSManaged public var product: Product?
     @NSManaged public var basket: Basket?
 

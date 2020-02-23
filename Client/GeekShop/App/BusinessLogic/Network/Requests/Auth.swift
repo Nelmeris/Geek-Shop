@@ -82,12 +82,12 @@ extension Auth {
             return [
                 "username": data.username,
                 "password": data.password,
-                "name": data.name as Any,
-                "surname": data.surname as Any,
-                "email": data.email as Any,
-                "gender": data.gender as Any,
-                "credit_card": data.creditCard as Any,
-                "bio": data.bio as Any
+                "name": data.name ?? "",
+                "surname": data.surname ?? "",
+                "email": data.email ?? "",
+                "gender": data.gender ?? "",
+                "credit_card": data.creditCard ?? "",
+                "bio": data.bio ?? ""
             ]
         }
     }
@@ -101,15 +101,15 @@ extension Auth {
 
         var parameters: Parameters? {
             return [
-                "user_id": data.id as Any,
+                "user_id": data.id ?? "",
                 "username": data.username,
                 "password": data.password,
-                "name": data.name as Any,
-                "surname": data.surname as Any,
-                "email": data.email as Any,
-                "gender": data.gender as Any,
-                "credit_card": data.creditCard as Any,
-                "bio": data.bio as Any
+                "name": data.name ?? "",
+                "surname": data.surname ?? "",
+                "email": data.email ?? "",
+                "gender": data.gender ?? "",
+                "credit_card": data.creditCard ?? "",
+                "bio": data.bio ?? ""
             ]
         }
     }

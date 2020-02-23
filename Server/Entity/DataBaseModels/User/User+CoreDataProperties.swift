@@ -1,8 +1,8 @@
 //
 //  User+CoreDataProperties.swift
-//  
+//  PerfectTemplate
 //
-//  Created by Artem Kufaev on 14.02.2020.
+//  Created by Artem Kufaev on 23.02.2020.
 //
 //
 
@@ -16,16 +16,16 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var id: Int64
-    @NSManaged public var username: String?
-    @NSManaged public var name: String?
-    @NSManaged public var surname: String?
     @NSManaged public var bio: String?
-    @NSManaged public var creditCard: String?
-    @NSManaged public var gender: String?
-    @NSManaged public var email: String?
     @NSManaged public var creationDate: Date?
+    @NSManaged public var creditCard: String?
+    @NSManaged public var email: String?
+    @NSManaged public var gender: String?
+    @NSManaged public var id: Int64
+    @NSManaged public var name: String?
     @NSManaged public var password: String?
+    @NSManaged public var surname: String?
+    @NSManaged public var username: String?
     @NSManaged public var basket: Basket?
     @NSManaged public var reviews: NSSet?
 

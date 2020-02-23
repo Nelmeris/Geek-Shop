@@ -51,10 +51,6 @@ class BasketTableViewCell: UITableViewCell {
             guard newValue >= 1 else { return }
             self.decreaseButton.isEnabled = newValue != 1
             self.quantityField.text = String(newValue)
-            let price = Decimal(string: self.viewModel!.price)!
-            self.priceLabel.text = NSDecimalNumber(decimal: price * Decimal(newValue)).stringValue
-            guard let model = viewModel else { return }
-            self.delegate?.quantityDidChange(for: model, with: newValue)
         }
     }
     
@@ -104,11 +100,15 @@ class BasketTableViewCell: UITableViewCell {
     @objc
     private func increaseQuantity() {
         self.quantity += 1
+        guard let model = viewModel else { return }
+        self.delegate?.quantityDidChange(for: model, with: self.quantity)
     }
     
     @objc
     private func decreaseQuantity() {
         self.quantity -= 1
+        guard let model = viewModel else { return }
+        self.delegate?.quantityDidChange(for: model, with: self.quantity)
     }
     
     @objc

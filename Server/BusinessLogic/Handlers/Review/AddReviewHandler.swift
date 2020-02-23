@@ -11,16 +11,10 @@ import PerfectHTTP
 class AddReviewHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    let reviewDB: ReviewDBService
-    let userDB: UserDBService
-    let productDB: ProductDBService
     
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.reviewDB = ReviewDBService()
-        self.userDB = UserDBService()
-        self.productDB = ProductDBService()
     }
 }
 
@@ -30,8 +24,10 @@ extension AddReviewHandler {
         switch validate() {
         case .success(let data):
             do {
-                let review = try reviewDB.save(with: data)
+                let context = CoreDataStack.shared.mainContext
+                let review = try Review.make(with: data, in: context)
                 try sendingResponse(with: review)
+                CoreDataStack.shared.saveContext(context)
             } catch {
                 ErrorHandler(request: request, response: response).process()
             }
@@ -59,10 +55,11 @@ extension AddReviewHandler {
             let productId = Int(productIdStr) else {
                 return .badData
         }
-        guard let user = try! userDB.load(id: userId) else {
+        let context = CoreDataStack.shared.mainContext
+        guard let user = User.fetchById(userId, in: context) else {
             return .userNotFound
         }
-        guard let product = try! productDB.load(id: productId) else {
+        guard let product = Product.fetchById(productId, in: context) else {
             return .productNotFound
         }
         return .success(ReviewData(content: content, user: user, product: product))

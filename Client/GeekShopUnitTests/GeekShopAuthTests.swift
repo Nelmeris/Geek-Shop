@@ -52,6 +52,10 @@ class GeekShopAuthTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 10.0)
     }
+    
+    func testRegisterStress() {
+        for _ in 1...100 { testRegister() }
+    }
 
     func testRegister() {
         let username = randomString(length: 10)

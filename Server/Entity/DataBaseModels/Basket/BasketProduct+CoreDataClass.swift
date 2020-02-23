@@ -2,7 +2,7 @@
 //  BasketProduct+CoreDataClass.swift
 //  PerfectTemplate
 //
-//  Created by Artem Kufaev on 20.02.2020.
+//  Created by Artem Kufaev on 23.02.2020.
 //
 //
 
@@ -22,4 +22,15 @@ public class BasketProduct: NSManagedObject, Encodable {
         try container.encode(self.product, forKey: .product)
     }
     
+    static func fetchAll(in context: NSManagedObjectContext) -> [BasketProduct] {
+        let request = NSFetchRequest<BasketProduct>(entityName: "BasketProduct")
+        do {
+            return try context.fetch(request)
+        } catch {
+            debugPrint("Can't fetch basket products")
+            debugPrint((error as NSError).userInfo)
+            return []
+        }
+    }
+
 }

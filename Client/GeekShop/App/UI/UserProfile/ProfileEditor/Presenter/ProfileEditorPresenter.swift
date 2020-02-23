@@ -70,11 +70,6 @@ class ProfileEditorViewPresenter: ProfileEditorPresenter {
             self.controller.showResult(message) {}
             return false
         }
-        if model.password.isEmpty {
-            let message = R.string.localizable.missingPasswordErrorMessage()
-            self.controller.showResult(message) {}
-            return false
-        }
         if model.password != model.repeatPassword {
             let message = R.string.localizable.passwordsDontMatch()
             self.controller.showResult(message) {}
