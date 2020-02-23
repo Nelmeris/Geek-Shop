@@ -11,12 +11,10 @@ import PerfectHTTP
 class LoginHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    let db: UserDBService
 
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.db = UserDBService()
     }
 }
 
@@ -60,7 +58,8 @@ extension LoginHandler {
     }
     
     private func loginProcess(with data: LoginData) -> LoginResult {
-        guard let user = try! db.load(username: data.username),
+        let context = CoreDataStack.shared.mainContext
+        guard let user = User.fetchByUsername(data.username, in: context),
             user.password == data.password else {
                 return .failure
         }

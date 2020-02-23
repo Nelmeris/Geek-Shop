@@ -25,4 +25,55 @@ public class Review: NSManagedObject, Encodable {
         try container.encode(creationDate, forKey: .creationDate)
     }
     
+    static func fetchAll(in context: NSManagedObjectContext) -> [Review] {
+        let request = NSFetchRequest<Review>(entityName: "Review")
+        request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+        do {
+            return try context.fetch(request)
+        } catch {
+            debugPrint("Can't fetch reviews")
+            debugPrint((error as NSError).userInfo)
+            return []
+        }
+    }
+    
+    static func fetchById(_ id: Int, in context: NSManagedObjectContext) -> Review? {
+        let request = NSFetchRequest<Review>(entityName: "Review")
+        request.predicate = NSPredicate(format: "id == %d", id)
+        do {
+            return try context.fetch(request).first
+        } catch {
+            debugPrint("Can't fetch review with id \(id)")
+            debugPrint((error as NSError).userInfo)
+            return nil
+        }
+    }
+    
+    static func fetchByProductId(_ id: Int, in context: NSManagedObjectContext) -> [Review]? {
+        let request = NSFetchRequest<Review>(entityName: "Review")
+        do {
+            let reviews = try context.fetch(request)
+            return reviews.filter { $0.product?.id == Int64(id) }
+        } catch {
+            debugPrint("Can't fetch review with id \(id)")
+            debugPrint((error as NSError).userInfo)
+            return nil
+        }
+    }
+    
+    static func make(with data: ReviewData, in context: NSManagedObjectContext) throws -> Review {
+        let review = Review(context: context)
+        let reviews = fetchAll(in: context)
+        review.update(from: data)
+        review.id = (reviews.last?.id ?? -1) + 1
+        review.creationDate = Date()
+        return review
+    }
+    
+    func update(from data: ReviewData) {
+        self.content = data.content
+        self.author = data.user
+        self.product = data.product
+    }
+    
 }

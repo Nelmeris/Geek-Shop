@@ -11,12 +11,10 @@ import PerfectHTTP
 class RegisterHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    let db: UserDBService
-
+    
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.db = UserDBService()
     }
 }
 
@@ -26,8 +24,10 @@ extension RegisterHandler {
         switch validate() {
         case .success(let data):
             do {
-                let user = try db.save(with: data)
+                let context = CoreDataStack.shared.mainContext
+                let user = try User.make(from: data, in: context)
                 try sendingResponse(with: user)
+                CoreDataStack.shared.saveContext(context)
             } catch {
                 ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
             }
@@ -49,7 +49,8 @@ extension RegisterHandler {
             let password = request.param(name: "password") else {
                 return .badData
         }
-        guard try! db.load(username: username) == nil else {
+        let context = CoreDataStack.shared.mainContext
+        guard User.fetchByUsername(username, in: context) == nil else {
             return .usernameBusy
         }
         return .success(UserData(username: username, password: password,

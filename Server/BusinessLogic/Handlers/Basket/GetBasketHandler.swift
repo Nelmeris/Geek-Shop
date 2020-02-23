@@ -12,14 +12,9 @@ class GetBasketHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
     
-    let userDB: UserDBService
-    let basketDB: BasketDBService
-    
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.userDB = UserDBService()
-        self.basketDB = BasketDBService()
     }
 }
 
@@ -29,7 +24,12 @@ extension GetBasketHandler {
         switch validate() {
         case .success(let user):
             do {
-                let basket = try basketDB.load(for: Int(user.id))
+                var basket: Basket! = Basket.fetchByUserId(Int(user.id), in: CoreDataStack.shared.mainContext)
+                if basket == nil {
+                    let context = CoreDataStack.shared.mainContext
+                    basket = Basket.make(for: user, in: context)
+                    CoreDataStack.shared.saveContext(context)
+                }
                 try sendingResponse(with: basket)
             } catch {
                 ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
@@ -52,7 +52,8 @@ extension GetBasketHandler {
             let userId = Int(userIdStr) else {
                 return .badData
         }
-        guard let user = try! userDB.load(id: userId) else {
+        let context = CoreDataStack.shared.mainContext
+        guard let user = User.fetchById(userId, in: context) else {
             return .userNotFound
         }
         return .success(user: user)

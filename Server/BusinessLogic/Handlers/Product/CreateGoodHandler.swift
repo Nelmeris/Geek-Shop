@@ -11,12 +11,10 @@ import PerfectHTTP
 class CreateGoodHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    let productDB: ProductDBService
 
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.productDB = ProductDBService()
     }
 }
 
@@ -26,8 +24,10 @@ extension CreateGoodHandler {
         switch validate() {
         case .success(let data):
             do {
-                let product = try productDB.save(with: data)
+                let context = CoreDataStack.shared.mainContext
+                let product = try Product.make(from: data, in: context)
                 try sendingResponse(with: product)
+                CoreDataStack.shared.saveContext(context)
             } catch {
                 ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
             }

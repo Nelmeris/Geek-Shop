@@ -13,6 +13,8 @@ final class CoreDataStack {
     private let modelName: String
     private let storeIsReady = DispatchGroup()
     
+    static public let shared = CoreDataStack()
+    
     // MARK: - Init
     
     init(modelName: String = "DataModel") {
@@ -26,7 +28,6 @@ final class CoreDataStack {
         storeIsReady.wait()
             
         let context = self.persistentContainer.viewContext
-        context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         
         return context
     }()
@@ -35,21 +36,23 @@ final class CoreDataStack {
         storeIsReady.wait()
 
         let context = self.persistentContainer.newBackgroundContext()
-        context.parent = mainContext
         
         return context
     }
     
     func saveToStore() {
+        saveContext(mainContext)
+    }
+    
+    func saveContext(_ context: NSManagedObjectContext) {
         storeIsReady.wait()
         
-        guard mainContext.hasChanges else {
+        guard context.hasChanges else {
             debugPrint("Data has not changes")
             return
         }
         do {
-            try mainContext.save()
-            mainContext.reset()
+            try context.save()
             debugPrint("Data succesfully saved to store")
         } catch {
             debugPrint("Data not saved to store with error \(error)")

@@ -11,18 +11,10 @@ import PerfectHTTP
 class AddToBasketHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    let userDB: UserDBService
-    let basketProductDB: BasketProductDBService
-    let productDB: ProductDBService
-    let basketDB: BasketDBService
     
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.userDB = UserDBService()
-        self.productDB = ProductDBService()
-        self.basketProductDB = BasketProductDBService()
-        self.basketDB = BasketDBService()
     }
 }
 
@@ -32,15 +24,14 @@ extension AddToBasketHandler {
         switch validate() {
         case .success(let data):
             do {
-                let basket = try basketDB.add(for: data.user, with: data.product)
+                let context = CoreDataStack.shared.mainContext
+                var basket: Basket! = Basket.fetchByUserId(Int(data.user.id), in: context)
+                if basket == nil {
+                    basket = Basket.make(for: data.user, in: context)
+                }
+                basket.addProduct(data.product, with: data.quantity, in: context)
                 try sendingResponse(with: basket)
-            } catch {
-                ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
-            }
-        case .productRemoved(let user):
-            do {
-                let basket = try basketDB.load(for: Int(user.id))
-                try sendingResponse(with: basket)
+                CoreDataStack.shared.saveContext(context)
             } catch {
                 ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
             }
@@ -54,10 +45,9 @@ extension AddToBasketHandler {
     }
     
     enum ValidateResult {
-        case success(user: User, product: BasketProduct)
+        case success(user: User, product: Product, quantity: Int)
         case badData
         case userNotFound, productNotFound
-        case productRemoved(user: User)
     }
     
     private func validate() -> ValidateResult {
@@ -69,16 +59,14 @@ extension AddToBasketHandler {
             let quantity = Int(quantityStr) else {
                 return .badData
         }
-        guard let user = try! userDB.load(id: userId) else {
+        let context = CoreDataStack.shared.mainContext
+        guard let user = User.fetchById(userId, in: context) else {
             return .userNotFound
         }
-        guard let product = try! productDB.load(id: productId) else {
+        guard let product = Product.fetchById(productId, in: context) else {
             return .productNotFound
         }
-        guard let basketProduct = try! basketProductDB.save(with: Int(quantity), product: product) else {
-            return .productRemoved(user: user)
-        }
-        return .success(user: user, product: basketProduct)
+        return .success(user: user, product: product, quantity: quantity)
     }
     
     private func sendingResponse(with basket: Basket?) throws {

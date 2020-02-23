@@ -11,12 +11,10 @@ import PerfectHTTP
 class ChangeUserDataHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
-    let db: UserDBService
 
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
-        self.db = UserDBService()
     }
 }
 
@@ -26,8 +24,10 @@ extension ChangeUserDataHandler {
         switch validate() {
         case .success(let user, let newData):
             do {
-                let user = try db.update(user, with: newData)
+                user.update(from: newData)
                 try sendingResponse(with: user)
+                let context = CoreDataStack.shared.mainContext
+                CoreDataStack.shared.saveContext(context)
             } catch {
                 ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
             }
@@ -53,12 +53,9 @@ extension ChangeUserDataHandler {
             let username = request.param(name: "username") else {
                 return .badData
         }
-        guard let user = try! db.load(id: userId) else {
+        let context = CoreDataStack.shared.mainContext
+        guard let user = User.fetchById(userId, in: context) else {
             return .userNotFound
-        }
-        if let userWithUsername = try! db.load(username: username),
-            userWithUsername.id != user.id {
-            return .usernameBusy
         }
         var password: String!
         if let newPassword = request.param(name: "password"), !newPassword.isEmpty {

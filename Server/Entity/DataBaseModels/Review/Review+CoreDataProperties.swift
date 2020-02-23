@@ -1,8 +1,8 @@
 //
 //  Review+CoreDataProperties.swift
-//  
+//  PerfectTemplate
 //
-//  Created by Artem Kufaev on 14.02.2020.
+//  Created by Artem Kufaev on 23.02.2020.
 //
 //
 
@@ -19,7 +19,7 @@ extension Review {
     @NSManaged public var content: String?
     @NSManaged public var creationDate: Date?
     @NSManaged public var id: Int64
-    @NSManaged public var product: Product?
     @NSManaged public var author: User?
+    @NSManaged public var product: Product?
 
 }

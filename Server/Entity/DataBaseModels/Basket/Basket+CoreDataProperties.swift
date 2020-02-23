@@ -1,8 +1,8 @@
 //
 //  Basket+CoreDataProperties.swift
-//  
+//  PerfectTemplate
 //
-//  Created by Artem Kufaev on 14.02.2020.
+//  Created by Artem Kufaev on 23.02.2020.
 //
 //
 
