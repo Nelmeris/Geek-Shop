@@ -49,16 +49,16 @@ class ProfileEditorViewController: UIViewController {
             let bio = self.profileEditorView.registerFormView.bioTextView.text
             else { fatalError("Fields text error") }
         
-        let model = UserData(id: nil,
+        let model = UserData(id: User.authUser?.id,
                              username: username,
-                             password: name,
-                             repeatPassword: surname,
-                             email: password,
-                             name: repeatPassword,
-                             surname: email,
-                             bio: gender,
+                             password: password,
+                             repeatPassword: repeatPassword,
+                             email: email,
+                             name: name,
+                             surname: surname,
+                             bio: bio,
                              creditCard: creditCard,
-                             gender: bio)
+                             gender: gender)
         presenter.changeDataProcess(with: model)
     }
     

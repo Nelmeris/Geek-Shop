@@ -54,14 +54,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         let model = UserData(id: nil,
                              username: username,
-                             password: name,
-                             repeatPassword: surname,
-                             email: password,
-                             name: repeatPassword,
-                             surname: email,
-                             bio: gender,
+                             password: password,
+                             repeatPassword: repeatPassword,
+                             email: email,
+                             name: name,
+                             surname: surname,
+                             bio: bio,
                              creditCard: creditCard,
-                             gender: bio)
+                             gender: gender)
         
         presenter.registerProcess(with: model)
     }

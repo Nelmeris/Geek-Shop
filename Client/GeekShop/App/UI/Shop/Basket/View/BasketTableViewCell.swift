@@ -51,8 +51,6 @@ class BasketTableViewCell: UITableViewCell {
             guard newValue >= 1 else { return }
             self.decreaseButton.isEnabled = newValue != 1
             self.quantityField.text = String(newValue)
-            let price = Decimal(string: self.viewModel!.price)!
-            self.priceLabel.text = NSDecimalNumber(decimal: price * Decimal(newValue)).stringValue
         }
     }
     
