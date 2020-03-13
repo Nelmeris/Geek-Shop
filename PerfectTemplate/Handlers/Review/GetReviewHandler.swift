@@ -11,54 +11,53 @@ import PerfectHTTP
 class GetReviewHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
+    let db: ReviewDBService
     
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
+        self.db = ReviewDBService()
     }
 }
 
 extension GetReviewHandler {
     
-    func dataValidation() -> Bool {
-        guard request.param(name: "product_id") != nil
-            else {
+    func process() {
+        switch validate() {
+        case .success(let data):
+            do {
+                let reviews: [Review] = try db.load(for: data)
+                try sendingResponse(with: reviews)
+            } catch {
                 ErrorHandler(request: request, response: response).process()
-                return false
+            }
+        case .badData:
+            ErrorHandler(request: request, response: response).process(with: "Не полные данные")
         }
-        return true
     }
     
-    func process() {
-        response.setHeader(.contentType, value: "application/json")
-        guard dataValidation() else { return }
-        let json: [[String: Any]] = [
-            [
-                "user": [
-                    "id_user": 123,
-                    "user_login": "geekbrains",
-                    "user_name": "John",
-                    "user_lastname": "Doe"
-                ],
-                "text": "Some text"
-            ],
-            [
-                "user": [
-                    "id_user": 12,
-                    "user_login": "nelmeris",
-                    "user_name": "Alex",
-                    "user_lastname": "Morgan"
-                ],
-                "text": "Some text"
-            ]
-        ]
-        
-        do {
-            try response.setBody(json: json)
-        } catch {
-            print(error)
+    enum ValidateResult {
+        case success(productId: Int)
+        case badData
+    }
+    
+    private func validate() -> ValidateResult {
+        guard let productIdStr = request.param(name: "product_id"),
+            let productId = Int(productIdStr) else {
+                return .badData
         }
-        response.completed()
+        return .success(productId: productId)
+    }
+    
+    private func sendingResponse(with reviews: [Review]) throws {
+        self.response.setHeader(.contentType, value: "application/json")
+        try self.response.setBody(json: Response(reviews: reviews))
+        self.response.completed()
+    }
+    
+    struct Response: Encodable {
+        let result = 1
+        let reviews: [Review]
     }
     
 }

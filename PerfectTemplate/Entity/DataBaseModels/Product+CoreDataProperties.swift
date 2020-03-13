@@ -1,8 +1,8 @@
 //
 //  Product+CoreDataProperties.swift
-//  
+//  PerfectTemplate
 //
-//  Created by Artem Kufaev on 14.02.2020.
+//  Created by Artem Kufaev on 18.02.2020.
 //
 //
 
@@ -16,13 +16,12 @@ extension Product {
         return NSFetchRequest<Product>(entityName: "Product")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var price: NSDecimalNumber?
     @NSManaged public var descript: String?
     @NSManaged public var id: Int64
+    @NSManaged public var price: NSDecimalNumber?
+    @NSManaged public var title: String?
     @NSManaged public var basket: NSSet?
     @NSManaged public var reviews: NSSet?
-    @NSManaged public var catalog: NSSet?
 
 }
 
@@ -57,22 +56,5 @@ extension Product {
 
     @objc(removeReviews:)
     @NSManaged public func removeFromReviews(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for catalog
-extension Product {
-
-    @objc(addCatalogObject:)
-    @NSManaged public func addToCatalog(_ value: Catalog)
-
-    @objc(removeCatalogObject:)
-    @NSManaged public func removeFromCatalog(_ value: Catalog)
-
-    @objc(addCatalog:)
-    @NSManaged public func addToCatalog(_ values: NSSet)
-
-    @objc(removeCatalog:)
-    @NSManaged public func removeFromCatalog(_ values: NSSet)
 
 }

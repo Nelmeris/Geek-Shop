@@ -10,6 +10,19 @@ import Foundation
 import CoreData
 
 @objc(Review)
-public class Review: NSManagedObject {
-
+public class Review: NSManagedObject, Encodable {
+    
+    enum CodingKeys: String, CodingKey {
+        case id, content, author, product, creationDate
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(content, forKey: .content)
+        try container.encode(author, forKey: .author)
+        try container.encode(product, forKey: .product)
+        try container.encode(creationDate, forKey: .creationDate)
+    }
+    
 }

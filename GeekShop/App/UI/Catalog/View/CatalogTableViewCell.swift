@@ -42,6 +42,7 @@ class CatalogTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configureUI()
         setupLayout()
         setupConstraints()
     }
@@ -63,6 +64,10 @@ class CatalogTableViewCell: UITableViewCell {
         self.titleLabel.text = model.title
         self.priceLabel.text = model.price
         self.setupDescription(model.description)
+    }
+    
+    private func configureUI() {
+        self.selectionStyle = .none
     }
     
     private func setupLayout() {

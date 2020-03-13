@@ -33,6 +33,7 @@ class CatalogViewController: UIViewController {
         super.loadView()
         self.view = CatalogView()
         self.catalogView.tableView.dataSource = self
+        self.catalogView.tableView.delegate = self
     }
     
     override func viewDidLoad() {
@@ -63,7 +64,7 @@ extension CatalogViewController: CatalogController, AlertDelegate {
 }
 
 // MARK: - TableViewDataSource
-extension CatalogViewController: UITableViewDataSource {
+extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -78,6 +79,10 @@ extension CatalogViewController: UITableViewDataSource {
         let model = viewModels[indexPath.row]
         cell.configure(with: model)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.productDidSelect(for: indexPath)
     }
     
 }

@@ -1,8 +1,8 @@
 //
 //  Product+CoreDataClass.swift
-//  
+//  PerfectTemplate
 //
-//  Created by Artem Kufaev on 14.02.2020.
+//  Created by Artem Kufaev on 18.02.2020.
 //
 //
 
