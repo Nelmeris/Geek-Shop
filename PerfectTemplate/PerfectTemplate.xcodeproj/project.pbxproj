@@ -25,6 +25,11 @@
 		57A0888923FC820B00F257F0 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0888123FC820B00F257F0 /* User+CoreDataClass.swift */; };
 		57A0888B23FC820B00F257F0 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0888323FC820B00F257F0 /* Product+CoreDataClass.swift */; };
 		57A0888C23FC820B00F257F0 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0888423FC820B00F257F0 /* Product+CoreDataProperties.swift */; };
+		57DC9C0B23FECB1C004CE8C7 /* BasketDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9C0A23FECB1C004CE8C7 /* BasketDBService.swift */; };
+		57DC9C0D23FECBE6004CE8C7 /* BasketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9C0C23FECBE6004CE8C7 /* BasketData.swift */; };
+		57DC9C1423FED309004CE8C7 /* BasketProduct+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9C1223FED309004CE8C7 /* BasketProduct+CoreDataClass.swift */; };
+		57DC9C1523FED309004CE8C7 /* BasketProduct+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9C1323FED309004CE8C7 /* BasketProduct+CoreDataProperties.swift */; };
+		57DC9C1723FED45C004CE8C7 /* BasketProductDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9C1623FED45C004CE8C7 /* BasketProductDBService.swift */; };
 		57F688ED23F6CA1800ECF27D /* BaseDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F688EC23F6CA1800ECF27D /* BaseDBService.swift */; };
 		57F688F023F6CA4D00ECF27D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57F688EE23F6CA4D00ECF27D /* DataModel.xcdatamodeld */; };
 		57F688F223F6CFBA00ECF27D /* UserDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F688F123F6CFBA00ECF27D /* UserDBService.swift */; };
@@ -607,6 +612,11 @@
 		57A0888123FC820B00F257F0 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Entity/DataBaseModels/User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		57A0888323FC820B00F257F0 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataClass.swift"; path = "Entity/DataBaseModels/Product+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		57A0888423FC820B00F257F0 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "Entity/DataBaseModels/Product+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		57DC9C0A23FECB1C004CE8C7 /* BasketDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketDBService.swift; sourceTree = "<group>"; };
+		57DC9C0C23FECBE6004CE8C7 /* BasketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketData.swift; sourceTree = "<group>"; };
+		57DC9C1223FED309004CE8C7 /* BasketProduct+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasketProduct+CoreDataClass.swift"; sourceTree = "<group>"; };
+		57DC9C1323FED309004CE8C7 /* BasketProduct+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasketProduct+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		57DC9C1623FED45C004CE8C7 /* BasketProductDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductDBService.swift; sourceTree = "<group>"; };
 		57F688EC23F6CA1800ECF27D /* BaseDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDBService.swift; sourceTree = "<group>"; };
 		57F688EF23F6CA4D00ECF27D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		57F688F123F6CFBA00ECF27D /* UserDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBService.swift; sourceTree = "<group>"; };
@@ -1113,6 +1123,8 @@
 				57F688F123F6CFBA00ECF27D /* UserDBService.swift */,
 				57FD692723FC58EA0055FC45 /* ProductDBService.swift */,
 				57A0887923FC80F600F257F0 /* ReviewDBService.swift */,
+				57DC9C0A23FECB1C004CE8C7 /* BasketDBService.swift */,
+				57DC9C1623FED45C004CE8C7 /* BasketProductDBService.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -1169,6 +1181,8 @@
 			children = (
 				57A0888323FC820B00F257F0 /* Product+CoreDataClass.swift */,
 				57A0888423FC820B00F257F0 /* Product+CoreDataProperties.swift */,
+				57DC9C1223FED309004CE8C7 /* BasketProduct+CoreDataClass.swift */,
+				57DC9C1323FED309004CE8C7 /* BasketProduct+CoreDataProperties.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -1180,6 +1194,7 @@
 				57F6893223F722D400ECF27D /* UserData.swift */,
 				57FD692B23FC5D0D0055FC45 /* ProductData.swift */,
 				57A0887B23FC814B00F257F0 /* ReviewData.swift */,
+				57DC9C0C23FECBE6004CE8C7 /* BasketData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -2555,6 +2570,7 @@
 				57A0888C23FC820B00F257F0 /* Product+CoreDataProperties.swift in Sources */,
 				574D3BBE2278C51F001C6B00 /* HandlerFactory.swift in Sources */,
 				57F688F223F6CFBA00ECF27D /* UserDBService.swift in Sources */,
+				57DC9C0B23FECB1C004CE8C7 /* BasketDBService.swift in Sources */,
 				57F6891823F6D81500ECF27D /* Basket+CoreDataClass.swift in Sources */,
 				OBJ_806 /* main.swift in Sources */,
 				57FD692F23FC60020055FC45 /* GetGoodsHandler.swift in Sources */,
@@ -2570,9 +2586,12 @@
 				574D3BC52278C768001C6B00 /* RemoveReviewHandler.swift in Sources */,
 				57FD692A23FC5ADF0055FC45 /* CreateGoodHandler.swift in Sources */,
 				574D3BBF2278C522001C6B00 /* LoginHandler.swift in Sources */,
+				57DC9C1423FED309004CE8C7 /* BasketProduct+CoreDataClass.swift in Sources */,
 				574D3BBA2278C50B001C6B00 /* AbstractHandler.swift in Sources */,
 				57F6893323F722D400ECF27D /* UserData.swift in Sources */,
+				57DC9C1523FED309004CE8C7 /* BasketProduct+CoreDataProperties.swift in Sources */,
 				574D3BBB2278C50E001C6B00 /* ChangeUserDataHandler.swift in Sources */,
+				57DC9C0D23FECBE6004CE8C7 /* BasketData.swift in Sources */,
 				570B678B228ADDF500CA814F /* AddToBasketHandler.swift in Sources */,
 				57F688F023F6CA4D00ECF27D /* DataModel.xcdatamodeld in Sources */,
 				574D3BC72278C7DD001C6B00 /* GetReviewHandler.swift in Sources */,
@@ -2581,6 +2600,7 @@
 				57FD692C23FC5D0D0055FC45 /* ProductData.swift in Sources */,
 				574D3BC02278C525001C6B00 /* LogoutHandler.swift in Sources */,
 				57F6891523F6D81500ECF27D /* Basket+CoreDataProperties.swift in Sources */,
+				57DC9C1723FED45C004CE8C7 /* BasketProductDBService.swift in Sources */,
 				57F6891623F6D81500ECF27D /* Review+CoreDataProperties.swift in Sources */,
 				57A0887C23FC814B00F257F0 /* ReviewData.swift in Sources */,
 			);

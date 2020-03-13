@@ -27,21 +27,7 @@ class GeekShopCatalogTests: XCTestCase {
 
     func testGetCatalogData() {
         let expectation = XCTestExpectation(description: "Get catalog data")
-        catalog.getCatalog(pageNumber: 123, categoryId: 1) { response in
-            switch response.result {
-            case .success: break
-            case .failure (let error):
-                print(error)
-                XCTFail()
-            }
-            expectation.fulfill()
-        }
-        wait(for: [expectation], timeout: 10.0)
-    }
-
-    func testGetGoodById() {
-        let expectation = XCTestExpectation(description: "Get good by id")
-        catalog.getGood(by: 123) { response in
+        catalog.getGoods { response in
             switch response.result {
             case .success: break
             case .failure (let error):

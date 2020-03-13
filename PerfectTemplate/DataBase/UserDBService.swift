@@ -18,9 +18,9 @@ final class UserDBService: BaseDBService {
         return try context.fetch(request)
     }
     
-    func load(id: String) throws -> User? {
+    func load(id: Int) throws -> User? {
         let request: NSFetchRequest<User> = NSFetchRequest(entityName: entityName)
-        request.predicate = NSPredicate(format: "id == %@", id)
+        request.predicate = NSPredicate(format: "id == %d", id)
         return try context.fetch(request).first
     }
     

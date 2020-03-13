@@ -36,7 +36,7 @@ class RequestFactory {
     
     func makeBasketRequestFactory() -> BasketRequestFactory {
         let errorParser = makeErrorParser()
-        return Basket(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return BasketService(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
     }
     
 }

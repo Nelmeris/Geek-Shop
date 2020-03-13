@@ -27,7 +27,7 @@ class GeekShopAuthTests: XCTestCase {
 
     func testLogin() {
         let expectation = XCTestExpectation(description: "Login")
-        auth.login(username: "Somebody", password: "mypassword") { response in
+        auth.login(username: "admin", password: "admin") { response in
             switch response.result {
             case .success: break
             case .failure (let error):

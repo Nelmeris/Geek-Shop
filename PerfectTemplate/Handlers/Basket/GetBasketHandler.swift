@@ -12,51 +12,61 @@ class GetBasketHandler: AbstractHandler {
     var request: HTTPRequest
     var response: HTTPResponse
     
+    let userDB: UserDBService
+    let basketDB: BasketDBService
+    
     required init(request: HTTPRequest, response: HTTPResponse) {
         self.request = request
         self.response = response
+        self.userDB = UserDBService()
+        self.basketDB = BasketDBService()
     }
 }
 
 extension GetBasketHandler {
-    
-    func dataValidation() -> Bool {
-        guard request.param(name: "user_id") != nil
-            else {
-                ErrorHandler(request: request, response: response).process()
-                return false
+
+    func process() {
+        switch validate() {
+        case .success(let user):
+            do {
+                let basket = try basketDB.load(for: Int(user.id))
+                try sendingResponse(with: basket)
+            } catch {
+                ErrorHandler(request: request, response: response).process(with: error.localizedDescription)
+            }
+        case .badData:
+            ErrorHandler(request: request, response: response).process(with: "Не полные данные")
+        case .userNotFound:
+            ErrorHandler(request: request, response: response).process(with: "Пользователь не найден")
         }
-        return true
     }
     
-    func process() {
-        response.setHeader(.contentType, value: "application/json")
-        guard dataValidation() else { return }
-        let json: [String: Any] = [
-            "amount": 46600,
-            "count_goods": 2,
-            "contents": [
-                [
-                    "id_product": 123,
-                    "product_name": "Ноутбук",
-                    "price": 45600,
-                    "quantity": 1
-                ],
-                [
-                    "id_product": 456,
-                    "product_name": "Мышка",
-                    "price": 1000,
-                    "quantity": 1
-                ]
-            ]
-        ]
-        
-        do {
-            try response.setBody(json: json)
-        } catch {
-            print(error)
+    enum ValidateResult {
+        case success(user: User)
+        case badData
+        case userNotFound
+    }
+    
+    private func validate() -> ValidateResult {
+        guard let userIdStr = request.param(name: "user_id"),
+            let userId = Int(userIdStr) else {
+                return .badData
         }
-        response.completed()
+        guard let user = try! userDB.load(id: userId) else {
+            return .userNotFound
+        }
+        return .success(user: user)
+    }
+    
+    private func sendingResponse(with basket: Basket) throws {
+        self.response.setHeader(.contentType, value: "application/json")
+        try self.response.setBody(json: Response(basket: basket))
+        self.response.completed()
+    }
+    
+    struct Response: Encodable {
+        let result = 1
+        let basket: Basket
     }
     
 }

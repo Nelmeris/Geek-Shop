@@ -16,7 +16,7 @@ extension Basket {
         return NSFetchRequest<Basket>(entityName: "Basket")
     }
 
-    @NSManaged public var userId: User?
+    @NSManaged public var user: User?
     @NSManaged public var products: NSSet?
 
 }
@@ -25,10 +25,10 @@ extension Basket {
 extension Basket {
 
     @objc(addProductsObject:)
-    @NSManaged public func addToProducts(_ value: Product)
+    @NSManaged public func addToProducts(_ value: BasketProduct)
 
     @objc(removeProductsObject:)
-    @NSManaged public func removeFromProducts(_ value: Product)
+    @NSManaged public func removeFromProducts(_ value: BasketProduct)
 
     @objc(addProducts:)
     @NSManaged public func addToProducts(_ values: NSSet)

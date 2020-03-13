@@ -48,7 +48,8 @@ extension ChangeUserDataHandler {
     }
     
     private func validate() -> ValidateResult {
-        guard let userId = request.param(name: "user_id"),
+        guard let userIdStr = request.param(name: "user_id"),
+            let userId = Int(userIdStr),
             let username = request.param(name: "username") else {
                 return .badData
         }

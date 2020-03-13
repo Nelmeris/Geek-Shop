@@ -9,12 +9,12 @@
 import Alamofire
 
 protocol BasketRequestFactory {
-    func add(productId: Int, quantity: Int, completion: @escaping (DataResponse<ResultResponse>) -> ())
-    func remove(productId: Int, completion: @escaping (DataResponse<ResultResponse>) -> ())
+    func add(productId: Int, userId: Int, quantity: Int, completion: @escaping (DataResponse<ResultResponse>) -> ())
+    func remove(productId: Int, userId: Int, completion: @escaping (DataResponse<ResultResponse>) -> ())
     func get(userId: Int, completion: @escaping (DataResponse<GetBasketResponse>) -> ())
 }
 
-class Basket: AbstractRequestFactory {
+class BasketService: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: SessionManager
     let queue: DispatchQueue?
@@ -30,15 +30,15 @@ class Basket: AbstractRequestFactory {
     }
 }
 
-extension Basket: BasketRequestFactory {
+extension BasketService: BasketRequestFactory {
     
-    func add(productId: Int, quantity: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void) {
-        let requestModel = AddToBasketRequest(baseUrl: baseUrl, productId: productId, quantity: quantity)
+    func add(productId: Int, userId: Int, quantity: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void) {
+        let requestModel = AddToBasketRequest(baseUrl: baseUrl, productId: productId, quantity: quantity, userId: userId)
         self.request(request: requestModel, completionHandler: completion)
     }
     
-    func remove(productId: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void) {
-        let requestModel = RemoveFromBasketRequest(baseUrl: baseUrl, productId: productId)
+    func remove(productId: Int, userId: Int, completion: @escaping (DataResponse<ResultResponse>) -> Void) {
+        let requestModel = RemoveFromBasketRequest(baseUrl: baseUrl, productId: productId, userId: userId)
         self.request(request: requestModel, completionHandler: completion)
     }
     
@@ -49,7 +49,7 @@ extension Basket: BasketRequestFactory {
     
 }
 
-extension Basket {
+extension BasketService {
     
     struct AddToBasketRequest: RequestRouter {
         let baseUrl: URL
@@ -58,10 +58,13 @@ extension Basket {
         
         let productId: Int
         let quantity: Int
+        let userId: Int
+        
         var parameters: Parameters? {
             return [
                 "product_id": productId,
-                "quantity": quantity
+                "quantity": quantity,
+                "user_id": userId
             ]
         }
     }
@@ -72,9 +75,11 @@ extension Basket {
         let path: String = "basket.remove"
         
         let productId: Int
+        let userId: Int
         var parameters: Parameters? {
             return [
-                "product_id": productId
+                "product_id": productId,
+                "user_id": userId
             ]
         }
     }

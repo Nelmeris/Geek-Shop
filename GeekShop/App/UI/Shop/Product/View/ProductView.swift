@@ -9,11 +9,16 @@
 import Foundation
 import UIKit
 
+protocol ProductViewDelegate {
+    func addToBasketButtonDidClicked()
+}
+
 class ProductView: UIView {
     
     // MARK: - Properties
     
     private let reuseId = "reuse"
+    public var delegate: ProductViewDelegate?
     
     // MARK: - Subviews
     
@@ -26,6 +31,7 @@ class ProductView: UIView {
     private(set) lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         return label
     }()
     
@@ -42,6 +48,14 @@ class ProductView: UIView {
         return tableView
     }()
     
+    private(set) lazy var addToBasketButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(addToBasket), for: .touchUpInside)
+        button.setTitle("Добавить в корзину", for: .normal)
+        return button
+    }()
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -53,6 +67,13 @@ class ProductView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Actions
+    
+    @objc
+    private func addToBasket() {
+        self.delegate?.addToBasketButtonDidClicked()
     }
     
     // MARK: - Public methods
@@ -81,6 +102,7 @@ class ProductView: UIView {
         self.addSubview(descriptionLabel)
         self.addSubview(priceLabel)
         self.addSubview(reviewTableView)
+        self.addSubview(addToBasketButton)
     }
     
     private func setupConstraints() {
@@ -102,7 +124,10 @@ class ProductView: UIView {
             self.reviewTableView.topAnchor.constraint(equalTo: self.descriptionLabel.bottomAnchor, constant: 20),
             self.reviewTableView.leftAnchor.constraint(equalTo: safeArea.leftAnchor),
             self.reviewTableView.rightAnchor.constraint(equalTo: safeArea.rightAnchor),
-            self.reviewTableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
+            
+            self.addToBasketButton.topAnchor.constraint(equalTo: self.reviewTableView.bottomAnchor, constant: 20),
+            self.addToBasketButton.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            self.addToBasketButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20)
         ])
     }
     

@@ -9,13 +9,6 @@
 import Foundation
 
 struct GetBasketResponse: Codable {
-    let amount: Int
-    let countGoods: Int
-    let contents: [BasketProduct]
-    
-    enum CodingKeys: String, CodingKey {
-        case amount
-        case countGoods = "count_goods"
-        case contents
-    }
+    let result: Int
+    let basket: Basket
 }

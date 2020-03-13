@@ -22,6 +22,7 @@ extension Product {
     @NSManaged public var title: String?
     @NSManaged public var basket: NSSet?
     @NSManaged public var reviews: NSSet?
+    @NSManaged public var basketProducts: NSSet?
 
 }
 
@@ -57,4 +58,21 @@ extension Product {
     @objc(removeReviews:)
     @NSManaged public func removeFromReviews(_ values: NSSet)
 
+}
+
+// MARK: Generated accessors for basketProducts
+extension Product {
+
+    @objc(addBasketProductsObject:)
+    @NSManaged public func addToReviews(_ value: BasketProduct)
+
+    @objc(removeBasketProductsObject:)
+    @NSManaged public func removeFromReviews(_ value: BasketProduct)
+
+    @objc(addToBasketProducts:)
+    @NSManaged public func addToBasketProducts(_ values: NSSet)
+
+    @objc(removeFromBasketProducts:)
+    @NSManaged public func removeFromBasketProducts(_ values: NSSet)
+    
 }

@@ -16,11 +16,15 @@ class TabBarController: UITabBarController {
         catalogVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
         let catalogNVC = UINavigationController(rootViewController: catalogVC)
         
+        let basketVC = BasketModuleBuilder.build()
+        basketVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+        let basketNVC = UINavigationController(rootViewController: basketVC)
+        
         let profileVC = ProfileViewController()
-        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
         let profileNVC = UINavigationController(rootViewController: profileVC)
         
-        return [catalogNVC, profileNVC]
+        return [catalogNVC, basketVC, profileNVC]
     }()
     
     override func viewDidLoad() {

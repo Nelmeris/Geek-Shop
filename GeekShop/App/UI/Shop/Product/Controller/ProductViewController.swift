@@ -28,6 +28,7 @@ class ProductViewController: UIViewController {
         super.loadView()
         self.view = ProductView()
         self.productView.reviewTableView.dataSource = self
+        self.productView.delegate = self
     }
     
     override func viewDidLoad() {
@@ -50,7 +51,11 @@ extension ProductViewController: ProductController, AlertDelegate {
     }
     
     func showError(_ error: Error) {
-        self.showAlert(title: error.localizedDescription)
+        self.showAlert(title: "Ошибка", message: error.localizedDescription)
+    }
+    
+    func showMessage(_ message: String) {
+        self.showAlert(title: message)
     }
     
 }
@@ -66,6 +71,14 @@ extension ProductViewController: UITableViewDataSource {
         let model = self.viewModels[indexPath.row]
         cell.configure(with: model)
         return cell
+    }
+    
+}
+
+extension ProductViewController: ProductViewDelegate {
+    
+    func addToBasketButtonDidClicked() {
+        self.presenter.addToBasket()
     }
     
 }
