@@ -1,0 +1,60 @@
+/* 
+  Localizable.strings
+  GeekShop
+
+  Created by Artem Kufaev on 22.02.2020.
+  Copyright © 2020 Artem Kufaev. All rights reserved.
+*/
+
+// Title
+"AppTitle" = "GeekShop";
+"AuthorizationTitle" = "Авторизация";
+"RegistrationTitle" = "Регистрация";
+"CatalogTitle" = "Каталог";
+"CartTitle" = "Корзина";
+"ProfileTitle" = "Профиль";
+"ProfileEditorTitle" = "Редактирование профиля";
+
+// Labels
+"UsernameLabel" = "Username";
+"NameLabel" = "Имя";
+"SurnameLabel" = "Фамилия";
+"TotalPriceLabel" = "Итого";
+
+// Buttons
+"LoginButton" = "Войти";
+"SignUpButton" = "Зарегистрироваться";
+"ProfileEditButton" = "Изменить";
+"RemoveButton" = "Удалить";
+"AddToCartButton" = "Добавить в корзину";
+"MakePurchaseButton" = "Купить";
+
+// Fields
+"UsernameField" = "Username";
+"PasswordField" = "Пароль";
+"RepeatPasswordField" = "Повторите пароль";
+"NameField" = "Имя";
+"SurnameField" = "Фамилия";
+"EmailField" = "example@mail.ru";
+"CreditCardField" = "5555 5555 5555 4444";
+
+// Genders
+"GenderMale" = "Мужской";
+"GenderFemale" = "Женский";
+
+// Alerts
+"StandartErrorTitle" = "Ошибка";
+"StandartOKButton" = "Ок";
+"StandartCancelButton" = "Отмена";
+
+// Permission Question
+"SendReportsPermissionQuestionTitle" = "Отправка аналитических отчетов";
+"SendReportsPermissionQuestionContent" = "Разрешаете ли вы собирать аналитику для разработчиков?";
+
+// Messages
+"SuccessfulMessage" = "Успешно!";
+"MissingUsernameErrorMessage" = "Напишите имя пользователя";
+"MissingPasswordErrorMessage" = "Напишите свой пароль";
+"PasswordsDontMatch" = "Пароли не совпадают";
+"PurchaseIsMadeMessage" = "Покупка совершена";
+"SuccessfulAddToCartMessage" = "Товар был успешно добавлен в корзину";

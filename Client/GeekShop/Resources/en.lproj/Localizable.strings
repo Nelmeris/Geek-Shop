@@ -1,0 +1,60 @@
+/* 
+  Localizable.strings
+  GeekShop
+
+  Created by Artem Kufaev on 22.02.2020.
+  Copyright © 2020 Artem Kufaev. All rights reserved.
+*/
+
+// Title
+"AppTitle" = "GeekShop";
+"AuthorizationTitle" = "Authorization";
+"RegistrationTitle" = "Registration";
+"CatalogTitle" = "Catalog";
+"CartTitle" = "Cart";
+"ProfileTitle" = "Profile";
+"ProfileEditorTitle" = "Profile Editing";
+
+// Labels
+"UsernameLabel" = "Username";
+"NameLabel" = "Name";
+"SurnameLabel" = "Surname";
+"TotalPriceLabel" = "Total";
+
+// Buttons
+"LoginButton" = "Login";
+"SignUpButton" = "Sign up";
+"ProfileEditButton" = "Edit";
+"RemoveButton" = "Remove";
+"AddToCartButton" = "Add to cart";
+"MakePurchaseButton" = "Purchase";
+
+// Fields
+"UsernameField" = "Username";
+"PasswordField" = "Password";
+"RepeatPasswordField" = "Repeat Password";
+"NameField" = "Name";
+"SurnameField" = "Surname";
+"EmailField" = "example@gmail.com";
+"CreditCardField" = "5555 5555 5555 4444";
+
+// Genders
+"GenderMale" = "Male";
+"GenderFemale" = "Female";
+
+// Alerts
+"StandartErrorTitle" = "Error";
+"StandartOKButton" = "OK";
+"StandartCancelButton" = "Cancel";
+
+// Permission Question
+"SendReportsPermissionQuestionTitle" = "Sending analytical reports";
+"SendReportsPermissionQuestionContent" = "Do you allow collecting Analytics for developers?";
+
+// Messages
+"SuccessfulMessage" = "Success!";
+"MissingUsernameErrorMessage" = "Write your username";
+"MissingPasswordErrorMessage" = "Write your password";
+"PasswordsDontMatch" = "Password don't match";
+"PurchaseIsMadeMessage" = "The purchase is made";
+"SuccessfulAddToCartMessage" = "The product was successfully added to the cart";

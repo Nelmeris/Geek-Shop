@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='GeekShopUITests.xctest' tests='11' failures='0'>
+  <testsuite name='GeekShopUnitTests.GeekShopAuthTests' tests='4' failures='0'>
+    <testcase classname='GeekShopUnitTests.GeekShopAuthTests' name='testChangeUserData' time='0.027'/>
+    <testcase classname='GeekShopUnitTests.GeekShopAuthTests' name='testLogin' time='0.009'/>
+    <testcase classname='GeekShopUnitTests.GeekShopAuthTests' name='testLogout' time='0.006'/>
+    <testcase classname='GeekShopUnitTests.GeekShopAuthTests' name='testRegister' time='0.007'/>
+  </testsuite>
+  <testsuite name='GeekShopUnitTests.GeekShopBasketTests' tests='3' failures='0'>
+    <testcase classname='GeekShopUnitTests.GeekShopBasketTests' name='testAddToBasket' time='0.008'/>
+    <testcase classname='GeekShopUnitTests.GeekShopBasketTests' name='testGetBasket' time='0.007'/>
+    <testcase classname='GeekShopUnitTests.GeekShopBasketTests' name='testRemoveFromBasket' time='0.006'/>
+  </testsuite>
+  <testsuite name='GeekShopUnitTests.GeekShopCatalogTests' tests='1' failures='0'>
+    <testcase classname='GeekShopUnitTests.GeekShopCatalogTests' name='testGetCatalogData' time='0.007'/>
+  </testsuite>
+  <testsuite name='GeekShopUITests.GeekShopUITests' tests='3' failures='0'>
+    <testcase classname='GeekShopUITests.GeekShopUITests' name='testLogin' time='5.892'/>
+    <testcase classname='GeekShopUITests.GeekShopUITests' name='testLogout' time='9.582'/>
+    <testcase classname='GeekShopUITests.GeekShopUITests' name='testRegister' time='9.857'/>
+  </testsuite>
+</testsuites>
