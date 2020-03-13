@@ -9,20 +9,6 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "57871FA422675B090052E0A4"
-               BuildableName = "GeekShop.app"
-               BlueprintName = "GeekShop"
-               ReferencedContainer = "container:GeekShop.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "NO"
-            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
@@ -46,19 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "57C6293F2273850100C6080F"
-               BuildableName = "GeekShopUnitTests.xctest"
-               BlueprintName = "GeekShopUnitTests"
-               ReferencedContainer = "container:GeekShop.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "57DC9BE923FDD26C004CE8C7"
-               BuildableName = "GeekShopUITests.xctest"
-               BlueprintName = "GeekShopUITests"
+               BlueprintIdentifier = "573F62D123FF72B4009CBC11"
+               BuildableName = "SnapshotGeekShopUITests.xctest"
+               BlueprintName = "SnapshotGeekShopUITests"
                ReferencedContainer = "container:GeekShop.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -74,22 +50,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "57871FA422675B090052E0A4"
-            BuildableName = "GeekShop.app"
-            BlueprintName = "GeekShop"
-            ReferencedContainer = "container:GeekShop.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "-FIRDebugEnabled"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -97,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "57871FA422675B090052E0A4"
-            BuildableName = "GeekShop.app"
-            BlueprintName = "GeekShop"
+            BlueprintIdentifier = "573F62D123FF72B4009CBC11"
+            BuildableName = "SnapshotGeekShopUITests.xctest"
+            BlueprintName = "SnapshotGeekShopUITests"
             ReferencedContainer = "container:GeekShop.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

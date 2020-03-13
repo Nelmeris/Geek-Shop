@@ -1,0 +1,70 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :main do
+
+    # Checkout release branch
+    #ensure_git_status_clean
+
+    # Clear cache
+    clear_derived_data
+    xcclean(
+        scheme: "GeekShop",
+        workspace: "GeekShop.xcworkspace"
+    )
+
+    # Update Pods
+    cocoapods(
+        use_bundle_exec: false
+    )
+
+    # Tests
+    run_tests
+
+  end
+
+  lane :deploy do
+
+    # Increment build number
+    increment_build_number
+
+    gym(
+      scheme: "GeekShop",
+      configuration: "Release",
+      export_method: "development",
+      include_symbols: true,
+      include_bitcode: true,
+      silent: false
+    )
+
+    # commit changes to git
+    versionNumber = get_version_number
+    buildNumber = get_build_number
+    tag = "#{versionNumber}.#{buildNumber}"
+
+    # git_add
+    git_add(path: ["./Podfile.lock", "./GeekShop.xcodeproj/project.pbxproj", "./GeekShopUnitTests/Info.plist", "./GeekShop/Environments/Info.plist", "./GeekShopUITests/Info.plist"])
+    git_commit(path: ["./Podfile.lock", "./GeekShop.xcodeproj/project.pbxproj", "./GeekShopUnitTests/Info.plist", "./GeekShop/Environments/Info.plist", "./GeekShopUITests/Info.plist"], message: "verson up")
+    add_git_tag(
+      tag: tag
+    )
+
+  end
+
+end

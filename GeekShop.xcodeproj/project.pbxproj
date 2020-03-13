@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1215640A8D4111665767D667 /* Pods_GeekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076D9EB5FCB7160A3C47B396 /* Pods_GeekShop.framework */; };
 		570B6791228ADF6C00CA814F /* BasketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B6790228ADF6C00CA814F /* BasketService.swift */; };
 		570B6797228AE5E600CA814F /* GeekShopBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B6796228AE5E600CA814F /* GeekShopBasketTests.swift */; };
 		570B6799228AE69A00CA814F /* ResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B6798228AE69A00CA814F /* ResultResponse.swift */; };
 		570B679C228AE7A200CA814F /* GetBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B679B228AE7A200CA814F /* GetBasketResponse.swift */; };
 		570B679E228AE7FD00CA814F /* BasketProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B679D228AE7FD00CA814F /* BasketProduct.swift */; };
+		573F62D523FF72B4009CBC11 /* SnapshotGeekShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F62D423FF72B4009CBC11 /* SnapshotGeekShopUITests.swift */; };
+		573F62DD23FF7370009CBC11 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F62DC23FF7370009CBC11 /* SnapshotHelper.swift */; };
 		5763B5F023FF3AFE00C41287 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5763B5ED23FF2FA400C41287 /* GoogleService-Info.plist */; };
 		576F037022D9C704004015F9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F036F22D9C704004015F9 /* RegisterViewController.swift */; };
 		57871FA922675B090052E0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57871FA822675B090052E0A4 /* AppDelegate.swift */; };
@@ -84,10 +85,18 @@
 		57FD693A23FC6A7F0055FC45 /* CatalogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD693923FC6A7F0055FC45 /* CatalogResponse.swift */; };
 		57FD694023FC6C8F0055FC45 /* CatalogViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD693F23FC6C8F0055FC45 /* CatalogViewPresenter.swift */; };
 		57FD694323FC6D400055FC45 /* CatalogModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD694223FC6D400055FC45 /* CatalogModelBuilder.swift */; };
-		E7ED8FF7CE9469F95464CE64 /* Pods_GeekShopUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FF651F12386D03EF7AA000 /* Pods_GeekShopUnitTests.framework */; };
+		D5E66886532828E6304FC72C /* Pods_GeekShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2BB8D8E2D958BC6FA4F9E5 /* Pods_GeekShop.framework */; };
+		DA2777747F86BD6BC28BA4F9 /* Pods_GeekShopUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B747647032B6B4B9C6AAC39 /* Pods_GeekShopUnitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		573F62D723FF72B4009CBC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57871F9D22675B090052E0A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57871FA422675B090052E0A4;
+			remoteInfo = GeekShop;
+		};
 		57C629452273850100C6080F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 57871F9D22675B090052E0A4 /* Project object */;
@@ -119,14 +128,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00FD0B845EE71DFDBC2D9AEA /* Pods-GeekShopUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopUnitTests.release.xcconfig"; path = "Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests.release.xcconfig"; sourceTree = "<group>"; };
-		076D9EB5FCB7160A3C47B396 /* Pods_GeekShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E5346A35CA1051CA4CBD6E9 /* Pods-GeekShopUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		08635D10BBF14EA69A68B55F /* Pods-GeekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.debug.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.debug.xcconfig"; sourceTree = "<group>"; };
+		1B747647032B6B4B9C6AAC39 /* Pods_GeekShopUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShopUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570B6790228ADF6C00CA814F /* BasketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketService.swift; sourceTree = "<group>"; };
 		570B6796228AE5E600CA814F /* GeekShopBasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekShopBasketTests.swift; sourceTree = "<group>"; };
 		570B6798228AE69A00CA814F /* ResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultResponse.swift; sourceTree = "<group>"; };
 		570B679B228AE7A200CA814F /* GetBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResponse.swift; sourceTree = "<group>"; };
 		570B679D228AE7FD00CA814F /* BasketProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProduct.swift; sourceTree = "<group>"; };
+		573F62D223FF72B4009CBC11 /* SnapshotGeekShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotGeekShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		573F62D423FF72B4009CBC11 /* SnapshotGeekShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotGeekShopUITests.swift; sourceTree = "<group>"; };
+		573F62D623FF72B4009CBC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		573F62DC23FF7370009CBC11 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		5763B5ED23FF2FA400C41287 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		576F036F22D9C704004015F9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		57871FA522675B090052E0A4 /* GeekShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,17 +218,25 @@
 		57FD693923FC6A7F0055FC45 /* CatalogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResponse.swift; sourceTree = "<group>"; };
 		57FD693F23FC6C8F0055FC45 /* CatalogViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewPresenter.swift; sourceTree = "<group>"; };
 		57FD694223FC6D400055FC45 /* CatalogModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModelBuilder.swift; sourceTree = "<group>"; };
-		93FF651F12386D03EF7AA000 /* Pods_GeekShopUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShopUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7F0CAF63A76FF94E885E2F3 /* Pods-GeekShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.release.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.release.xcconfig"; sourceTree = "<group>"; };
-		C439EDB991B797D21461EB04 /* Pods-GeekShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.debug.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.debug.xcconfig"; sourceTree = "<group>"; };
+		6537963F746BA6D3D87BEF47 /* Pods-GeekShopUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E2BB8D8E2D958BC6FA4F9E5 /* Pods_GeekShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB845048DB1E7B709AAE4FB /* Pods-GeekShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShop.release.xcconfig"; path = "Target Support Files/Pods-GeekShop/Pods-GeekShop.release.xcconfig"; sourceTree = "<group>"; };
+		AEABC098C685C71B5C869918 /* Pods-GeekShopUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekShopUnitTests.release.xcconfig"; path = "Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		573F62CF23FF72B4009CBC11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		57871FA222675B090052E0A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1215640A8D4111665767D667 /* Pods_GeekShop.framework in Frameworks */,
+				D5E66886532828E6304FC72C /* Pods_GeekShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7ED8FF7CE9469F95464CE64 /* Pods_GeekShopUnitTests.framework in Frameworks */,
+				DA2777747F86BD6BC28BA4F9 /* Pods_GeekShopUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +271,23 @@
 			path = NetworkResponses;
 			sourceTree = "<group>";
 		};
+		573F62D323FF72B4009CBC11 /* SnapshotGeekShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				573F62D423FF72B4009CBC11 /* SnapshotGeekShopUITests.swift */,
+				573F62DC23FF7370009CBC11 /* SnapshotHelper.swift */,
+				573F62D623FF72B4009CBC11 /* Info.plist */,
+			);
+			path = SnapshotGeekShopUITests;
+			sourceTree = "<group>";
+		};
 		57871F9C22675B090052E0A4 = {
 			isa = PBXGroup;
 			children = (
 				57871FA722675B090052E0A4 /* GeekShop */,
 				57C629412273850100C6080F /* GeekShopUnitTests */,
 				57DC9BEB23FDD26C004CE8C7 /* GeekShopUITests */,
+				573F62D323FF72B4009CBC11 /* SnapshotGeekShopUITests */,
 				57871FA622675B090052E0A4 /* Products */,
 				AAE1AEB4C45A0453DBB0173C /* Pods */,
 				72AC838FAD3526BDFCEF0290 /* Frameworks */,
@@ -269,6 +300,7 @@
 				57871FA522675B090052E0A4 /* GeekShop.app */,
 				57C629402273850100C6080F /* GeekShopUnitTests.xctest */,
 				57DC9BEA23FDD26C004CE8C7 /* GeekShopUITests.xctest */,
+				573F62D223FF72B4009CBC11 /* SnapshotGeekShopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -853,8 +885,8 @@
 				57F688CD23F524C700ECF27D /* RxSwift.framework */,
 				57F688C923F524C300ECF27D /* Alamofire.framework */,
 				578C33A023F46DDA00897182 /* Alamofire.framework */,
-				076D9EB5FCB7160A3C47B396 /* Pods_GeekShop.framework */,
-				93FF651F12386D03EF7AA000 /* Pods_GeekShopUnitTests.framework */,
+				6E2BB8D8E2D958BC6FA4F9E5 /* Pods_GeekShop.framework */,
+				1B747647032B6B4B9C6AAC39 /* Pods_GeekShopUnitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -862,10 +894,10 @@
 		AAE1AEB4C45A0453DBB0173C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C439EDB991B797D21461EB04 /* Pods-GeekShop.debug.xcconfig */,
-				B7F0CAF63A76FF94E885E2F3 /* Pods-GeekShop.release.xcconfig */,
-				0E5346A35CA1051CA4CBD6E9 /* Pods-GeekShopUnitTests.debug.xcconfig */,
-				00FD0B845EE71DFDBC2D9AEA /* Pods-GeekShopUnitTests.release.xcconfig */,
+				08635D10BBF14EA69A68B55F /* Pods-GeekShop.debug.xcconfig */,
+				8EB845048DB1E7B709AAE4FB /* Pods-GeekShop.release.xcconfig */,
+				6537963F746BA6D3D87BEF47 /* Pods-GeekShopUnitTests.debug.xcconfig */,
+				AEABC098C685C71B5C869918 /* Pods-GeekShopUnitTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -873,18 +905,35 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		573F62D123FF72B4009CBC11 /* SnapshotGeekShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 573F62DB23FF72B4009CBC11 /* Build configuration list for PBXNativeTarget "SnapshotGeekShopUITests" */;
+			buildPhases = (
+				573F62CE23FF72B4009CBC11 /* Sources */,
+				573F62CF23FF72B4009CBC11 /* Frameworks */,
+				573F62D023FF72B4009CBC11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				573F62D823FF72B4009CBC11 /* PBXTargetDependency */,
+			);
+			name = SnapshotGeekShopUITests;
+			productName = SnapshotGeekShopUITests;
+			productReference = 573F62D223FF72B4009CBC11 /* SnapshotGeekShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		57871FA422675B090052E0A4 /* GeekShop */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57871FB722675B0B0052E0A4 /* Build configuration list for PBXNativeTarget "GeekShop" */;
 			buildPhases = (
-				59A8847A1BF252CA843B0F28 /* [CP] Check Pods Manifest.lock */,
+				9634D7BDEF3809952784C9E8 /* [CP] Check Pods Manifest.lock */,
 				57871FA122675B090052E0A4 /* Sources */,
 				57871FA222675B090052E0A4 /* Frameworks */,
 				57871FA322675B090052E0A4 /* Resources */,
 				57F688D223F524DD00ECF27D /* Embed Frameworks */,
-				0550AAE387998E8DEF8FFFDC /* [CP] Embed Pods Frameworks */,
 				576A3FC723FF0DB1003B5238 /* Crashlytics */,
-				5763B5F123FF3DBD00C41287 /* ShellScript */,
+				D81055E780B733E5FC3E5EFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -899,11 +948,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57C629472273850100C6080F /* Build configuration list for PBXNativeTarget "GeekShopUnitTests" */;
 			buildPhases = (
-				9AAD17C00F0C46835DD0852B /* [CP] Check Pods Manifest.lock */,
+				60F4CBD35A32A20B897DA3F9 /* [CP] Check Pods Manifest.lock */,
 				57C6293C2273850100C6080F /* Sources */,
 				57C6293D2273850100C6080F /* Frameworks */,
 				57C6293E2273850100C6080F /* Resources */,
-				0CC01F92276A238D8F54E03F /* [CP] Embed Pods Frameworks */,
+				0D4204156FEB78B2AC5A0B1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -943,6 +992,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Artem Kufaev";
 				TargetAttributes = {
+					573F62D123FF72B4009CBC11 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 57871FA422675B090052E0A4;
+					};
 					57871FA422675B090052E0A4 = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -972,11 +1025,19 @@
 				57871FA422675B090052E0A4 /* GeekShop */,
 				57C6293F2273850100C6080F /* GeekShopUnitTests */,
 				57DC9BE923FDD26C004CE8C7 /* GeekShopUITests */,
+				573F62D123FF72B4009CBC11 /* SnapshotGeekShopUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		573F62D023FF72B4009CBC11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		57871FA322675B090052E0A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1004,24 +1065,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0550AAE387998E8DEF8FFFDC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0CC01F92276A238D8F54E03F /* [CP] Embed Pods Frameworks */ = {
+		0D4204156FEB78B2AC5A0B1D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1037,23 +1081,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekShopUnitTests/Pods-GeekShopUnitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		5763B5F123FF3DBD00C41287 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/upload-symbols\" -gsp \"${PROJECT_DIR}/GeekShop/Environments/GoogleService-Info.plist\" -p ios \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
 		};
 		576A3FC723FF0DB1003B5238 /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1074,29 +1101,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
 		};
-		59A8847A1BF252CA843B0F28 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GeekShop-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9AAD17C00F0C46835DD0852B /* [CP] Check Pods Manifest.lock */ = {
+		60F4CBD35A32A20B897DA3F9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1118,9 +1123,57 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9634D7BDEF3809952784C9E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeekShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D81055E780B733E5FC3E5EFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekShop/Pods-GeekShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		573F62CE23FF72B4009CBC11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				573F62D523FF72B4009CBC11 /* SnapshotGeekShopUITests.swift in Sources */,
+				573F62DD23FF7370009CBC11 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		57871FA122675B090052E0A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1217,6 +1270,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		573F62D823FF72B4009CBC11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57871FA422675B090052E0A4 /* GeekShop */;
+			targetProxy = 573F62D723FF72B4009CBC11 /* PBXContainerItemProxy */;
+		};
 		57C629462273850100C6080F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 57871FA422675B090052E0A4 /* GeekShop */;
@@ -1241,6 +1299,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		573F62D923FF72B4009CBC11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YX6VKW92JQ;
+				INFOPLIST_FILE = SnapshotGeekShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artemkufaev.SnapshotGeekShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeekShop;
+			};
+			name = Debug;
+		};
+		573F62DA23FF72B4009CBC11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YX6VKW92JQ;
+				INFOPLIST_FILE = SnapshotGeekShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = artemkufaev.SnapshotGeekShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeekShop;
+			};
+			name = Release;
+		};
 		57871FB522675B0B0052E0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1360,10 +1457,11 @@
 		};
 		57871FB822675B0B0052E0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C439EDB991B797D21461EB04 /* Pods-GeekShop.debug.xcconfig */;
+			baseConfigurationReference = 08635D10BBF14EA69A68B55F /* Pods-GeekShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YX6VKW92JQ;
@@ -1378,15 +1476,17 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		57871FB922675B0B0052E0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7F0CAF63A76FF94E885E2F3 /* Pods-GeekShop.release.xcconfig */;
+			baseConfigurationReference = 8EB845048DB1E7B709AAE4FB /* Pods-GeekShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YX6VKW92JQ;
 				INFOPLIST_FILE = GeekShop/Environments/Info.plist;
@@ -1400,12 +1500,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		57C629482273850100C6080F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E5346A35CA1051CA4CBD6E9 /* Pods-GeekShopUnitTests.debug.xcconfig */;
+			baseConfigurationReference = 6537963F746BA6D3D87BEF47 /* Pods-GeekShopUnitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1425,7 +1526,7 @@
 		};
 		57C629492273850100C6080F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00FD0B845EE71DFDBC2D9AEA /* Pods-GeekShopUnitTests.release.xcconfig */;
+			baseConfigurationReference = AEABC098C685C71B5C869918 /* Pods-GeekShopUnitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1484,6 +1585,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		573F62DB23FF72B4009CBC11 /* Build configuration list for PBXNativeTarget "SnapshotGeekShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				573F62D923FF72B4009CBC11 /* Debug */,
+				573F62DA23FF72B4009CBC11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		57871FA022675B090052E0A4 /* Build configuration list for PBXProject "GeekShop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
