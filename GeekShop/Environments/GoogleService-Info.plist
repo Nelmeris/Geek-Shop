@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>855689234857-7psvtj1b3c40nvbnegd53ha6eqir3et7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.855689234857-7psvtj1b3c40nvbnegd53ha6eqir3et7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA_6tZ83LdhC-hYidV2q5RYGR5OqN2KlPU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>855689234857</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>artemkufaev.Geek-Shop</string>
+	<key>PROJECT_ID</key>
+	<string>geek-shop-2bafe</string>
+	<key>STORAGE_BUCKET</key>
+	<string>geek-shop-2bafe.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:855689234857:ios:91e9bb9eaf6214e89a1cb8</string>
+	<key>DATABASE_URL</key>
+	<string>https://geek-shop-2bafe.firebaseio.com</string>
+</dict>
+</plist>

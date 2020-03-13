@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Crashlytics
+import BackgroundTasks
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,17 +20,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appStartManager = AppStartManager(with: window)
         appStartManager?.start()
         
+//        BGTaskScheduler.shared.register(forTaskWithIdentifier: "crashlytics-send-reports", using: DispatchQueue.global()) { task in
+//            self.sendReports(task: task)
+//        }
+        
         return true
     }
+    
+//    private func sendReports(task: BGTask) {
+//        Crashlytics.crashlytics().checkForUnsentReports { isUnsentReports in
+//            guard isUnsentReports else { return }
+//            self.sendReports2(task: task)
+//        }
+//    }
+    
+//    private func sendReports2(task: BGTask? = nil) {
+//        if UserDefaults.standard.bool(forKey: "isSendReports") {
+//            Crashlytics.crashlytics().log("Test")
+//            Crashlytics.crashlytics().sendUnsentReports()
+//        } else {
+//            Crashlytics.crashlytics().deleteUnsentReports()
+//        }
+//        task?.setTaskCompleted(success: true)
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+//        sendReports2()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -40,7 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Crashlytics
 
 class ProductViewController: UIViewController {
     

@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Crashlytics
+import FirebaseAnalytics
 
 protocol BasketController: UIViewController {
     func showProducts(with products: [BasketProductViewModel])
@@ -41,6 +43,7 @@ extension BasketViewPresenter: BasketPresenter {
                 let viewModels = self.viewModelFactory.make(with: self.products)
                 self.controller.showProducts(with: viewModels)
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }
@@ -51,8 +54,16 @@ extension BasketViewPresenter: BasketPresenter {
         requestFactory.remove(productId: product.product.id, userId: User.authUser!.id) { response in
             switch response.result {
             case .success:
+                Analytics.logEvent("RemoveFromCart", parameters: [
+                    "Product ID": product.product.id,
+                    "Product name": product.product.title,
+                    "Price": product.product.price,
+                    "Quantity": product.quantity,
+                    "Currency": "RUB"
+                ])
                 self.loadProducts()
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }
@@ -63,14 +74,30 @@ extension BasketViewPresenter: BasketPresenter {
         requestFactory.add(productId: product.product.id, userId: User.authUser!.id, quantity: quantity) { response in
             switch response.result {
             case .success:
+                Analytics.logEvent("AddToCart", parameters: [
+                    "Product ID": product.product,
+                    "Product name": product.product.title,
+                    "Price": product.product.price,
+                    "Quantity": quantity,
+                    "Currency": "RUB"
+                ])
+                Answers.logAddToCart(withPrice: NSDecimalNumber(decimal: product.product.price), currency: "RUB", itemName: product.product.title, itemType: nil, itemId: String(product.product.id), customAttributes: [
+                    "quantity": quantity
+                ])
                 self.loadProducts()
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }
     }
     
     func makePurchase() {
+        Analytics.logEvent("Purchase", parameters: [
+            "currency": "RUB",
+            "success": true,
+            "totalPrice": Decimal(0.0)
+        ])
         self.controller.showMessage("Заказ оформлен!")
     }
     

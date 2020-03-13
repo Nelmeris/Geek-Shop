@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Crashlytics
 
 protocol CatalogController: class {
     func showProducts(_ viewModels: [ProductViewModel])
@@ -36,6 +37,7 @@ class CatalogViewPresenter: CatalogPresenter {
                 let viewModels = self.viewModelFactory.make(from: result.products)
                 self.controller.showProducts(viewModels)
             case .failure(let error):
+                Crashlytics.sharedInstance().recordError(error)
                 self.controller.showError(error)
             }
         }

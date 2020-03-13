@@ -13,6 +13,8 @@ class AuthorizationViewController: UIViewController {
     
     // MARK: - Properties
     
+    private let sendReportKey = "isSendReports"
+    
     private lazy var router: AuthorizationRouter = { return AuthorizationRouter(controller: self) }()
     
     private var authView: AuthorizationView {
@@ -30,6 +32,10 @@ class AuthorizationViewController: UIViewController {
         super.viewDidLoad()
         self.authView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
         self.authView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
+        
+        if UserDefaults.standard.object(forKey: sendReportKey) == nil {
+            askPermissionSendReports()
+        }
     }
     
     // MARK: - Actions
@@ -42,6 +48,22 @@ class AuthorizationViewController: UIViewController {
     @objc
     private func register() {
         router.toRegister()
+    }
+    
+}
+
+extension AuthorizationViewController: AlertDelegate {
+    
+    private func askPermissionSendReports() {
+        let title = "Отправка отчетов об ошибках"
+        let message = "Вы разрешите нам отправлять анонимные отчеты об ошибках разработчикам?"
+        self.showQuestion(title: title, message: message, actions: (
+            { actionOk in
+                UserDefaults.standard.set(true, forKey: self.sendReportKey)
+            }, { actionCancel in
+                UserDefaults.standard.set(false, forKey: self.sendReportKey)
+            })
+        )
     }
     
 }

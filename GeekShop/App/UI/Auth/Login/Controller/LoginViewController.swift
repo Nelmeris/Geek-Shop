@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Crashlytics
+import FirebaseAnalytics
 
 class LoginViewController: UIViewController, AlertDelegate {
     
@@ -54,9 +56,18 @@ class LoginViewController: UIViewController, AlertDelegate {
             case .success(let result):
                 self.showAlert(title: "Успешно! ID: \(result.user.id)") { _ in
                     User.authUser = result.user
+                    Analytics.logEvent("Login", parameters: [
+                        "Success": true,
+                        "User ID": result.user.id,
+                        "Username": result.user.username
+                    ])
                     self.router.toProfile()
                 }
             case .failure(let error):
+                Analytics.logEvent("Login", parameters: [
+                    "Success": false
+                ])
+                Crashlytics.sharedInstance().recordError(error)
                 self.showAlert(title: error.localizedDescription)
             }
         }
