@@ -13,15 +13,6 @@ class ProfileView: UIView {
     
     // MARK: - Subviews
     
-    private(set) lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Профиль"
-        label.font = UIFont.boldSystemFont(ofSize: 23)
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
     private(set) lazy var usernameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -69,7 +60,6 @@ class ProfileView: UIView {
     }
     
     private func setupLayout() {
-        self.addSubview(titleLabel)
         self.addSubview(usernameLabel)
         self.addSubview(nameLabel)
         self.addSubview(surnameLabel)
@@ -79,11 +69,7 @@ class ProfileView: UIView {
         let safeArea = self.safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-            self.titleLabel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
-            self.titleLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: 20),
-            self.titleLabel.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: -20),
-        
-            self.usernameLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 20),
+            self.usernameLabel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
             self.usernameLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor, constant: 20),
             self.usernameLabel.rightAnchor.constraint(equalTo: safeArea.rightAnchor, constant: -20),
             

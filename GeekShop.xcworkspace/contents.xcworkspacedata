@@ -5,9 +5,6 @@
       location = "group:GeekShop.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:PerfectTemplate/PerfectTemplate.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

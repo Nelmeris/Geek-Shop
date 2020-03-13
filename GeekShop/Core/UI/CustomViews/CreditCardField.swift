@@ -34,7 +34,8 @@ class CreditCardField: UITextField, UITextFieldDelegate {
         return true
     }
     
-    @objc func reformatAsCardNumber(textField: UITextField) {
+    @objc
+    func reformatAsCardNumber(textField: UITextField) {
         var targetCursorPosition = 0
         if let startPosition = textField.selectedTextRange?.start {
             targetCursorPosition = textField.offset(from: textField.beginningOfDocument, to: startPosition)

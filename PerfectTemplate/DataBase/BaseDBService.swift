@@ -20,10 +20,10 @@ class BaseDBService {
         return container
     }()
     
-    static let context = BaseDBService.persistentContainer.viewContext
+    let context = BaseDBService.persistentContainer.viewContext
     
     func saveContext() throws {
-        try BaseDBService.context.save()
+        try context.save()
     }
     
 }

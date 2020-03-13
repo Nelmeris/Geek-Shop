@@ -34,11 +34,13 @@ class AuthorizationViewController: UIViewController {
     
     // MARK: - Actions
     
-    @objc private func login() {
+    @objc
+    private func login() {
         router.toLogin()
     }
     
-    @objc private func register() {
+    @objc
+    private func register() {
         router.toRegister()
     }
     

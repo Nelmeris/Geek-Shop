@@ -40,7 +40,8 @@ class GenderPicker: UITextField {
         self.inputView = genderPicker
     }
 
-    @objc func doneGenderPicker() {
+    @objc
+    func doneGenderPicker() {
         self.endEditing(true)
     }
     

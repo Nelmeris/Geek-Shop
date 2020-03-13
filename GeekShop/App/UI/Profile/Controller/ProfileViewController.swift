@@ -31,11 +31,13 @@ class ProfileViewController: UIViewController {
     }
     
     private func configureUI() {
+        self.title = "Профиль"
         let editingButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(startEditing))
         self.navigationItem.setRightBarButton(editingButton, animated: true)
     }
     
-    @objc private func startEditing() {
+    @objc
+    private func startEditing() {
         router.toEditor()
     }
     

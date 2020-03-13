@@ -29,12 +29,13 @@ class ProfileEditorViewController: UIViewController {
     }
     
     private func configureUI() {
-        let editingButton = UIBarButtonItem(barButtonSystemItem: .undo, target: self, action: #selector(logout))
+        let editingButton = UIBarButtonItem(title: "Выйти", style: .plain, target: self, action: #selector(logout))
         self.navigationItem.setRightBarButton(editingButton, animated: true)
         self.profileEditorView.changeButton.addTarget(self, action: #selector(changeData), for: .touchUpInside)
     }
     
-    @objc private func changeData() {
+    @objc
+    private func changeData() {
         guard let username = self.profileEditorView.registerFormView.usernameField.text,
             let name = self.profileEditorView.registerFormView.nameField.text,
             let surname = self.profileEditorView.registerFormView.surnameField.text,
@@ -50,7 +51,8 @@ class ProfileEditorViewController: UIViewController {
         presenter.changeDataProcess(with: model)
     }
     
-    @objc private func logout() {
+    @objc
+    private func logout() {
         presenter.logoutProcess()
     }
     

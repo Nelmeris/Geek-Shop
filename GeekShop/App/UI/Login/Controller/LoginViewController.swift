@@ -43,7 +43,8 @@ class LoginViewController: UIViewController, AlertDelegate {
     
     // MARK: - Actions
     
-    @objc func login() {
+    @objc
+    func login() {
         guard let username = self.loginView.usernameField.text, !username.isEmpty,
             let password = self.loginView.passwordField.text, !password.isEmpty
             else { return }

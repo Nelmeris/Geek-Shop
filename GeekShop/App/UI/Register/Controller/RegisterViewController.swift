@@ -50,7 +50,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, AlertDelega
     
     // MARK: - Actions
     
-    @objc func register() {
+    @objc
+    func register() {
         guard let username = self.registerView.registerFormView.usernameField.text,
             let name = self.registerView.registerFormView.nameField.text,
             let surname = self.registerView.registerFormView.surnameField.text,

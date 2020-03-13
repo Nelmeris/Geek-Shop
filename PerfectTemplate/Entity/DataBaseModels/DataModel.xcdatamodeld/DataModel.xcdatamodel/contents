@@ -2,11 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Basket" representedClassName="Basket" syncable="YES">
         <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="basket" inverseEntity="Product"/>
-        <relationship name="userId" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="basket" inverseEntity="User"/>
-    </entity>
-    <entity name="Catalog" representedClassName="Catalog" syncable="YES">
-        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="products" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="catalog" inverseEntity="Product"/>
+        <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="basket" inverseEntity="User"/>
     </entity>
     <entity name="Product" representedClassName="Product" syncable="YES">
         <attribute name="descript" optional="YES" attributeType="String"/>
@@ -14,13 +10,12 @@
         <attribute name="price" attributeType="Decimal"/>
         <attribute name="title" attributeType="String"/>
         <relationship name="basket" toMany="YES" deletionRule="Cascade" destinationEntity="Basket" inverseName="products" inverseEntity="Basket"/>
-        <relationship name="catalog" toMany="YES" deletionRule="Nullify" destinationEntity="Catalog" inverseName="products" inverseEntity="Catalog"/>
-        <relationship name="reviews" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="productId" inverseEntity="Review"/>
+        <relationship name="reviews" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="product" inverseEntity="Review"/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES">
         <attribute name="content" attributeType="String"/>
-        <relationship name="productId" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="reviews" inverseEntity="Product"/>
-        <relationship name="userId" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="reviews" inverseEntity="User"/>
+        <relationship name="product" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="reviews" inverseEntity="Product"/>
+        <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="reviews" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="bio" optional="YES" attributeType="String"/>
@@ -33,13 +28,12 @@
         <attribute name="password" attributeType="String"/>
         <attribute name="surname" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
-        <relationship name="basket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Basket" inverseName="userId" inverseEntity="Basket"/>
-        <relationship name="reviews" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="userId" inverseEntity="Review"/>
+        <relationship name="basket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Basket" inverseName="user" inverseEntity="Basket"/>
+        <relationship name="reviews" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="user" inverseEntity="Review"/>
     </entity>
     <elements>
         <element name="Basket" positionX="-36" positionY="72" width="128" height="73"/>
-        <element name="Catalog" positionX="0" positionY="108" width="128" height="73"/>
-        <element name="Product" positionX="-54" positionY="63" width="128" height="148"/>
+        <element name="Product" positionX="-54" positionY="63" width="128" height="133"/>
         <element name="Review" positionX="-18" positionY="90" width="128" height="88"/>
         <element name="User" positionX="-63" positionY="-18" width="128" height="223"/>
     </elements>
