@@ -22,6 +22,20 @@
 		574D3BC32278C667001C6B00 /* AddReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC22278C667001C6B00 /* AddReviewHandler.swift */; };
 		574D3BC52278C768001C6B00 /* RemoveReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */; };
 		574D3BC72278C7DD001C6B00 /* GetReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */; };
+		57F688ED23F6CA1800ECF27D /* BaseDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F688EC23F6CA1800ECF27D /* BaseDBService.swift */; };
+		57F688F023F6CA4D00ECF27D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57F688EE23F6CA4D00ECF27D /* DataModel.xcdatamodeld */; };
+		57F688F223F6CFBA00ECF27D /* UserDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F688F123F6CFBA00ECF27D /* UserDBService.swift */; };
+		57F6891423F6D81500ECF27D /* Catalog+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6890A23F6D81400ECF27D /* Catalog+CoreDataClass.swift */; };
+		57F6891523F6D81500ECF27D /* Basket+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6890B23F6D81400ECF27D /* Basket+CoreDataProperties.swift */; };
+		57F6891623F6D81500ECF27D /* Review+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6890C23F6D81400ECF27D /* Review+CoreDataProperties.swift */; };
+		57F6891723F6D81500ECF27D /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6890D23F6D81400ECF27D /* User+CoreDataProperties.swift */; };
+		57F6891823F6D81500ECF27D /* Basket+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6890E23F6D81400ECF27D /* Basket+CoreDataClass.swift */; };
+		57F6891923F6D81500ECF27D /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6890F23F6D81400ECF27D /* Product+CoreDataClass.swift */; };
+		57F6891A23F6D81500ECF27D /* Review+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6891023F6D81500ECF27D /* Review+CoreDataClass.swift */; };
+		57F6891B23F6D81500ECF27D /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6891123F6D81500ECF27D /* Product+CoreDataProperties.swift */; };
+		57F6891C23F6D81500ECF27D /* Catalog+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6891223F6D81500ECF27D /* Catalog+CoreDataProperties.swift */; };
+		57F6891D23F6D81500ECF27D /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6891323F6D81500ECF27D /* User+CoreDataClass.swift */; };
+		57F6893323F722D400ECF27D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F6893223F722D400ECF27D /* UserData.swift */; };
 		OBJ_375 /* a_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* a_.c */; };
 		OBJ_376 /* aes_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* aes_.c */; };
 		OBJ_377 /* ameth_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* ameth_lib.c */; };
@@ -588,6 +602,20 @@
 		574D3BC22278C667001C6B00 /* AddReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewHandler.swift; sourceTree = "<group>"; };
 		574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewHandler.swift; sourceTree = "<group>"; };
 		574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReviewHandler.swift; sourceTree = "<group>"; };
+		57F688EC23F6CA1800ECF27D /* BaseDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDBService.swift; sourceTree = "<group>"; };
+		57F688EF23F6CA4D00ECF27D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		57F688F123F6CFBA00ECF27D /* UserDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBService.swift; sourceTree = "<group>"; };
+		57F6890A23F6D81400ECF27D /* Catalog+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Catalog+CoreDataClass.swift"; sourceTree = "<group>"; };
+		57F6890B23F6D81400ECF27D /* Basket+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Basket+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		57F6890C23F6D81400ECF27D /* Review+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Review+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		57F6890D23F6D81400ECF27D /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		57F6890E23F6D81400ECF27D /* Basket+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Basket+CoreDataClass.swift"; sourceTree = "<group>"; };
+		57F6890F23F6D81400ECF27D /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		57F6891023F6D81500ECF27D /* Review+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Review+CoreDataClass.swift"; sourceTree = "<group>"; };
+		57F6891123F6D81500ECF27D /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		57F6891223F6D81500ECF27D /* Catalog+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Catalog+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		57F6891323F6D81500ECF27D /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		57F6893223F722D400ECF27D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = COpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_100 /* a_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_.c; sourceTree = "<group>"; };
 		OBJ_101 /* aes_.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_.c; sourceTree = "<group>"; };
@@ -923,7 +951,7 @@
 		"PerfectHTTPServer::PerfectHTTPServer::Product" /* PerfectHTTPServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PerfectHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PerfectLib::PerfectLib::Product" /* PerfectLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PerfectLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PerfectNet::PerfectNet::Product" /* PerfectNet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PerfectNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"PerfectTemplate::PerfectTemplate::Product" /* PerfectTemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = PerfectTemplate; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PerfectTemplate::PerfectTemplate::Product" /* PerfectTemplate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = PerfectTemplate; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PerfectThread::PerfectThread::Product" /* PerfectThread.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PerfectThread.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1033,6 +1061,10 @@
 		570B679F228AEAAF00CA814F /* User */ = {
 			isa = PBXGroup;
 			children = (
+				574D3BA82278C49F001C6B00 /* LoginHandler.swift */,
+				574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */,
+				574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */,
+				574D3BAC2278C49F001C6B00 /* ChangeUserDataHandler.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1040,6 +1072,9 @@
 		570B67A0228AEABF00CA814F /* Basket */ = {
 			isa = PBXGroup;
 			children = (
+				570B678A228ADDF500CA814F /* AddToBasketHandler.swift */,
+				570B678E228ADE1300CA814F /* GetBasketHandler.swift */,
+				570B6794228AE3A000CA814F /* RemoveFromBasketHandler.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -1047,6 +1082,8 @@
 		570B67A1228AEAC400CA814F /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				574D3BA72278C49F001C6B00 /* GetCatalogDataHandler.swift */,
+				574D3BAE2278C49F001C6B00 /* GetGoodByIdHandler.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -1054,26 +1091,108 @@
 		574D3BA62278C48B001C6B00 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				574D3BA92278C49F001C6B00 /* HandlerFactory.swift */,
+				574D3BAB2278C49F001C6B00 /* ErrorHandler.swift */,
+				576F037422D9C7AD004015F9 /* Review */,
 				570B67A1228AEAC400CA814F /* Catalog */,
 				570B67A0228AEABF00CA814F /* Basket */,
 				570B679F228AEAAF00CA814F /* User */,
-				574D3BA92278C49F001C6B00 /* HandlerFactory.swift */,
-				574D3BAA2278C49F001C6B00 /* AbstractHandler.swift */,
-				574D3BAB2278C49F001C6B00 /* ErrorHandler.swift */,
-				574D3BAC2278C49F001C6B00 /* ChangeUserDataHandler.swift */,
-				574D3BA72278C49F001C6B00 /* GetCatalogDataHandler.swift */,
-				574D3BAE2278C49F001C6B00 /* GetGoodByIdHandler.swift */,
-				574D3BA82278C49F001C6B00 /* LoginHandler.swift */,
-				574D3BAD2278C49F001C6B00 /* LogoutHandler.swift */,
-				574D3BAF2278C49F001C6B00 /* RegisterHandler.swift */,
-				574D3BC22278C667001C6B00 /* AddReviewHandler.swift */,
-				574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */,
-				574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */,
-				570B678A228ADDF500CA814F /* AddToBasketHandler.swift */,
-				570B6794228AE3A000CA814F /* RemoveFromBasketHandler.swift */,
-				570B678E228ADE1300CA814F /* GetBasketHandler.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		576F037422D9C7AD004015F9 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				574D3BC22278C667001C6B00 /* AddReviewHandler.swift */,
+				574D3BC62278C7DD001C6B00 /* GetReviewHandler.swift */,
+				574D3BC42278C768001C6B00 /* RemoveReviewHandler.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		57F688EB23F6CA0900ECF27D /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				57F688EC23F6CA1800ECF27D /* BaseDBService.swift */,
+				57F688F123F6CFBA00ECF27D /* UserDBService.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		57F688F323F6D42200ECF27D /* DataBaseModels */ = {
+			isa = PBXGroup;
+			children = (
+				57F688EE23F6CA4D00ECF27D /* DataModel.xcdatamodeld */,
+				57F6893023F71FA200ECF27D /* Catalog */,
+				57F6892F23F71F9E00ECF27D /* Product */,
+				57F6892E23F71F9B00ECF27D /* User */,
+				57F6892D23F71F9500ECF27D /* Basket */,
+				57F6892C23F71F8800ECF27D /* Review */,
+			);
+			path = DataBaseModels;
+			sourceTree = "<group>";
+		};
+		57F6892B23F71A3500ECF27D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				574D3BAA2278C49F001C6B00 /* AbstractHandler.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		57F6892C23F71F8800ECF27D /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				57F6891023F6D81500ECF27D /* Review+CoreDataClass.swift */,
+				57F6890C23F6D81400ECF27D /* Review+CoreDataProperties.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		57F6892D23F71F9500ECF27D /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				57F6890E23F6D81400ECF27D /* Basket+CoreDataClass.swift */,
+				57F6890B23F6D81400ECF27D /* Basket+CoreDataProperties.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		57F6892E23F71F9B00ECF27D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				57F6891323F6D81500ECF27D /* User+CoreDataClass.swift */,
+				57F6890D23F6D81400ECF27D /* User+CoreDataProperties.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		57F6892F23F71F9E00ECF27D /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				57F6890F23F6D81400ECF27D /* Product+CoreDataClass.swift */,
+				57F6891123F6D81500ECF27D /* Product+CoreDataProperties.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		57F6893023F71FA200ECF27D /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				57F6890A23F6D81400ECF27D /* Catalog+CoreDataClass.swift */,
+				57F6891223F6D81500ECF27D /* Catalog+CoreDataProperties.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		57F6893123F71FD100ECF27D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				57F688F323F6D42200ECF27D /* DataBaseModels */,
+				57F6893223F722D400ECF27D /* UserData.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -1332,7 +1451,10 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				57F6893123F71FD100ECF27D /* Entity */,
+				57F688EB23F6CA0900ECF27D /* DataBase */,
 				574D3BA62278C48B001C6B00 /* Handlers */,
+				57F6892B23F71A3500ECF27D /* Core */,
 				OBJ_8 /* PerfectTemplate */,
 			);
 			name = Sources;
@@ -1971,7 +2093,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 9999;
-				LastUpgradeCheck = 9999;
+				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					"COpenSSL::COpenSSL" = {
 						LastSwiftMigration = 1020;
@@ -1980,11 +2102,11 @@
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "PerfectTemplate" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = OBJ_5;
 			productRefGroup = OBJ_355 /* Products */;
@@ -2431,22 +2553,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				57F688ED23F6CA1800ECF27D /* BaseDBService.swift in Sources */,
 				574D3BBE2278C51F001C6B00 /* HandlerFactory.swift in Sources */,
+				57F688F223F6CFBA00ECF27D /* UserDBService.swift in Sources */,
+				57F6891823F6D81500ECF27D /* Basket+CoreDataClass.swift in Sources */,
 				OBJ_806 /* main.swift in Sources */,
 				570B6795228AE3A000CA814F /* RemoveFromBasketHandler.swift in Sources */,
+				57F6891C23F6D81500ECF27D /* Catalog+CoreDataProperties.swift in Sources */,
+				57F6891423F6D81500ECF27D /* Catalog+CoreDataClass.swift in Sources */,
+				57F6891D23F6D81500ECF27D /* User+CoreDataClass.swift in Sources */,
 				574D3BB92278C505001C6B00 /* GetCatalogDataHandler.swift in Sources */,
 				574D3BC12278C527001C6B00 /* RegisterHandler.swift in Sources */,
 				570B678F228ADE1300CA814F /* GetBasketHandler.swift in Sources */,
 				574D3BBC2278C511001C6B00 /* ErrorHandler.swift in Sources */,
 				574D3BC32278C667001C6B00 /* AddReviewHandler.swift in Sources */,
 				574D3BC52278C768001C6B00 /* RemoveReviewHandler.swift in Sources */,
+				57F6891923F6D81500ECF27D /* Product+CoreDataClass.swift in Sources */,
 				574D3BBF2278C522001C6B00 /* LoginHandler.swift in Sources */,
 				574D3BBA2278C50B001C6B00 /* AbstractHandler.swift in Sources */,
+				57F6893323F722D400ECF27D /* UserData.swift in Sources */,
 				574D3BBD2278C51C001C6B00 /* GetGoodByIdHandler.swift in Sources */,
 				574D3BBB2278C50E001C6B00 /* ChangeUserDataHandler.swift in Sources */,
 				570B678B228ADDF500CA814F /* AddToBasketHandler.swift in Sources */,
+				57F688F023F6CA4D00ECF27D /* DataModel.xcdatamodeld in Sources */,
 				574D3BC72278C7DD001C6B00 /* GetReviewHandler.swift in Sources */,
+				57F6891A23F6D81500ECF27D /* Review+CoreDataClass.swift in Sources */,
+				57F6891723F6D81500ECF27D /* User+CoreDataProperties.swift in Sources */,
 				574D3BC02278C525001C6B00 /* LogoutHandler.swift in Sources */,
+				57F6891523F6D81500ECF27D /* Basket+CoreDataProperties.swift in Sources */,
+				57F6891623F6D81500ECF27D /* Review+CoreDataProperties.swift in Sources */,
+				57F6891B23F6D81500ECF27D /* Product+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2631,18 +2767,44 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2717,16 +2879,41 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -3242,6 +3429,7 @@
 		OBJ_803 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -3255,7 +3443,6 @@
 				INFOPLIST_FILE = PerfectTemplate.xcodeproj/PerfectTemplate_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/module.modulemap";
@@ -3272,6 +3459,7 @@
 		OBJ_804 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -3285,7 +3473,6 @@
 				INFOPLIST_FILE = PerfectTemplate.xcodeproj/PerfectTemplate_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-CZlib-src/PerfectCZlib/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-COpenSSL/COpenSSL/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-HTTPServer/Sources/PerfectCHTTPParser/include/module.modulemap";
@@ -3567,6 +3754,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		57F688EE23F6CA4D00ECF27D /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57F688EF23F6CA4D00ECF27D /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 57F688EF23F6CA4D00ECF27D /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }

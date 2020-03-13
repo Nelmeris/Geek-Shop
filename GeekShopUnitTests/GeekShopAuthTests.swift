@@ -27,7 +27,7 @@ class GeekShopAuthTests: XCTestCase {
 
     func testLogin() {
         let expectation = XCTestExpectation(description: "Login")
-        auth.login(userName: "Somebody", password: "mypassword") { response in
+        auth.login(username: "Somebody", password: "mypassword") { response in
             switch response.result {
             case .success: break
             case .failure (let error):
@@ -41,7 +41,7 @@ class GeekShopAuthTests: XCTestCase {
 
     func testLogout() {
         let expectation = XCTestExpectation(description: "Logout")
-        auth.logout(userId: 123) { response in
+        auth.logout(id: 123) { response in
             switch response.result {
             case .success: break
             case .failure (let error):
@@ -55,7 +55,7 @@ class GeekShopAuthTests: XCTestCase {
 
     func testRegister() {
         let expectation = XCTestExpectation(description: "Registration")
-        auth.register(userId: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
+        auth.register(username: "new_user4", password: "mypassword", name: "Artem", surname: "Kufaev", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success: break
             case .failure (let error):
@@ -69,7 +69,7 @@ class GeekShopAuthTests: XCTestCase {
 
     func testChangeUserData() {
         let expectation = XCTestExpectation(description: "Change user data")
-        auth.changeUserData(userId: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
+        auth.changeUserData(id: 0, username: "new_username", password: "mypassword", name: "Artem", surname: "Kufaev", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
             switch response.result {
             case .success: break
             case .failure (let error):

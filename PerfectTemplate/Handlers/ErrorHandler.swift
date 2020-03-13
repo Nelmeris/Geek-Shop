@@ -21,18 +21,23 @@ class ErrorHandler: AbstractHandler {
 extension ErrorHandler {
     
     func process() {
+        process(with: "Некорректный запрос")
+    }
+    
+    func process(with message: String) {
         response.setHeader(.contentType, value: "application/json")
-        let json: [String: Any] = [
-            "result": 0,
-            "errorMessage": "Incorrect request"
-        ]
-
+        let error = ErrorResponse(errorMessage: message)
         do {
-            try response.setBody(json: json)
+            try response.setBody(json: error)
         } catch {
             print(error)
         }
         response.completed()
     }
     
+}
+
+struct ErrorResponse: Codable {
+    let result: Int = 0
+    let errorMessage: String
 }

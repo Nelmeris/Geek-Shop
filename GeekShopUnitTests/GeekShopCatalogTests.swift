@@ -27,7 +27,7 @@ class GeekShopCatalogTests: XCTestCase {
 
     func testGetCatalogData() {
         let expectation = XCTestExpectation(description: "Get catalog data")
-        catalog.getCatalogData(pageNumber: 123, categoryId: 1) { response in
+        catalog.getCatalog(pageNumber: 123, categoryId: 1) { response in
             switch response.result {
             case .success: break
             case .failure (let error):
@@ -41,7 +41,7 @@ class GeekShopCatalogTests: XCTestCase {
 
     func testGetGoodById() {
         let expectation = XCTestExpectation(description: "Get good by id")
-        catalog.getGoodById(productId: 123) { response in
+        catalog.getGood(by: 123) { response in
             switch response.result {
             case .success: break
             case .failure (let error):
